@@ -1,0 +1,19 @@
+$whiteColor: #FFFFFF;
+$blackColor: #000;
+$whiteSmoke:#f2f7f8;
+$mintCream:#f4f8f0;
+
+$content-width: 1440px;
+$desktop-width: 991px;
+$tablet-width: 767px;
+$mobile-width: 479px;
+
+:export {
+  whiteColor: $whiteColor;
+  blackColor: $blackColor;
+  whiteSmoke: $whiteSmoke;
+  mintCream: $mintCream;
+  content-width: $content-width;
+  tablet-width: $tablet-width;
+  mobile-width: $mobile-width;
+}

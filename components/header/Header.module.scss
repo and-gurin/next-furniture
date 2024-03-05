@@ -1,0 +1,29 @@
+@import 'styles/mixins';
+
+.header {
+
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 20px;
+  }
+
+  &__navigation {
+    @include flex( $gap:20px)
+  }
+
+  &__products {
+    @include flex( $gap:5px)
+  }
+
+  &__links {
+    @include flex( $gap:20px)
+  }
+}
+
+.logo {
+  @include flex( $gap:10px)
+}
