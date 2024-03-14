@@ -1,0 +1,9 @@
+@import "../styles/constants";
+@import "../styles/mixins";
+.wrapper {
+  max-width: $content-width;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+}

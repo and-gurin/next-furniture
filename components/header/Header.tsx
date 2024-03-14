@@ -1,7 +1,7 @@
 import React from "react";
+import "@/styles/wrapper.scss"
 import NavItem from "@/components/navigation/Navigation";
 import Link from "next/link";
-import s from "@/app/page.module.scss";
 import style from "./Header.module.scss";
 import Image from "next/image";
 import logo from "@/public/logo_lalasia.svg";
@@ -15,8 +15,8 @@ const links = [
 
 const Header = () => {
     return (
-        <header className={raleWay.className}>
-            <div className={s.wrapper + ' ' + style.header__wrapper}>
+        <header className={raleWay.className + ' ' + style.header}>
+            <div className={`wrapper  ${style.header__wrapper}`}>
                 <Link href='/' className={style.logo}>
                     <Image
                         src={logo}

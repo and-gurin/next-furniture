@@ -1,0 +1,102 @@
+@import 'styles/constants';
+
+.hero {
+  margin: 100px 8px 8px 8px;
+
+  &__wrapper {
+    grid-auto-columns: 1fr;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 4.5rem;
+    background-color: $whiteSmoke;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 760px;
+    padding: 48px 0 0 40px;
+  }
+
+  &__title {
+    font-size: 72px;
+    line-height: 83px;
+    font-weight: 700;
+  }
+}
+
+.slider {
+  position: absolute;
+
+  &__wrapper {
+    position: relative;
+  }
+}
+
+.slick-list {
+  height: 650px;
+  width: 950px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.slick-track {
+  position: absolute;
+  overflow: hidden;
+}
+
+.slick-cloned {
+  opacity: 0;
+}
+
+.slick-slide {
+  img {
+    border-radius: 24px;
+  }
+}
+
+.slick-active {
+  opacity: 1;
+  display: block !important;
+  margin-right: 16px;
+  width: 560px !important;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.slick-prev,
+.slick-next {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: calc(100% - 60px/2);
+  z-index: 1;
+}
+
+.slick-next {
+  left: 60px;
+  background-color: $blackColor;
+  border-radius: 0 24px 0 0;
+
+  &:before {
+    color: $whiteColor;
+    opacity: 1;
+  }
+
+  &:hover {
+    background-color: $blackColor;
+  }
+}
+
+.slick-prev {
+  background-color: $whiteSmoke;
+  left: 0;
+  border-radius: 0 0 0 24px;
+
+  &:before {
+    color: $blackColor;
+    opacity: 1;
+  }
+
+  &:hover {
+    background-color: $whiteSmoke;
+  }
+}

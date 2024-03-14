@@ -1,4 +1,4 @@
-@import '../app/constants.module';
+@import 'constants';
 
 
 @mixin font ($fontSize, $lineHeight, $fontWeight, $textColor) {
@@ -24,14 +24,18 @@
 }
 
 @mixin media-desktop {
-  @media (max-width: $desktop-width) { @content; }
+  @media (min-width: $content-width) { @content; }
+}
+
+@mixin media-laptop {
+  @media (min-width: $desktop-width) { @content; }
 }
 
 @mixin media-tablet {
-  @media (max-width: $tablet-width) { @content; }
+  @media (min-width: $tablet-width) { @content; }
 }
 
 @mixin media-mobile {
-  @media (max-width: $mobile-width) { @content; }
+  @media (min-width: $mobile-width) { @content; }
 }
 
