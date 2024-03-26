@@ -20,30 +20,47 @@
     font-size: 72px;
     line-height: 83px;
     font-weight: 700;
+    margin-bottom: 32px;
+  }
+
+  &__subtitle {
+    max-width: 60ch;
+    margin-bottom: 72px;
+  }
+
+  &__button {
+    background-color: $blackColor;
+    text-align: center;
+    padding: 16px;
+    font-family: Raleway Bold, sans-serif;
+    font-weight: 700;
+    color: $whiteColor;
+    display: inline-block;
   }
 }
 
 .slider {
-  position: absolute;
+  //position: absolute;
 
   &__wrapper {
-    position: relative;
+    //position: relative;
   }
 }
 
 .slick-list {
   height: 650px;
-  width: 950px;
+  width: 650px;
   overflow: hidden;
   border-radius: 24px;
 }
 
 .slick-track {
-  position: absolute;
+  //position: absolute;
   overflow: hidden;
 }
 
 .slick-cloned {
+  display: none;
   opacity: 0;
 }
 

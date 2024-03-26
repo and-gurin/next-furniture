@@ -1,0 +1,44 @@
+@import 'styles/constants';
+
+.contacts {
+  margin: 100px 8px 8px 8px;
+
+  &__wrapper {
+    grid-auto-columns: 1fr;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 4.5rem;
+    background-color: $whiteSmoke;
+    border-radius: 24px;
+    padding: 48px 0 0 40px;
+  }
+
+  &__description {
+
+  }
+
+  &__title {
+    font-size: 72px;
+    line-height: 83px;
+    font-weight: 700;
+    margin-bottom: 32px;
+  }
+
+  &__subtitle {
+    max-width: 60ch;
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    display: flex;
+  }
+}
+
+.form {
+
+
+  &__title {
+
+  }
+}

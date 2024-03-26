@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl">
-    <body>
+    <body >
     <Header/>
     <main className={raleWay.className}>{children}</main>
     </body>
