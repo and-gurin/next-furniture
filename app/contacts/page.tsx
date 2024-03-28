@@ -44,49 +44,51 @@ export default function Contacts () {
                     </p>
                     <address className={style.contacts__links}>
                         <div className={style.contacts__link}>
-                            <p>Telefon:</p>
+                            <p className={style.contacts__link_left}>Telefon:</p>
                             <a className={style.contacts__link_right} href="tel:+48511944302">511944302</a>
                         </div>
                         <br/>
                         <div className={style.contacts__link}>
-                            <p>E-mail:</p>
+                            <p className={style.contacts__link_left}>E-mail:</p>
                             <a className={style.contacts__link_right} href="mailto:inhouse@gmail.com">inhouse@gmail.com</a>
                         </div>
                         <br/>
                         <div className={style.contacts__link}>
-                            <p>E-mail:</p>
+                            <p className={style.contacts__link_left}>Adres:</p>
                             <a className={style.contacts__link_right} href="https://goo.gl/maps/ZgnfN5Z5FdkxQxpr9">Niemena 4, 95-070 Aleksandrów Łódzki</a>
                         </div>
                     </address>
                 </div>
                 <div className={style.form}>
-                    <h3 className={style.form__title}>
+                    <h3 className={baskerville.className + ' ' + style.form__title}>
                         Wpisz swoje imię oraz numer telefonu lub adres e-mail.
                         Skontaktujemy się z Tobą tak szybko, jak to możliwe.
                     </h3>
                     <form className={style.contacts__form} ref={form} onSubmit={sendEmail}>
                         <input placeholder='Imię'
                                name='user_name'
-                               className={style.contacts__field}
+                               className={style.form__field}
                                type="text"
                                required // Podaj swoje imię
                         />
                         <input placeholder='E-mail'
                                name='email'
-                               className={style.contacts__field}
+                               className={style.form__field}
                                type="email"
                         />
                         <input placeholder='Telefon'
                                name='phone'
-                               className={style.contacts__field}
+                               className={style.form__field}
                                type="tel"
                         />
-                        <textarea className={style.contacts__field + ' ' + style.contacts__field_area}
+                        <textarea className={style.form__field + ' ' + style.form__field_area}
                                   rows={7} cols={45}
                                   placeholder='Wiadomość...'
                                   name='message'
                         />
-                        <button type='submit'>Contact me</button>
+                        <button className={style.form__button} type='submit'>
+                            Wyślij nam wiadomość
+                        </button>
                     </form>
                 </div>
             </div>
