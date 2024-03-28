@@ -1,0 +1,16 @@
+@import 'styles/constants';
+
+.stages {
+  background-color: $mintCream;
+  border-radius: 24px;
+  margin: 0 8px 64px 8px;
+  padding: 40px;
+
+  &__figure {
+
+
+    & img {
+      border-radius: 12px;
+    }
+  }
+}

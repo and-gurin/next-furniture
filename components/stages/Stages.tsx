@@ -1,0 +1,87 @@
+import style from "./Stages.module.scss"
+import Image from "next/image";
+import stageOne from "@/public/stages-of-work-1.jpg";
+import stageTwo from "@/public/stages-of-work-2.jpg";
+import stageThree from "@/public/stages-of-work-3.jpg";
+import stageFour from "@/public/stages-of-work-4.jpg";
+import "@/styles/wrapper.scss"
+
+const stages = [
+    {
+        id: '01',
+        src: stageOne,
+        title: 'Pierwszy kontakt.',
+        description: 'Dzwonisz do nas lub wysyłasz wiadomość, ' +
+            'a my próbujemy sprawdzić, czy możemy pomóc ci rozwiązać twój problem.',
+        list: ''
+    },
+    {
+        id: '02',
+        src: stageTwo,
+        title: 'Projekt',
+        description: 'To najważniejszy etap. Wyraźnie rozumiemy, ' +
+            'że meble na zamówienie muszą być w pełnej harmonii z pomieszczeniem. ' +
+            'Nie poprosimy Cię o odwiedzenie naszego biura ani ' +
+            'przesłanie nam zdjęć swojego pokoju. Przyjedziemy do ' +
+            'Ciebie z próbkami materiałów, laptopem, na którym ' +
+            'we współpracy z Tobą stworzymy projekt 3d w czasie rzeczywistym. ' +
+            'Na tym etapie wykonamy:',
+        list: '1',
+    },
+    {
+        id: '03',
+        src: stageThree,
+        title: 'Produkcja',
+        description: 'Zawarcie umowy i produkcja mebli. Podpiszemy z Tobą umowę i wykonamy meble. ' +
+            'Jesteśmy zwykłymi ludźmi i doskonale zdajemy sobie sprawę, ' +
+            'że po podpisaniu umowy i zatwierdzeniu projektu możesz mieć ' +
+            'genialne pomysły, jak ulepszyć meble. Możesz dokonać nieograniczonej ' +
+            'liczby zmian w projekcie do momentu zakupu materiałów.',
+        list: ''
+    },
+    {
+        id: '04',
+        src: stageFour,
+        title: 'Montaż',
+        description: 'Installation of furniture. We will install the furniture, ' +
+            'adjust the mechanisms and make sure that you got what you wanted.',
+        list: ''
+    },
+]
+const Stages = () => {
+    return (
+        <section className={style.stages}>
+            <div className={`wrapper ${style.stages__wrapper}`}>
+                <h2 className={style.stages__title}>
+                    Wykonywanie mebli – krok po kroku
+                </h2>
+                <div className={style.stages__content}>
+                    {stages.map(stage =>
+                        <div key={stage.id} className={style.stages__grid}>
+                            <div className={style.stages__figure}>
+                                <Image src={stage.src}
+                                       width={626}
+                                       height={281}
+                                       alt='stages-of-work'
+                                />
+                            </div>
+                            <p className={style.stages__descriptions}>
+                                {stage.description}
+                                {stage.list &&
+                                    <ul className={style.stages_list}>
+                                    <li>pomiar</li>
+                                    <li>tworzenie projektu</li>
+                                    <li>wybór materiałów</li>
+                                    </ul>
+                                }
+                            </p>
+                        </div>
+
+                    )}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Stages;

@@ -20,10 +20,10 @@ import Link from "next/link";
 
 const images = [
     {id: 1, image500: kitchenOne500, image555: kitchenOne555,},
-    {id: 1, image500: kitchenTwo500, image555: kitchenTwo555,},
-    {id: 1, image500: kitchenThree500, image555: kitchenThree555,},
-    {id: 1, image500: kitchenFour500, image555: kitchenFour555,},
-    {id: 1, image500: wardrobe555, image555: wardrobe555,},
+    {id: 2, image500: kitchenTwo500, image555: kitchenTwo555,},
+    {id: 3, image500: kitchenThree500, image555: kitchenThree555,},
+    {id: 4, image500: kitchenFour500, image555: kitchenFour555,},
+    {id: 5, image500: wardrobe555, image555: wardrobe555,},
 ]
 
 const Hero = () => {
