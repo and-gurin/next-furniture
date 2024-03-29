@@ -5,6 +5,8 @@ import stageTwo from "@/public/stages-of-work-2.jpg";
 import stageThree from "@/public/stages-of-work-3.jpg";
 import stageFour from "@/public/stages-of-work-4.jpg";
 import "@/styles/wrapper.scss"
+import {baskerville} from "@/app/fonts";
+import {Fade} from "react-awesome-reveal";
 
 const stages = [
     {
@@ -52,33 +54,46 @@ const Stages = () => {
     return (
         <section className={style.stages}>
             <div className={`wrapper ${style.stages__wrapper}`}>
-                <h2 className={style.stages__title}>
-                    Wykonywanie mebli – krok po kroku
-                </h2>
-                <div className={style.stages__content}>
+                <Fade direction={"up"}>
+                    <h2 className={baskerville.className + ' ' + style.stages__title}>
+                        Wykonywanie mebli – krok po kroku
+                    </h2>
+                </Fade>
                     {stages.map(stage =>
-                        <div key={stage.id} className={style.stages__grid}>
-                            <div className={style.stages__figure}>
-                                <Image src={stage.src}
-                                       width={626}
-                                       height={281}
-                                       alt='stages-of-work'
-                                />
+                        <Fade direction={"up"} triggerOnce={true} fraction={0} key={stage.id}>
+                            <div  className={style.stages__content}>
+                                <div className={style.stages__figure}>
+                                    <Image src={stage.src}
+                                           width={626}
+                                           height={281}
+                                           alt='stages-of-work'
+                                    />
+                                </div>
+                                <div className={style.stages__number}>
+                                    <p className={baskerville.className + ' ' + style.stages__subtitle}>{stage.id}</p>
+                                    <p className={style.stages__verticalLine}></p>
+                                </div>
+                                <div className={style.stages__description}>
+                                    <p className={baskerville.className + ' ' + style.stages__subtitle}>
+                                        {stage.title}
+                                    </p>
+                                    <p className={style.stages__description}>
+                                        {stage.description}
+                                    </p>
+                                    <br/>
+                                    {stage.list &&
+                                        <ul className={style.stages_list}>
+                                            <li>- pomiar</li>
+                                            <li>- tworzenie projektu</li>
+                                            <li>- wybór materiałów</li>
+                                        </ul>
+                                    }
+                                </div>
                             </div>
-                            <p className={style.stages__descriptions}>
-                                {stage.description}
-                                {stage.list &&
-                                    <ul className={style.stages_list}>
-                                    <li>pomiar</li>
-                                    <li>tworzenie projektu</li>
-                                    <li>wybór materiałów</li>
-                                    </ul>
-                                }
-                            </p>
-                        </div>
+                        </Fade>
+
 
                     )}
-                </div>
             </div>
         </section>
     );

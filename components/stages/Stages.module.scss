@@ -6,11 +6,47 @@
   margin: 0 8px 64px 8px;
   padding: 40px;
 
+  &__title {
+    margin-bottom: 56px;
+    font-size: 42px;
+    line-height: 48px;
+    width: 45%;
+  }
+
+  &__content {
+    display: flex;
+    margin-bottom: 56px;
+    gap: 48px;
+  }
+
   &__figure {
 
 
     & img {
       border-radius: 12px;
     }
+  }
+
+  &__number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__verticalLine {
+    width: 1px;
+    height: 100%;
+    background-color: $blackColor;
+    text-align: center;
+  }
+
+  &__description {
+
+  }
+
+  &__subtitle {
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 32px;
   }
 }

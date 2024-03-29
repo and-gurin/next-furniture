@@ -5,7 +5,7 @@ export const raleWay = Raleway({
     subsets: ['latin'],
 })
 export const baskerville = Libre_Baskerville({
-    style: ['normal'],
-    weight: '700',
+    style: ['normal', "italic"],
+    weight: ['700', '400'],
     subsets: ['latin']
 })
