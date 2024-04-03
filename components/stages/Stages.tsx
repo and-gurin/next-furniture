@@ -1,3 +1,5 @@
+"use client";
+
 import style from "./Stages.module.scss"
 import Image from "next/image";
 import stageOne from "@/public/stages-of-work-1.jpg";

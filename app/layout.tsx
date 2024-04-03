@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import React from 'react';
 import Header from '@/components/header/Header';
 import {raleWay} from '@/app/fonts';
+import Footer from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -20,6 +21,7 @@ export default function RootLayout({
     <body >
     <Header/>
     <main className={raleWay.className}>{children}</main>
+    <Footer/>
     </body>
     </html>
   )

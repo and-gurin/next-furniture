@@ -1,0 +1,38 @@
+@import 'styles/constants';
+@import 'styles/mixins';
+
+.footer {
+  margin: 0 8px 16px 8px;
+
+  &__wrapper {
+    border-radius: 24px 24px 24px 24px;
+    background-color: $whiteSmoke;
+    padding: 40px 40px 0 40px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px $blackColor;
+    padding-bottom: 40px;
+  }
+
+  &__address {
+    @include flex( $flexDirection: column, $align: flex-start, $gap:16px)
+  }
+
+  &__links {
+    @include flex( $flexDirection: column, $align: flex-start, $gap:16px)
+  }
+
+  &__social {
+    @include flex( $flexDirection: column, $align: flex-start, $gap:16px)
+  }
+
+  &__copyright {
+    padding: 16px 0;
+    margin-left: auto;
+  }
+}

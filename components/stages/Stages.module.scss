@@ -14,9 +14,13 @@
   }
 
   &__content {
-    display: flex;
-    margin-bottom: 56px;
-    gap: 48px;
+    grid-column-gap: 48px;
+    grid-row-gap: 16px;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
+    grid-auto-columns: 1fr;
+    margin-top: 3.5rem;
+    display: grid;
   }
 
   &__figure {
