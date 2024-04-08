@@ -63,9 +63,11 @@ export default function Contacts () {
                     </div>
                     <div className={style.form}>
                         <h3 className={baskerville.className + ' ' + style.form__title}>
-                            Wpisz swoje imię oraz numer telefonu lub adres e-mail.
-                            Skontaktujemy się z Tobą tak szybko, jak to możliwe.
+                            Bezpłatna wizyta
                         </h3>
+                        <p className={style.form__subtitle}>
+                            Wpisz swoje imię i nazwisko oraz numer telefonu lub adres e-mail, aby umówić się na bezpłatną wizytę.
+                        </p>
                         <form className={style.contacts__form} ref={form} onSubmit={sendEmail}>
                             <input placeholder='Imię'
                                    name='user_name'

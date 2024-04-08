@@ -17,10 +17,10 @@ const Footer = () => {
                         </a>
                     </div>
                     <address className={style.footer__links}>
-                        <a className={style.contacts__link_right} href="tel:+48511944302">
+                        <a href="tel:+48511944302">
                             511944302
                         </a>
-                        <a className={style.contacts__link_right} href="mailto:inhouse.pol@gmail.com">
+                        <a href="mailto:inhouse.pol@gmail.com">
                             inhouse.pol@gmail.com
                         </a>
                     </address>

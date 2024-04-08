@@ -36,7 +36,6 @@ const Hero = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         cssEase: 'linear',
-        centerMode: true,
     };
 
     return (

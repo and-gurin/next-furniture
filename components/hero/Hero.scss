@@ -39,14 +39,6 @@
   }
 }
 
-.slider {
-  //position: absolute;
-
-  &__wrapper {
-    //position: relative;
-  }
-}
-
 .slick-list {
   height: 650px;
   width: 650px;
@@ -55,7 +47,6 @@
 }
 
 .slick-track {
-  //position: absolute;
   overflow: hidden;
 }
 

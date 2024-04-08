@@ -28,10 +28,44 @@
   }
 
   &__products {
-    @include flex( $gap:5px)
+    @include flex( $gap:5px);
+    cursor: pointer;
+
+  }
+
+  &__arrow {
+    transform: rotate(180deg);
+    transition: transform 500ms ease;
+
+    &_up {
+      transition: transform 500ms ease;
+    }
   }
 
   &__links {
     @include flex( $gap:20px)
+  }
+
+  &__bottomMenu {
+    background-color: $whiteColor;
+    border-radius: 0 0 12px 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    z-index: 14;
+    padding: 13px 20px;
+
+    &_active {
+      opacity: 1;
+      transition: all 0.3s ease-out;
+
+    }
+  }
+
+  &__additional {
+    transition:  500ms ease;
   }
 }
