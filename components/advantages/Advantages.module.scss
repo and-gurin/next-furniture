@@ -1,0 +1,15 @@
+.advantages {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.advantage {
+  line-height: 34px;
+  font-style: italic;
+}
+
+.txt {
+  max-width: 50ch;
+  margin-bottom: 12px;
+}

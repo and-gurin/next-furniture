@@ -25,10 +25,11 @@ const KindOfFurniture = ({images, descriptions, location}: {
     location?: string
 }) => {
     return (
-        <Fade direction={'up'} triggerOnce={true} fraction={0}>
+
             <section className={style.kind}>
+                <Fade direction={'up'} triggerOnce={true} fraction={0}>
                 <div className={`wrapper ${style.kind__wrapper}`}>
-                    <div className={location === 'image-on-left'
+                    <div className={location !== 'image-on-left'
                         ? style.kind__grid
                         : style.kind__grid + ' ' + style.kind__grid_left}>
                         <div className={style.kind__description}>
@@ -44,10 +45,10 @@ const KindOfFurniture = ({images, descriptions, location}: {
                                 </p>
                                 <div>
                                     {descriptions.furnitureTypes.map(type => {
-                                        return <Fade key={type} direction={'left'}>
+                                        return <Fade key={type} direction={location !== 'image-on-left'
+                                            ? 'left' : 'right'}>
                                             <Link href={'#'} className={style.kind__details}>
                                                 <p>{type}</p>
-                                                <Fade direction={"left"} triggerOnce={true} fraction={0}>
                                                     <div className={style.kind__more}>
                                                         <p className={baskerville.className + ' ' + style.kind__copy}>
                                                             Więcej
@@ -58,10 +59,8 @@ const KindOfFurniture = ({images, descriptions, location}: {
                                                                height='16'
                                                         />
                                                     </div>
-                                                </Fade>
                                             </Link>
                                         </Fade>
-
                                     })}
                                 </div>
                             </div>
@@ -69,7 +68,8 @@ const KindOfFurniture = ({images, descriptions, location}: {
                         <div className={style.kind__images}>
                             {images.map(image => {
                                 return (
-                                    <div key={image.id} className={style.kind__figure}>
+                                    <div key={image.id} className={location !== 'image-on-left'
+                                        ? style.kind__figure_right : style.kind__figure_left}>
                                         <Image className={style.kind__image}
                                                src={image.src}
                                                alt='image-of-furniture'
@@ -82,9 +82,8 @@ const KindOfFurniture = ({images, descriptions, location}: {
                         </div>
                     </div>
                 </div>
+                </Fade>
             </section>
-        </Fade>
-
     );
 };
 

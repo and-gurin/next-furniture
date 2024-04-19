@@ -12,7 +12,6 @@
     background-color: $whiteSmoke;
     border-radius: 24px;
     overflow: hidden;
-    height: 760px;
     padding: 48px 0 0 40px;
   }
 
@@ -21,11 +20,21 @@
     line-height: 83px;
     font-weight: 700;
     margin-bottom: 32px;
+    margin-top: 24px;
   }
 
   &__subtitle {
-    max-width: 60ch;
-    margin-bottom: 72px;
+    max-width: 50ch;
+    margin-bottom: 32px;
+  }
+
+  &__figure {
+    position: relative;
+    height: 590px;
+  }
+
+  &__image {
+    object-fit: cover;
   }
 
   &__button {
@@ -36,6 +45,7 @@
     font-weight: 700;
     color: $whiteColor;
     display: inline-block;
+    margin-bottom: 32px;
   }
 }
 
@@ -75,7 +85,7 @@
   width: 60px;
   height: 60px;
   position: absolute;
-  top: calc(100% - 60px/2);
+  top: calc(100% - 91px);
   z-index: 1;
 }
 
@@ -89,22 +99,31 @@
     opacity: 1;
   }
 
+  &:focus {
+    background: $blackColor;
+  }
+
   &:hover {
-    background-color: $blackColor;
+    background: $blackColor;
   }
 }
 
 .slick-prev {
   background-color: $whiteSmoke;
   left: 0;
-  border-radius: 0 0 0 24px;
+  //border-radius: 0 0 0 24px;
 
   &:before {
     color: $blackColor;
     opacity: 1;
   }
 
+  &:focus {
+    background: $whiteSmoke;
+  }
+
   &:hover {
-    background-color: $whiteSmoke;
+    background: $whiteSmoke;
+    color: $whiteSmoke;
   }
 }

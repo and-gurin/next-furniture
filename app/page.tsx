@@ -1,7 +1,7 @@
 import Hero from "@/components/hero/Hero";
-import kitchen1 from "@/public/Collage/kitchen-collage-1.jpg"
-import kitchen2 from "@/public/Collage/kitchen-collage-3.jpg"
-import kitchen3 from "@/public/Collage/kitchen-collage-2.jpg"
+import kitchen1 from "@/public/Kitchen/Сollage/high-tech-1.jpg"
+import kitchen2 from "@/public/Kitchen/Сollage/Modern-2-2.jpg"
+import kitchen3 from "@/public/Kitchen/Сollage/Modern-1.jpg"
 import KindOfFurniture from "@/components/kinds/KindOfFurniture";
 import Stages from "@/components/stages/Stages";
 
