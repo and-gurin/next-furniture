@@ -1,0 +1,20 @@
+@import 'styles/constants';
+
+.button {
+  background-color: $blackColor;
+  text-align: center;
+  padding: 16px;
+  font-family: Raleway Bold, sans-serif;
+  font-weight: 700;
+  color: $whiteColor;
+  display: inline-block;
+  margin-bottom: 32px;
+  border: solid 1px $blackColor;
+  transition: all 500ms ease;
+
+  &:hover {
+    background-color: $whiteSmoke;
+    color: $blackColor;
+    border: solid 1px $blackColor;
+  }
+}

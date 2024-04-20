@@ -12,8 +12,8 @@ import kitchenFour500 from "@/public/Kitchen/HIGH-TECH/high-tech-5.jpg"
 import wardrobe555 from "@/public/Kitchen/HIGH-TECH/high-tech-6-3.jpg"
 import Image from "next/image";
 import {baskerville} from '@/app/fonts';
-import Link from "next/link";
 import Advantages from "@/components/advantages/Advantages";
+import Button from "@/components/button/button";
 
 const images = [
     {id: 1, src: kitchenOne500},
@@ -44,10 +44,7 @@ const Hero = () => {
                       dla Twojego wnętrza! Tworzymy spersonalizowane rozwiązania meblowe,
                       które odzwierciedlają Twoją wyjątkowość i styl.
                   </p>
-
-                  <Link href='/contacts' className='hero__button'>
-                      Skontaktuj się z nami →
-                  </Link>
+                  <Button/>
                   <div>
                       <Advantages/>
                   </div>

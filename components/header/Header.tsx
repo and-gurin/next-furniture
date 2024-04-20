@@ -8,6 +8,7 @@ import arrowDown from "@/public/arrow-down-339-svgrepo-com.svg";
 import {raleWay} from '@/app/fonts';
 import Logo from "@/components/logo/Logo";
 import {useState} from "react";
+import Link from "next/link";
 
 const links = [
     {id: 1, title: 'Materiały', href: '/materials'},
@@ -44,7 +45,7 @@ const Header = () => {
             </div>
             <div className={!open ? style.header__bottomMenu
                 : style.header__bottomMenu + ' ' +style.header__bottomMenu_active}>
-                <p className={style.header__additional}>Kuhnie</p>
+                <Link href={'/products/modern-kitchen'} className={style.header__additional}>Kuhnie</Link>
                 <p className={style.header__additional}>Kuhnie</p>
                 <p className={style.header__additional}>Kuhnie</p>
                 <p className={style.header__additional}>Kuhnie</p>
