@@ -55,8 +55,8 @@ const Hero = () => {
                           {images.map((image) =>
                               <div className='hero__figure' key={image.id}>
                                   <Image
-                                      fill
                                       className='hero__image'
+                                      fill
                                       sizes="(min-width: 200px) 50vw, 100vw"
                                       src={image.src}
                                       alt="slider image of furniture"
