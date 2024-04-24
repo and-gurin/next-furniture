@@ -52,9 +52,9 @@ const stages = [
         list: ''
     },
 ]
-const Stages = () => {
+const Stages = ({background}: {background?: string}) => {
     return (
-        <section className={style.stages}>
+        <section className={background === 'whiteSmoke' ? style.stages + ' ' + style.stages_backgroundSmoke : style.stages}>
             <div className={`wrapper ${style.stages__wrapper}`}>
                 <Fade direction={"up"}>
                     <h2 className={baskerville.className + ' ' + style.stages__title}>

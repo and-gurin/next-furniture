@@ -2,7 +2,7 @@
   background-color: gray;
   width: 100vw;
   height: 100vh;
-  z-index: 6;
+  z-index: 11;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -17,10 +17,6 @@
   z-index: 17;
   width: 90vw;
   height: 100vh;
-}
-
-.modal {
-
 }
 
 .paging__figure {

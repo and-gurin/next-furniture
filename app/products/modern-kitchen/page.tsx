@@ -14,7 +14,7 @@ const ModernKitchen = () => {
                     'odważne rozwiązania w każdym szczególe to kuchnie ' +
                     'w stylu secesyjnym.'}/>
             <GalleryKitchen/>
-            <Stages/>
+            <Stages background={'whiteSmoke'}/>
         </>
     );
 };

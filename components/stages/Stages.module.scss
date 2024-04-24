@@ -6,6 +6,10 @@
   margin: 0 8px 64px 8px;
   padding: 40px;
 
+  &_backgroundSmoke {
+    background-color: $whiteSmoke;
+  }
+
   &__title {
     margin-bottom: 56px;
     font-size: 42px;

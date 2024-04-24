@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.scss";
 import "slick-carousel/slick/slick-theme.scss";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import CustomPaging from "@/components/slider/Slider";
+import React from "react";
 
 export type TabsProps = {
     tag: string,
