@@ -1,0 +1,22 @@
+import React from 'react';
+import FurnitureDetails from "@/components/details/FurnitureDetails";
+import classic from "@/public/Kitchen/Classic/Classic-3.jpg"
+import Stages from "@/components/stages/Stages";
+import GalleryKitchen from "@/components/gallery/gallery-kitchen/GalleryKitchen";
+
+const ClassicKitchen = () => {
+    return (
+        <>
+            <FurnitureDetails
+                image={classic}
+                title={'Kuchnie w stylu klasycznym'}
+                description={'Klasyka, która nigdy nie wychodzi z mody. ' +
+                    'Witamy w świecie wspaniałości i' +
+                    'wyrafinowania, w którym piękno żyje w każdym szczególe.'}/>
+            <GalleryKitchen/>
+            <Stages background={'whiteSmoke'}/>
+        </>
+    );
+};
+
+export default ClassicKitchen;

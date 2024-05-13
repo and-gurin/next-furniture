@@ -9,6 +9,9 @@ import {raleWay} from '@/app/fonts';
 import Logo from "@/components/logo/Logo";
 import {useState} from "react";
 import Link from "next/link";
+import kitchen1 from "@/public/Kitchen/Modern/Modern-8.jpg"
+import kitchen2 from "@/public/Kitchen/Classic/Classic-3.jpg"
+import kitchen3 from "@/public/Kitchen/HIGH-TECH/high-tech-1.jpg"
 
 const links = [
     {id: 1, title: 'Materiały', href: '/materials'},
@@ -18,15 +21,16 @@ const links = [
 const Header = () => {
 
     const [open, setOpen] = useState(false)
+    const [productImage, setProductImage] = useState('')
 
     return (
         <header className={raleWay.className + ' ' + style.header}>
-            <div className={`wrapper  ${style.header__wrapper}`}>
+            <div className={`wrapper  ${style.header__wrapper}`} >
                 <Logo/>
                 <nav className={style.header__navigation}>
                     <div className={style.header__products}
                          //onMouseEnter={() => setOpen(!open)}
-                         //onMouseLeave={() => setOpen(!open)}
+                         //onMouseLeave={() => setOpen(open === false)}
                          onClick={() => setOpen(!open)}>
                         Produkty
                         <Image
@@ -45,11 +49,66 @@ const Header = () => {
             </div>
             <div className={!open ? style.header__bottomMenu
                 : style.header__bottomMenu + ' ' +style.header__bottomMenu_active}>
-                <Link href={'/products/modern-kitchen'} className={style.header__additional}>Kuhnie</Link>
-                <p className={style.header__additional}>Kuhnie</p>
-                <p className={style.header__additional}>Kuhnie</p>
-                <p className={style.header__additional}>Kuhnie</p>
-                <p className={style.header__additional}>Kuhnie</p>
+                <div className={style.header__categories}>
+                    <Link
+                        href={'/products/modern-kitchen'}
+                        className={style.header__category}
+                        onClick={() => setOpen(!open)}
+                        onMouseEnter={() => setProductImage('kitchen1')}
+                    >
+                        Kuchnie w nowoczesnym stylu
+                    </Link>
+                    <Link
+                        href={'/products/classic-kitchen'}
+                        className={style.header__category}
+                        onClick={() => setOpen(!open)}
+                        onMouseEnter={() => setProductImage('kitchen2')}
+                    >
+                        Kuchnie w stylu klasycznym
+                    </Link>
+                    <Link
+                        href={'/products/high-tech-kitchen'}
+                        className={style.header__category}
+                        onClick={() => setOpen(!open)}
+                        onMouseEnter={() => setProductImage('kitchen3')}
+                    >
+                        Kuchnie w stylu High Tech
+                    </Link>
+                </div>
+                <div className={style.header__categories}>
+                    <Link
+                        href={'/products/modern-kitchen'}
+                        className={style.header__category}
+                        onClick={() => setOpen(!open)}
+                    >
+                        Kuchnie w nowoczesnym stylu
+                    </Link>
+                    <Link
+                        href={'/products/classic-kitchen'}
+                        className={style.header__category}
+                        onClick={() => setOpen(!open)}
+                    >
+                        Kuchnie w stylu klasycznym
+                    </Link>
+                    <Link
+                        href={'/products/high-tech-kitchen'}
+                        className={style.header__category}
+                        onClick={() => setOpen(!open)}
+                    >
+                        Kuchnie w stylu High Tech
+                    </Link>
+                </div>
+                <div className={style.header__figure}>
+                    {
+                        productImage === 'kitchen1'
+                        ? <Image className={style.header__image} src={kitchen1} alt={'products photo'}/>
+                        : productImage === 'kitchen2'
+                                ? <Image className={style.header__image} src={kitchen2} alt={'products photo'}/>
+                                : productImage === 'kitchen3'
+                                    ? <Image className={style.header__image} src={kitchen3} alt={'products photo'}/>
+                                : <Image className={style.header__image} src={kitchen1} alt={'products photo'}/>
+                    }
+                </div>
             </div>
         </header>
     );
