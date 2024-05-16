@@ -56,9 +56,9 @@ import high103 from "@/public/Kitchen/HIGH-TECH/high-tech-10-3.jpg";
 
 const tabs = [
     {tag: 'all', title: 'Wszystkie'},
-    {tag: 'modern', title: 'Nowoczesny styl'},
-    {tag: 'high', title: 'Styl High-Tech'},
-    {tag: 'classic', title: 'Klasyczny styl'},
+    {tag: 'modern', title: 'Nowoczesny'},
+    {tag: 'high', title: 'High-Tech'},
+    {tag: 'classic', title: 'Klasyczny'},
 ]
 
 const images = [

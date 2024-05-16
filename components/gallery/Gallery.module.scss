@@ -15,6 +15,11 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 32px;
+
+    @include media-laptop {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   &__title {
@@ -22,6 +27,10 @@
     font-weight: 700;
     line-height: 48px;
     color: $blackColor;
+
+    @include media-laptop {
+      margin-bottom: 20px;
+    }
   }
 
   &__buttons {
