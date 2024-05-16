@@ -103,41 +103,41 @@ const Header = () => {
                     <Link
                         href={'/products/classic-kitchen'}
                         className={style.header__category}
-                        onClick={() => setOpenBottomMenu(!openBottomMenu)}
+                        onClick={onClickBottomMenuLinks}
                     >
                         Kuchnie w stylu klasycznym
                     </Link>
                     <Link
                         href={'/products/high-tech-kitchen'}
                         className={style.header__category}
-                        onClick={() => setOpenBottomMenu(!openBottomMenu)}
+                        onClick={onClickBottomMenuLinks}
                     >
                         Kuchnie w stylu High Tech
                     </Link>
                 </div>
-                <div className={style.header__categories}>
-                    <Link
-                        href={'/products/modern-kitchen'}
-                        className={style.header__category}
-                        onClick={() => setOpenBottomMenu(!openBottomMenu)}
-                    >
-                        Kuchnie w nowoczesnym stylu
-                    </Link>
-                    <Link
-                        href={'/products/classic-kitchen'}
-                        className={style.header__category}
-                        onClick={() => setOpenBottomMenu(!openBottomMenu)}
-                    >
-                        Kuchnie w stylu klasycznym
-                    </Link>
-                    <Link
-                        href={'/products/high-tech-kitchen'}
-                        className={style.header__category}
-                        onClick={() => setOpenBottomMenu(!openBottomMenu)}
-                    >
-                        Kuchnie w stylu High Tech
-                    </Link>
-                </div>
+                {/*<div className={style.header__categories}>*/}
+                {/*    <Link*/}
+                {/*        href={'/products/modern-kitchen'}*/}
+                {/*        className={style.header__category}*/}
+                {/*        onClick={() => setOpenBottomMenu(!openBottomMenu)}*/}
+                {/*    >*/}
+                {/*        Kuchnie w nowoczesnym stylu*/}
+                {/*    </Link>*/}
+                {/*    <Link*/}
+                {/*        href={'/products/classic-kitchen'}*/}
+                {/*        className={style.header__category}*/}
+                {/*        onClick={() => setOpenBottomMenu(!openBottomMenu)}*/}
+                {/*    >*/}
+                {/*        Kuchnie w stylu klasycznym*/}
+                {/*    </Link>*/}
+                {/*    <Link*/}
+                {/*        href={'/products/high-tech-kitchen'}*/}
+                {/*        className={style.header__category}*/}
+                {/*        onClick={() => setOpenBottomMenu(!openBottomMenu)}*/}
+                {/*    >*/}
+                {/*        Kuchnie w stylu High Tech*/}
+                {/*    </Link>*/}
+                {/*</div>*/}
             </div>
             <div className={!open ? style.header__bottomMenu
                 : style.header__bottomMenu + ' ' +style.header__bottomMenu_active}>
@@ -167,29 +167,29 @@ const Header = () => {
                         Kuchnie w stylu High Tech
                     </Link>
                 </div>
-                <div className={style.header__categories}>
-                    <Link
-                        href={'/products/modern-kitchen'}
-                        className={style.header__category}
-                        onClick={() => setOpen(!open)}
-                    >
-                        Kuchnie w nowoczesnym stylu
-                    </Link>
-                    <Link
-                        href={'/products/classic-kitchen'}
-                        className={style.header__category}
-                        onClick={() => setOpen(!open)}
-                    >
-                        Kuchnie w stylu klasycznym
-                    </Link>
-                    <Link
-                        href={'/products/high-tech-kitchen'}
-                        className={style.header__category}
-                        onClick={() => setOpen(!open)}
-                    >
-                        Kuchnie w stylu High Tech
-                    </Link>
-                </div>
+                {/*<div className={style.header__categories}>*/}
+                {/*    <Link*/}
+                {/*        href={'/products/modern-kitchen'}*/}
+                {/*        className={style.header__category}*/}
+                {/*        onClick={() => setOpen(!open)}*/}
+                {/*    >*/}
+                {/*        Kuchnie w nowoczesnym stylu*/}
+                {/*    </Link>*/}
+                {/*    <Link*/}
+                {/*        href={'/products/classic-kitchen'}*/}
+                {/*        className={style.header__category}*/}
+                {/*        onClick={() => setOpen(!open)}*/}
+                {/*    >*/}
+                {/*        Kuchnie w stylu klasycznym*/}
+                {/*    </Link>*/}
+                {/*    <Link*/}
+                {/*        href={'/products/high-tech-kitchen'}*/}
+                {/*        className={style.header__category}*/}
+                {/*        onClick={() => setOpen(!open)}*/}
+                {/*    >*/}
+                {/*        Kuchnie w stylu High Tech*/}
+                {/*    </Link>*/}
+                {/*</div>*/}
                 <div className={style.header__figure}>
                     {
                         productImage === 'kitchen1'
