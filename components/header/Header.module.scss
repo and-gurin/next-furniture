@@ -15,22 +15,33 @@
   margin: 8px;
   border-radius: 12px;
 
+  @include media-laptop {
+    padding: 8px 12px;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
   }
 
   &__navigation {
-    @include flex( $gap:20px)
+    @include flex( $gap:20px);
+
+    @include media-laptop {
+      display: none;
+    }
+
+    &_burger{
+      @include flex($flexDirection: column, $gap:20px, $align: flex-start, $justify: flex-start,);
+      margin: 20px 0 20px 10px;
+    }
   }
 
   &__products {
     @include flex( $gap:5px);
     cursor: pointer;
-
   }
 
   &__arrow {
@@ -43,7 +54,30 @@
   }
 
   &__links {
-    @include flex( $gap:20px)
+    @include flex( $gap:20px);
+
+    &_burger {
+      @include flex($flexDirection: column, $gap:20px, $align: flex-start,);
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @include media-laptop {
+      display: flex;
+    }
+  }
+
+  &__horizontalLLine {
+    height: 1px;
+    background-color: $blackColor;
+    text-align: center;
+  }
+
+  &__arrowLeft {
+    display: flex;
+    align-items: center;
   }
 
   &__bottomMenu {
@@ -64,11 +98,19 @@
       grid-template-columns: 1fr 1fr 1fr ;
       display: grid;
     }
+
+    &_burger {
+      transition: all 0.3s ease-out;
+      grid-row-gap: 12px;
+      grid-template-columns: 1fr;
+      display: grid;
+    }
   }
 
   &__categories {
     display: flex;
     flex-direction: column;
+    gap: 12px;
   }
 
   &__category {
@@ -81,7 +123,7 @@
   }
 
   &__figure {
-    width: 100%;
+    width: 80%;
     height: 240px;
     border-radius: 12px;
   }

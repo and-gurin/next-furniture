@@ -1,10 +1,27 @@
 @import 'styles/constants';
+@import 'styles/mixins';
 
 .stages {
-  background-color: $mintCream;
-  border-radius: 24px;
-  margin: 0 8px 64px 8px;
-  padding: 40px;
+  margin: 0 8px 4.5rem 8px;
+
+  @include media-tablet {
+    margin: 0 8px 32px 8px;
+  }
+
+  &__wrapper {
+    background-color: $mintCream;
+    border-radius: 24px;
+    padding: 40px;
+
+    @include media-laptop {
+      grid-template-columns: 1fr;
+      padding: 40px 16px 40px 16px;
+    }
+
+    @include media-mobile {
+      border-radius: 12px
+    }
+  }
 
   &_backgroundSmoke {
     background-color: $whiteSmoke;
@@ -15,23 +32,41 @@
     font-size: 42px;
     line-height: 48px;
     width: 45%;
+
+    @include media-laptop {
+      width: 90%;
+    }
   }
 
   &__content {
     grid-column-gap: 48px;
     grid-row-gap: 16px;
     grid-template-rows: auto;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "images description";
     grid-auto-columns: 1fr;
     margin-top: 3.5rem;
     display: grid;
+
+    @include media-laptop {
+      grid-template-columns: 1fr;
+      grid-template-areas: "description"
+      "images";
+    }
   }
 
   &__figure {
-
+    position: relative;
+    height: 240px;
+    grid-area: images;
 
     & img {
+      object-fit: cover;
       border-radius: 12px;
+
+      @include media-mobile {
+        border-radius: 8px;
+      }
     }
   }
 
@@ -49,7 +84,13 @@
   }
 
   &__description {
+    display: flex;
+    gap: 48px;
+    grid-area: description;
 
+    @include media-tablet {
+      gap: 24px;
+    }
   }
 
   &__subtitle {

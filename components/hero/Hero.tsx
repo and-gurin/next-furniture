@@ -26,49 +26,47 @@ const images = [
 const Hero = () => {
 
     const settings = {
-        className: 'center',
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
-        cssEase: 'linear',
     };
 
     return (
-      <section className='hero'>
-          <div className={`wrapper hero__wrapper`}>
-              <div className='hero__description'>
-                  <h1 className={`${baskerville.className} hero__title`}>Meble na wymiar</h1>
-                  <p className='hero__subtitle'>Witamy w świecie nieograniczonych możliwości
-                      dla Twojego wnętrza! Tworzymy spersonalizowane rozwiązania meblowe,
-                      które odzwierciedlają Twoją wyjątkowość i styl.
-                  </p>
-                  <Button/>
-                  <div>
-                      <Advantages/>
-                  </div>
-              </div>
-              <div className='slider__wrapper'>
-                  <div className='slider'>
-                      <Slider {...settings}>
-                          {images.map((image) =>
-                              <div className='hero__figure' key={image.id}>
-                                  <Image
-                                      className='hero__image'
-                                      fill
-                                      sizes="(min-width: 200px) 50vw, 100vw"
-                                      src={image.src}
-                                      alt="slider image of furniture"
-                                  />
-                              </div>
-                          )}
-                      </Slider>
-                  </div>
-              </div>
-          </div>
-      </section>
-  )
+        <section className='hero'>
+            <div className={`wrapper hero__wrapper`}>
+                <div className='hero__description'>
+                    <h1 className={`${baskerville.className} hero__title`}>Meble na wymiar</h1>
+                    <p className='hero__subtitle'>Witamy w świecie nieograniczonych możliwości
+                        dla Twojego wnętrza! Tworzymy spersonalizowane rozwiązania meblowe,
+                        które odzwierciedlają Twoją wyjątkowość i styl.
+                    </p>
+                    <Button/>
+                    <div>
+                        <Advantages/>
+                    </div>
+                </div>
+                <div className='slider__wrapper'>
+                    <div className='slider'>
+                        <Slider {...settings}>
+                            {images.map((image) =>
+                                <div className='hero__figure' key={image.id}>
+                                    <Image
+                                        className='hero__image'
+                                        fill
+                                        sizes="(min-width: 200px) 50vw, 100vw"
+                                        src={image.src}
+                                        alt="slider image of furniture"
+                                    />
+                                </div>
+                            )}
+                        </Slider>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
 }
 
 export default Hero;

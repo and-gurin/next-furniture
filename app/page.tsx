@@ -18,7 +18,11 @@ const kitchenDescriptions = {
         description: 'To nie ma znaczenia. W kuchni na zamówienie każdy, kto chce przygotować ' +
             'śniadanie, poczuje się jak szef kuchni. W Twojej kuchni ' +
             'uwzględnimy preferencje każdego członka rodziny.',
-        furnitureTypes: ['Kuchnie w nowoczesnym stylu', 'Kuchnie w stylu klasycznym', 'Kuchnie w stylu High-Tech',],
+        furnitureTypes: [
+            {type: 'Kuchnie w nowoczesnym stylu', link: '/products/modern-kitchen'},
+            {type: 'Kuchnie w stylu klasycznym', link: '/products/classic-kitchen'},
+            {type: 'Kuchnie w stylu High-Tech', link: '/products/high-tech-kitchen'},
+        ],
     }
 
 export default function Home() {

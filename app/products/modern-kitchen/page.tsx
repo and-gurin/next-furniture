@@ -13,7 +13,7 @@ const ModernKitchen = () => {
                 description={'Eleganckie linie, funkcjonalność i ' +
                     'odważne rozwiązania w każdym szczególe to kuchnie ' +
                     'w stylu secesyjnym.'}/>
-            <GalleryKitchen/>
+            <GalleryKitchen defaultTag={'modern'}/>
             <Stages background={'whiteSmoke'}/>
         </>
     );

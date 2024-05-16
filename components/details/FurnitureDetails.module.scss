@@ -2,22 +2,39 @@
 @import 'styles/mixins';
 
 .details {
-  margin: 100px 8px 16px 8px;
+  margin: 96px 8px 16px 8px;
+
+  @include media-tablet {
+    margin: 84px 8px 16px 8px;
+  }
 
   &__wrapper {
     border-radius: 24px 24px 24px 24px;
     background-color: $whiteSmoke;
+
+    @include media-mobile {
+      border-radius: 12px;
+    }
   }
 
   &__grid {
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
+    grid-auto-rows: 1fr;
     grid-template-columns: 50% 50%;
     grid-auto-columns: 1fr;
     display: grid;
+
+    @include media-laptop {
+      grid-template-columns: 100%;
+    }
   }
 
   &__description {
     padding: 40px;
+
+    @include media-laptop {
+      padding: 20px 16px;
+    }
   }
 
   &__title {
@@ -26,6 +43,10 @@
     line-height: 48px;
     color: $blackColor;
     margin-bottom: 32px;
+
+    @include media-mobile {
+      font-size: 36px;
+    }
   }
 
   &__subtitle {
@@ -35,11 +56,27 @@
 
   &__figure {
     position: relative;
+
+    @include media-laptop {
+      height: 590px;
+    }
+
+    @include media-mobile {
+      height: 430px;
+    }
   }
 
   &__image {
     object-fit: cover;
     border-radius: 0 24px 24px 0;
+
+    @include media-laptop {
+      border-radius: 8px 8px 24px 24px;
+    }
+
+    @include media-mobile {
+      border-radius: 4px 4px 12px 12px;
+    }
   }
 
 }

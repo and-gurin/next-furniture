@@ -117,9 +117,14 @@ const images = [
     {id: '53', src: high103, tag: 'high'},
 ]
 
-const GalleryKitchen = () => {
+const GalleryKitchen = ({defaultTag}: {defaultTag: string}) => {
     return (
-        <Gallery tabs={tabs} images={images} title={'Galeria realizacji'}/>
+        <Gallery
+            tabs={tabs}
+            images={images}
+            title={'Galeria realizacji'}
+            defaultTag={defaultTag}
+        />
     );
 };
 

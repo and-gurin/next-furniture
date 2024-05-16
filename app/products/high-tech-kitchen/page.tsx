@@ -14,7 +14,7 @@ const HighTechKitchen = () => {
                     'High Tech to innowacyjne rozwiązania i nowoczesne wzornictwo ' +
                     'stworzone z myślą o tych, ' +
                     'którzy nadążają za duchem czasu i cenią sobie komfort.'}/>
-            <GalleryKitchen/>
+            <GalleryKitchen defaultTag={'high'}/>
             <Stages background={'whiteSmoke'}/>
         </>
     );

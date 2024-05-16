@@ -26,13 +26,14 @@ export type ImagesProps = {
     initialIndex?: number,
 }
 
-const Gallery = ({tabs, images, title}: {
+const Gallery = ({tabs, images, title, defaultTag}: {
     tabs: TabsProps[],
     images: ImageProps[],
-    title: string
+    title: string,
+    defaultTag: string
 }) => {
 
-    const [activeTab, setActiveTab] = React.useState('all');
+    const [activeTab, setActiveTab] = React.useState(defaultTag);
     const [openSlider, setOpenSlider] = React.useState(false);
     const [initialIndex, setInitialIndex] = React.useState(0);
     const tabList = tabs.map(tab => {

@@ -13,7 +13,7 @@ const ClassicKitchen = () => {
                 description={'Klasyka, która nigdy nie wychodzi z mody. ' +
                     'Witamy w świecie wspaniałości i' +
                     'wyrafinowania, w którym piękno żyje w każdym szczególe.'}/>
-            <GalleryKitchen/>
+            <GalleryKitchen defaultTag={'classic'}/>
             <Stages background={'whiteSmoke'}/>
         </>
     );

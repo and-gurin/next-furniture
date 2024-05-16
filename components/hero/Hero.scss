@@ -1,18 +1,31 @@
 @import 'styles/constants';
+@import 'styles/mixins';
 
 .hero {
-  margin: 100px 8px 8px 8px;
+  margin: 100px 8px 4.5rem 8px;
+
+  @include media-tablet {
+    margin: 84px 8px 32px 8px;
+  }
 
   &__wrapper {
     grid-auto-columns: 1fr;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 4.5rem;
     background-color: $whiteSmoke;
     border-radius: 24px;
     overflow: hidden;
-    padding: 48px 0 0 40px;
+    padding: 48px 0 72px 40px;
+
+    @include media-laptop {
+      grid-template-columns: 1fr;
+      padding: 48px 16px 72px 16px;
+    }
+
+    @include media-mobile {
+      border-radius: 12px
+    }
   }
 
   &__title {
@@ -20,17 +33,30 @@
     line-height: 83px;
     font-weight: 700;
     margin-bottom: 32px;
-    margin-top: 24px;
+
+    @include media-mobile {
+      font-size: 36px;
+      margin-top: 0;
+      margin-bottom: 22px;
+    }
   }
 
   &__subtitle {
     max-width: 50ch;
     margin-bottom: 32px;
+
+    @include media-laptop {
+      max-width: 95%;
+    }
   }
 
   &__figure {
     position: relative;
     height: 590px;
+
+    @include media-tablet {
+      height: 400px;
+    }
   }
 
   &__image {
@@ -39,10 +65,17 @@
 }
 
 .slick-list {
-  height: 650px;
-  width: 650px;
+  width: 50vw;
+  height: 590px;
   overflow: hidden;
-  border-radius: 24px;
+
+  @include media-laptop {
+    width: 100vw;
+  }
+
+  @include media-tablet {
+    height: 400px;
+  }
 }
 
 .slick-track {
@@ -57,16 +90,27 @@
 .slick-slide {
   img {
     border-radius: 24px;
+
+    @include media-mobile {
+      border-radius: 12px
+    }
   }
 }
 
 .slick-active {
   opacity: 1;
-  display: block !important;
   margin-right: 16px;
-  width: 560px !important;
+  width: 45vw !important;
   overflow: hidden;
   border-radius: 24px;
+
+  @include media-laptop {
+    width: 85vw !important;
+  }
+
+  @include media-mobile {
+    border-radius: 12px
+  }
 }
 
 .slick-prev,
@@ -74,8 +118,12 @@
   width: 60px;
   height: 60px;
   position: absolute;
-  top: calc(100% - 91px);
+  top: 560px;
   z-index: 1;
+
+  @include media-tablet {
+    top: 370px;
+  }
 }
 
 .slick-next {

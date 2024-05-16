@@ -12,11 +12,16 @@ export type ImagePropsType = {
     src: StaticImageData,
 }
 
+export type FurnitureTypes = {
+    type: string,
+    link: string
+}
+
 export type FurnitureDescriptionType = {
     kindOfFurniture: string,
     title: string,
     description: string,
-    furnitureTypes: string[],
+    furnitureTypes: FurnitureTypes[],
 }
 
 const KindOfFurniture = ({images, descriptions, location}: {
@@ -45,12 +50,12 @@ const KindOfFurniture = ({images, descriptions, location}: {
                                 </p>
                                 <div>
                                     {descriptions.furnitureTypes.map(type => {
-                                        return <Fade key={type} direction={location !== 'image-on-left'
+                                        return <Fade key={type.type} direction={location !== 'image-on-left'
                                             ? 'left' : 'right'}>
-                                            <Link href={'#'} className={style.kind__details}>
-                                                <p>{type}</p>
+                                            <Link href={type.link} className={style.kind__details}>
+                                                <p>{type.type}</p>
                                                     <div className={style.kind__more}>
-                                                        <p className={baskerville.className + ' ' + style.kind__copy}>
+                                                        <p className={baskerville.className + ' ' + style.kind__details_copy}>
                                                             Więcej
                                                         </p>
                                                         <Image src={arrowRight}

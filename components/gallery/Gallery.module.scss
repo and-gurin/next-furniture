@@ -1,4 +1,5 @@
 @import 'styles/constants';
+@import 'styles/mixins';
 
 .gallery {
   margin: 0 8px 16px 8px;
@@ -53,6 +54,14 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-columns: 1fr;
     display: grid;
+
+    @include media-tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media-mobile {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__figure {

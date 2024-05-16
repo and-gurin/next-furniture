@@ -1,16 +1,28 @@
 @import 'styles/constants';
+@import 'styles/mixins';
 
 .contacts {
-  margin: 100px 8px 64px 8px;
+  margin: 96px 8px 48px 8px;
+
+  @include media-tablet {
+    margin: 84px 8px 32px 8px;
+  }
 
   &__wrapper {
     grid-auto-columns: 1fr;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 4.5rem;
     background-color: $whiteSmoke;
     border-radius: 24px 24px 24px 24px;
+
+    @include media-laptop {
+      grid-template-columns: 1fr;
+    }
+
+    @include media-mobile {
+      border-radius: 12px
+    }
   }
 
   &__description {
@@ -23,7 +35,11 @@
     font-size: 72px;
     line-height: 83px;
     font-weight: 700;
-    margin-bottom: 32px;
+    margin: 20px 0 32px 0;
+
+    @include media-mobile {
+      font-size: 36px;
+    }
   }
 
   &__subtitle {
@@ -52,6 +68,10 @@
   background-color: $blackColor;
   padding: 68px 32px 32px 32px;
   border-radius: 0 24px 24px 0;
+
+  @include media-laptop {
+    border-radius: 0 0 24px 24px;
+  }
 
   &__title {
     font-size: 32px;

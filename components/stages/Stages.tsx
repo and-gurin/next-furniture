@@ -66,30 +66,33 @@ const Stages = ({background}: {background?: string}) => {
                             <div  className={style.stages__content}>
                                 <div className={style.stages__figure}>
                                     <Image src={stage.src}
-                                           width={626}
-                                           height={281}
+                                           fill
+                                           sizes="(min-width: 200px) 50vw, 100vw"
                                            alt='stages-of-work'
                                     />
                                 </div>
-                                <div className={style.stages__number}>
-                                    <p className={baskerville.className + ' ' + style.stages__subtitle}>{stage.id}</p>
-                                    <p className={style.stages__verticalLine}></p>
-                                </div>
                                 <div className={style.stages__description}>
-                                    <p className={baskerville.className + ' ' + style.stages__subtitle}>
-                                        {stage.title}
-                                    </p>
-                                    <p className={style.stages__description}>
-                                        {stage.description}
-                                    </p>
-                                    <br/>
-                                    {stage.list &&
-                                        <ul className={style.stages_list}>
-                                            <li>- pomiar</li>
-                                            <li>- tworzenie projektu</li>
-                                            <li>- wybór materiałów</li>
-                                        </ul>
-                                    }
+                                    <div className={style.stages__number}>
+                                        <p className={baskerville.className + ' ' + style.stages__subtitle}>{stage.id}</p>
+                                        <p className={style.stages__verticalLine}></p>
+                                    </div>
+                                    <div>
+                                        <p className={baskerville.className + ' ' + style.stages__subtitle}>
+                                            {stage.title}
+                                        </p>
+                                        <p className={style.stages__description}>
+                                            {stage.description}
+                                        </p>
+                                        <br/>
+                                        {stage.list &&
+                                            <ul className={style.stages_list}>
+                                                <li>- pomiar</li>
+                                                <li>- tworzenie projektu</li>
+                                                <li>- wybór materiałów</li>
+                                            </ul>
+                                        }
+                                    </div>
+
                                 </div>
                             </div>
                         </Fade>

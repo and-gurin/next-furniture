@@ -2,11 +2,15 @@
 @import 'styles/mixins';
 
 .kind {
-  margin: 0 8px 16px 8px;
+  margin: 0 8px 45px 8px;
 
   &__wrapper {
     border-radius: 24px 24px 24px 24px;
     background-color: $whiteSmoke;
+
+    @include media-mobile {
+      border-radius: 12px;
+    }
   }
 
   &__grid {
@@ -25,6 +29,12 @@
       grid-auto-columns: 1fr;
       display: grid;
     }
+
+    @include media-laptop {
+      grid-template-columns: 1fr;
+      grid-template-areas: "description"
+      "images";
+    }
   }
 
   &__description {
@@ -33,15 +43,23 @@
     justify-content: space-between;
     padding: 40px;
     grid-area: description;
+
+    @include media-laptop {
+      padding: 40px 16px;
+    }
   }
 
   &__copy {
     font-style: italic;
     font-weight: 400;
+
+    @include media-laptop {
+      margin-bottom: 80px;
+    }
   }
 
   &__title {
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 700;
     line-height: 48px;
     color: $blackColor;
@@ -55,14 +73,22 @@
   &__images {
     display: grid;
     grid-column-gap: 8px;
-    grid-template-columns: 58% 21% 21%;
+    grid-template-columns: 58% 20% 20%;
     grid-area: images;
+
+    @include media-mobile {
+      grid-template-columns: 56% 20% 20%;
+    }
   }
 
   &__figure_right,
   &__figure_left {
     position: relative;
     height: 590px;
+
+    @include media-mobile {
+      height: 430px;
+    }
   }
 
   &__image {
@@ -74,6 +100,11 @@
     justify-content: space-between;
     padding: 14px 0;
     border-bottom: solid 1px $blackColor;
+
+    &_copy {
+      font-style: italic;
+      font-weight: 400;
+    }
   }
 
   &__more {
@@ -89,4 +120,40 @@
 
 .kind__images .kind__figure_left:first-child .kind__image {
   border-radius: 24px 0 0 24px;
+}
+
+@include media-laptop {
+  .kind__images .kind__figure_left:last-child .kind__image {
+    border-radius: 0 0 24px 0;
+  }
+
+  .kind__images .kind__figure_left:first-child .kind__image {
+    border-radius: 0 0 0 24px;
+  }
+
+  .kind__images .kind__figure_right:first-child .kind__image {
+    border-radius: 0 0 0 24px;
+  }
+
+  .kind__images .kind__figure_right:last-child .kind__image {
+    border-radius: 0 0 24px 0;
+  }
+}
+
+@include media-mobile {
+  .kind__images .kind__figure_left:last-child .kind__image {
+    border-radius: 0 0 12px 0;
+  }
+
+  .kind__images .kind__figure_left:first-child .kind__image {
+    border-radius: 0 0 0 12px;
+  }
+
+  .kind__images .kind__figure_right:first-child .kind__image {
+    border-radius: 0 0 0 12px;
+  }
+
+  .kind__images .kind__figure_right:last-child .kind__image {
+    border-radius: 0 0 12px 0;
+  }
 }

@@ -28,14 +28,14 @@
 }
 
 @mixin media-laptop {
-  @media (min-width: $desktop-width) { @content; }
+  @media (max-width: $desktop-width) { @content; }
 }
 
 @mixin media-tablet {
-  @media (min-width: $tablet-width) { @content; }
+  @media (max-width: $tablet-width) { @content; }
 }
 
 @mixin media-mobile {
-  @media (min-width: $mobile-width) { @content; }
+  @media (max-width: $mobile-width) { @content; }
 }
 
