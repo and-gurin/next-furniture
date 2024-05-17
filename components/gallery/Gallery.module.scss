@@ -8,6 +8,14 @@
     border-radius: 24px 24px 24px 24px;
     background-color: $mintCream;
     padding: 40px;
+
+    @include media-laptop {
+      padding: 16px;
+    }
+
+    @include media-mobile {
+      border-radius: 12px;
+    }
   }
 
   &__header {
@@ -78,6 +86,10 @@
     height: 240px;
     border-radius: 12px;
     cursor: pointer;
+
+    @include media-mobile {
+      border-radius: 8px;
+    }
   }
 
   &__image {
@@ -85,5 +97,9 @@
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
+
+    @include media-mobile {
+      border-radius: 8px;
+    }
   }
 }

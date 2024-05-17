@@ -16,6 +16,7 @@ import burger from "@/public/icons8-menu.svg";
 import close from "@/public/close-bold-svgrepo-com.svg";
 import arrowRight from "@/public/right-arrow-svgrepo-com.svg"
 import arrowLeft from "@/public/left-arrow-svgrepo-com.svg"
+import handset from "@/public/handset-svgrepo-com.svg"
 
 const links = [
     {id: 1, title: 'Materiały', href: '/materials'},
@@ -79,6 +80,15 @@ const Header = () => {
                     <ul className={style.header__links_burger}>
                         <NavItem links={links} openMenu={() => setOpenBurger(!openBurger)}/>
                     </ul>
+                    <a href="tel:+48511944302" className={style.header__phone}>
+                        <Image
+                            src={handset}
+                            width='24'
+                            height='24'
+                            alt='handset'
+                        />
+                        Zadzwoń do nas teraz
+                    </a>
                 </nav>
             }
             <div className={!openBottomMenu ? style.header__bottomMenu

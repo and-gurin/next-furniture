@@ -3,9 +3,14 @@
 
 .stages {
   margin: 0 8px 4.5rem 8px;
+  border-radius: 24px;
 
   @include media-tablet {
     margin: 0 8px 32px 8px;
+  }
+
+  @include media-mobile {
+    border-radius: 12px
   }
 
   &__wrapper {
@@ -16,10 +21,6 @@
     @include media-laptop {
       grid-template-columns: 1fr;
       padding: 40px 16px 40px 16px;
-    }
-
-    @include media-mobile {
-      border-radius: 12px
     }
   }
 

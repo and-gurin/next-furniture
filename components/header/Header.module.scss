@@ -80,6 +80,13 @@
     align-items: center;
   }
 
+  &__phone {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
+  }
+
   &__bottomMenu {
     background-color: $whiteColor;
     border-radius: 0 0 12px 12px;
