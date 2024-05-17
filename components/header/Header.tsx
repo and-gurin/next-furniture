@@ -132,21 +132,21 @@ const Header = () => {
                     <Link
                         href={'/products/wardrobe'}
                         className={style.header__category}
-                        onClick={() => setOpenBottomMenu(!openBottomMenu)}
+                        onClick={onClickBottomMenuLinks}
                     >
                         Garderoby
                     </Link>
                     <Link
                         href={'/products/swing'}
                         className={style.header__category}
-                        onClick={() => setOpenBottomMenu(!openBottomMenu)}
+                        onClick={onClickBottomMenuLinks}
                     >
                         Szafy z drzwiami skrzydłowymi
                     </Link>
                     <Link
                         href={'/products/sliding'}
                         className={style.header__category}
-                        onClick={() => setOpenBottomMenu(!openBottomMenu)}
+                        onClick={onClickBottomMenuLinks}
                     >
                         Szafy z drzwiami przesuwnymi
                     </Link>
