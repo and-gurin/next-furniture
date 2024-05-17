@@ -12,6 +12,9 @@ import Link from "next/link";
 import kitchen1 from "@/public/Kitchen/Modern/Modern-8.jpg";
 import kitchen2 from "@/public/Kitchen/Classic/Classic-3.jpg";
 import kitchen3 from "@/public/Kitchen/HIGH-TECH/high-tech-1.jpg";
+import wardrobe1 from "@/public/Wardrobe/Collage/Wardrobe-8.jpg";
+import wardrobeSliding from "@/public/Wardrobe/Collage/Sliding-wardrobe-3.jpg";
+import wardrobeSwing from "@/public/Wardrobe/Collage/Swing-wardrobe-11.jpg";
 import burger from "@/public/icons8-menu.svg";
 import close from "@/public/close-bold-svgrepo-com.svg";
 import arrowRight from "@/public/right-arrow-svgrepo-com.svg"
@@ -125,29 +128,29 @@ const Header = () => {
                         Kuchnie w stylu High Tech
                     </Link>
                 </div>
-                {/*<div className={style.header__categories}>*/}
-                {/*    <Link*/}
-                {/*        href={'/products/modern-kitchen'}*/}
-                {/*        className={style.header__category}*/}
-                {/*        onClick={() => setOpenBottomMenu(!openBottomMenu)}*/}
-                {/*    >*/}
-                {/*        Kuchnie w nowoczesnym stylu*/}
-                {/*    </Link>*/}
-                {/*    <Link*/}
-                {/*        href={'/products/classic-kitchen'}*/}
-                {/*        className={style.header__category}*/}
-                {/*        onClick={() => setOpenBottomMenu(!openBottomMenu)}*/}
-                {/*    >*/}
-                {/*        Kuchnie w stylu klasycznym*/}
-                {/*    </Link>*/}
-                {/*    <Link*/}
-                {/*        href={'/products/high-tech-kitchen'}*/}
-                {/*        className={style.header__category}*/}
-                {/*        onClick={() => setOpenBottomMenu(!openBottomMenu)}*/}
-                {/*    >*/}
-                {/*        Kuchnie w stylu High Tech*/}
-                {/*    </Link>*/}
-                {/*</div>*/}
+                <div className={style.header__categories}>
+                    <Link
+                        href={'/products/wardrobe'}
+                        className={style.header__category}
+                        onClick={() => setOpenBottomMenu(!openBottomMenu)}
+                    >
+                        Garderoby
+                    </Link>
+                    <Link
+                        href={'/products/swing'}
+                        className={style.header__category}
+                        onClick={() => setOpenBottomMenu(!openBottomMenu)}
+                    >
+                        Szafy z drzwiami skrzydłowymi
+                    </Link>
+                    <Link
+                        href={'/products/sliding'}
+                        className={style.header__category}
+                        onClick={() => setOpenBottomMenu(!openBottomMenu)}
+                    >
+                        Szafy z drzwiami przesuwnymi
+                    </Link>
+                </div>
             </div>
             <div className={!open ? style.header__bottomMenu
                 : style.header__bottomMenu + ' ' +style.header__bottomMenu_active}>
@@ -177,29 +180,32 @@ const Header = () => {
                         Kuchnie w stylu High Tech
                     </Link>
                 </div>
-                {/*<div className={style.header__categories}>*/}
-                {/*    <Link*/}
-                {/*        href={'/products/modern-kitchen'}*/}
-                {/*        className={style.header__category}*/}
-                {/*        onClick={() => setOpen(!open)}*/}
-                {/*    >*/}
-                {/*        Kuchnie w nowoczesnym stylu*/}
-                {/*    </Link>*/}
-                {/*    <Link*/}
-                {/*        href={'/products/classic-kitchen'}*/}
-                {/*        className={style.header__category}*/}
-                {/*        onClick={() => setOpen(!open)}*/}
-                {/*    >*/}
-                {/*        Kuchnie w stylu klasycznym*/}
-                {/*    </Link>*/}
-                {/*    <Link*/}
-                {/*        href={'/products/high-tech-kitchen'}*/}
-                {/*        className={style.header__category}*/}
-                {/*        onClick={() => setOpen(!open)}*/}
-                {/*    >*/}
-                {/*        Kuchnie w stylu High Tech*/}
-                {/*    </Link>*/}
-                {/*</div>*/}
+                <div className={style.header__categories}>
+                    <Link
+                        href={'/products/wardrobe'}
+                        className={style.header__category}
+                        onClick={() => setOpen(!open)}
+                        onMouseEnter={() => setProductImage('wardrobe1')}
+                    >
+                        Garderoby
+                    </Link>
+                    <Link
+                        href={'/products/swing'}
+                        className={style.header__category}
+                        onClick={() => setOpen(!open)}
+                        onMouseEnter={() => setProductImage('wardrobe2')}
+                    >
+                        Szafy z drzwiami skrzydłowymi
+                    </Link>
+                    <Link
+                        href={'/products/sliding'}
+                        className={style.header__category}
+                        onClick={() => setOpen(!open)}
+                        onMouseEnter={() => setProductImage('wardrobe3')}
+                    >
+                        Szafy z drzwiami przesuwnymi
+                    </Link>
+                </div>
                 <div className={style.header__figure}>
                     {
                         productImage === 'kitchen1'
@@ -208,6 +214,12 @@ const Header = () => {
                                 ? <Image className={style.header__image} src={kitchen2} alt={'products photo'}/>
                                 : productImage === 'kitchen3'
                                     ? <Image className={style.header__image} src={kitchen3} alt={'products photo'}/>
+                                    : productImage === 'wardrobe1'
+                                        ? <Image className={style.header__image} src={wardrobe1} alt={'products photo'}/>
+                                        : productImage === 'wardrobe2'
+                                            ? <Image className={style.header__image} src={wardrobeSwing} alt={'products photo'}/>
+                                            : productImage === 'wardrobe3'
+                                                ? <Image className={style.header__image} src={wardrobeSliding} alt={'products photo'}/>
                                 : <Image className={style.header__image} src={kitchen1} alt={'products photo'}/>
                     }
                 </div>
