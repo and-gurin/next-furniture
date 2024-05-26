@@ -37,6 +37,20 @@ const CustomPaging: React.FC<ImagesProps> = ({ images, setOpenSlider, initialInd
 
     const sliderRef = useRef<HTMLDivElement>(null);
 
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (sliderRef.current && !sliderRef.current.contains(event.target as Node)) {
+                setOpenSlider(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [setOpenSlider]);
+
     return (
         <>
             <div className={'darkBG'} ></div>
