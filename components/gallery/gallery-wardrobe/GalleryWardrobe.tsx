@@ -2,8 +2,6 @@ import React from 'react';
 import Gallery from "@/components/gallery/Gallery";
 import wardrobe1 from "@/public/Wardrobe/Wardrobe-1.jpg";
 import wardrobe2 from "@/public/Wardrobe/Wardrobe-2.jpg";
-import wardrobe31 from "@/public/Wardrobe/Wardrobe-3-1.jpg";
-import wardrobe32 from "@/public/Wardrobe/Wardrobe-3-2.jpg";
 import wardrobe4 from "@/public/Wardrobe/Wardrobe-4.jpg";
 import wardrobe5 from "@/public/Wardrobe/Wardrobe-5.jpg";
 import wardrobe6 from "@/public/Wardrobe/Wardrobe-6.jpg";
@@ -37,8 +35,6 @@ const tabs = [
 const images = [
     {id: '1', src: wardrobe1, tag: 'wardrobe'},
     {id: '1', src: wardrobe2, tag: 'wardrobe'},
-    {id: '1', src: wardrobe31, tag: 'wardrobe'},
-    {id: '1', src: wardrobe32, tag: 'wardrobe'},
     {id: '1', src: wardrobe4, tag: 'wardrobe'},
     {id: '1', src: wardrobe5, tag: 'wardrobe'},
     {id: '1', src: wardrobe6, tag: 'wardrobe'},
@@ -60,7 +56,6 @@ const images = [
     {id: '1', src: slidingWardrobe1, tag: 'sliding'},
     {id: '1', src: slidingWardrobe2, tag: 'sliding'},
     {id: '1', src: slidingWardrobe3, tag: 'sliding'},
-
 ]
 
 const GalleryWardrobe = ({defaultTag}: {defaultTag: string}) => {

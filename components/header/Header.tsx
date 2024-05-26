@@ -15,6 +15,9 @@ import kitchen3 from "@/public/Kitchen/HIGH-TECH/high-tech-1.jpg";
 import wardrobe1 from "@/public/Wardrobe/Collage/Wardrobe-8.jpg";
 import wardrobeSliding from "@/public/Wardrobe/Collage/Sliding-wardrobe-3.jpg";
 import wardrobeSwing from "@/public/Wardrobe/Collage/Swing-wardrobe-11.jpg";
+import bathRoom from "@/public/Custom/Collage/bath-4.jpg";
+import livingRoom from "@/public/Custom/Collage/living-room-1.jpg";
+import customRoom from "@/public/Custom/Collage/bed-room-3.jpg";
 import burger from "@/public/icons8-menu.svg";
 import close from "@/public/close-bold-svgrepo-com.svg";
 import arrowRight from "@/public/right-arrow-svgrepo-com.svg"
@@ -151,6 +154,29 @@ const Header = () => {
                         Szafy z drzwiami przesuwnymi
                     </Link>
                 </div>
+                <div className={style.header__categories}>
+                    <Link
+                        href={'/products/bath-room'}
+                        className={style.header__category}
+                        onClick={onClickBottomMenuLinks}
+                    >
+                        Łazienka
+                    </Link>
+                    <Link
+                        href={'/products/living-room'}
+                        className={style.header__category}
+                        onClick={onClickBottomMenuLinks}
+                    >
+                        Salon
+                    </Link>
+                    <Link
+                        href={'/products/custom-furniture'}
+                        className={style.header__category}
+                        onClick={onClickBottomMenuLinks}
+                    >
+                        Na wymiar
+                    </Link>
+                </div>
             </div>
             <div className={!open ? style.header__bottomMenu
                 : style.header__bottomMenu + ' ' +style.header__bottomMenu_active}>
@@ -206,6 +232,32 @@ const Header = () => {
                         Szafy z drzwiami przesuwnymi
                     </Link>
                 </div>
+                <div className={style.header__categories}>
+                    <Link
+                        href={'/products/bath-room'}
+                        className={style.header__category}
+                        onClick={() => setOpen(!open)}
+                        onMouseEnter={() => setProductImage('bath')}
+                    >
+                        Łazienka
+                    </Link>
+                    <Link
+                        href={'/products/living-room'}
+                        className={style.header__category}
+                        onClick={() => setOpen(!open)}
+                        onMouseEnter={() => setProductImage('living')}
+                    >
+                        Salon
+                    </Link>
+                    <Link
+                        href={'/products/custom-furniture'}
+                        className={style.header__category}
+                        onClick={() => setOpen(!open)}
+                        onMouseEnter={() => setProductImage('custom')}
+                    >
+                        Na wymiar
+                    </Link>
+                </div>
                 <div className={style.header__figure}>
                     {
                         productImage === 'kitchen1'
@@ -220,6 +272,12 @@ const Header = () => {
                                             ? <Image className={style.header__image} src={wardrobeSwing} alt={'products photo'}/>
                                             : productImage === 'wardrobe3'
                                                 ? <Image className={style.header__image} src={wardrobeSliding} alt={'products photo'}/>
+                                                : productImage === 'bath'
+                                                    ? <Image className={style.header__image} src={bathRoom} alt={'products photo'}/>
+                                                    : productImage === 'living'
+                                                        ? <Image className={style.header__image} src={livingRoom} alt={'products photo'}/>
+                                                        : productImage === 'custom'
+                                                            ? <Image className={style.header__image} src={customRoom} alt={'products photo'}/>
                                 : <Image className={style.header__image} src={kitchen1} alt={'products photo'}/>
                     }
                 </div>

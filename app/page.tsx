@@ -5,6 +5,9 @@ import kitchen3 from "@/public/Kitchen/Сollage/Modern-1.jpg"
 import wardrobe1 from "@/public/Wardrobe/Collage/Wardrobe-8.jpg"
 import wardrobe2 from "@/public/Wardrobe/Collage/Sliding-wardrobe-3.jpg"
 import wardrobe3 from "@/public/Wardrobe/Collage/Swing-wardrobe-11.jpg"
+import custom1 from "@/public/Custom/Collage/bath-4.jpg"
+import custom2 from "@/public/Custom/Collage/living-room-1.jpg"
+import custom3 from "@/public/Custom/Collage/bed-room-3.jpg"
 import KindOfFurniture from "@/components/kinds/KindOfFurniture";
 import Stages from "@/components/stages/Stages";
 
@@ -19,6 +22,12 @@ const wardrobeImages = [
     {id: '1', src: wardrobe1},
     {id: '2', src: wardrobe2},
     {id: '3', src: wardrobe3},
+]
+
+const customFurnitureImages = [
+    {id: '1', src: custom1},
+    {id: '2', src: custom2},
+    {id: '3', src: custom3},
 ]
 
 const kitchenDescriptions = {
@@ -47,12 +56,26 @@ const wardrobeDescriptions = {
     ],
 }
 
+const customFurnitureDescriptions = {
+    kindOfFurniture: 'meble na wymiar',
+    title: 'Twoje pomysły są naszą pracą.',
+    description: 'Od pomysłu do realizacji - ' +
+        'stworzymy Meble, które idealnie pasują do Twojej przestrzeni i ' +
+        'stylu życia.',
+    furnitureTypes: [
+        {type: 'Łazienka', link: '/products/bath-room'},
+        {type: 'Salon', link: '/products/living-room'},
+        {type: 'Meble na wymiar', link: '/products/custom-furniture'},
+    ],
+}
+
 export default function Home() {
     return (
         <>
             <Hero/>
             <KindOfFurniture images={kitchenImages} descriptions={kitchenDescriptions}/>
             <KindOfFurniture location={'image-on-left'} images={wardrobeImages} descriptions={wardrobeDescriptions}/>
+            <KindOfFurniture images={customFurnitureImages} descriptions={customFurnitureDescriptions}/>
             <Stages/>
         </>
     )

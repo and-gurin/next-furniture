@@ -1,29 +1,25 @@
 'use client'
 
-import React, { useEffect, useRef} from "react";
+import React, {useEffect, useRef} from "react";
 import Slider from "react-slick";
 import {ImagesProps} from "@/components/gallery/Gallery";
 import Image from "next/image";
 import "./Slider.scss"
+import "slick-carousel/slick/slick.scss";
+import "slick-carousel/slick/slick-theme.scss";
 
 const CustomPaging: React.FC<ImagesProps> = ({ images, setOpenSlider, initialIndex }) => {
-    const settings = {
-        // customPaging: function (i: number) {
-        //     return (
-        //         <a className={'thumb__figure'}>
-        //             <Image className={'thumb__image'} src={images[i].src} alt={`Slide ${i + 1}`} />
-        //         </a>
-        //     );
-        // },
-        // dots: true,
-        // dotsClass: "slick-dots slick-thumb",
+
+    const settingsGallery = {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         focusOnSelect: true,
         initialSlide: initialIndex,
+        className: 'sliderGallery'
     };
+
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === "Escape") {
@@ -55,28 +51,26 @@ const CustomPaging: React.FC<ImagesProps> = ({ images, setOpenSlider, initialInd
     }, [setOpenSlider]);
 
     return (
-        <div className={'darkBG'} >
+        <>
+            <div className={'darkBG'} ></div>
             <div className={'centered'}>
-                <div className={'modal'}>
-                    <div ref={sliderRef} className="slider-container">
-                        <Slider {...settings}>
-                            {images.map((image) => (
-                                <div key={image.id} className={'paging__figure'}>
-                                    <Image
-                                        className={'paging__image'}
-                                        fill
-                                        sizes="(min-width: 200px) 50vw, 100vw"
-                                        src={image.src}
-                                        alt="slider image of furniture"
-                                    />
-                                </div>
-                            ))}
-                        </Slider>
-                    </div>
+                <div ref={sliderRef} className="slider-container">
+                    <Slider {...settingsGallery}>
+                        {images.map((image) => (
+                            <div key={image.id} className={'paging__figure'}>
+                                <Image
+                                    className={'paging__image'}
+                                    fill
+                                    sizes="(min-width: 200px) 50vw, 100vw"
+                                    src={image.src}
+                                    alt="slider image of furniture"
+                                />
+                            </div>
+                        ))}
+                    </Slider>
                 </div>
             </div>
-        </div>
-
+        </>
     );
 };
 

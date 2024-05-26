@@ -4,6 +4,7 @@
 .stages {
   margin: 0 8px 4.5rem 8px;
   border-radius: 24px;
+  background-color: $mintCream;
 
   @include media-tablet {
     margin: 0 8px 32px 8px;
@@ -14,7 +15,6 @@
   }
 
   &__wrapper {
-    background-color: $mintCream;
     border-radius: 24px;
     padding: 40px;
 

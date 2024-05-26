@@ -64,102 +64,109 @@
   }
 }
 
-.slick-list {
-  width: 50vw;
-  height: 590px;
-  overflow: hidden;
+.sliderHero {
+  .slick-list {
+    width: 50vw;
+    height: 590px;
+    overflow: hidden;
+    border-radius: 24px 0 0 24px;
 
-  @include media-laptop {
-    width: 100vw;
+    @include media-laptop {
+      width: 100vw;
+    }
+
+    @include media-tablet {
+      height: 400px;
+    }
+
+    @include media-mobile {
+      border-radius: 12px 0 0 12px;
+    }
   }
 
-  @include media-tablet {
-    height: 400px;
+  .slick-track {
+    overflow: hidden;
   }
-}
 
-.slick-track {
-  overflow: hidden;
-}
+  .slick-cloned {
+    display: none;
+    opacity: 0;
+  }
 
-.slick-cloned {
-  display: none;
-  opacity: 0;
-}
+  .slick-slide {
+    img {
+      border-radius: 24px;
 
-.slick-slide {
-  img {
+      @include media-mobile {
+        border-radius: 12px
+      }
+    }
+  }
+
+  .slick-active {
+    opacity: 1;
+    margin-right: 16px;
+    width: 45vw !important;
+    overflow: hidden;
     border-radius: 24px;
+
+    @include media-laptop {
+      width: 85vw !important;
+    }
 
     @include media-mobile {
       border-radius: 12px
     }
   }
-}
 
-.slick-active {
-  opacity: 1;
-  margin-right: 16px;
-  width: 45vw !important;
-  overflow: hidden;
-  border-radius: 24px;
+  .slick-prev,
+  .slick-next {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 560px;
+    z-index: 1;
 
-  @include media-laptop {
-    width: 85vw !important;
+    @include media-tablet {
+      top: 370px;
+    }
   }
 
-  @include media-mobile {
-    border-radius: 12px
-  }
-}
+  .slick-next {
+    left: 60px;
+    background-color: $blackColor;
+    border-radius: 0 24px 0 0;
 
-.slick-prev,
-.slick-next {
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  top: 560px;
-  z-index: 1;
+    &:before {
+      color: $whiteColor;
+      opacity: 1;
+    }
 
-  @include media-tablet {
-    top: 370px;
-  }
-}
+    &:focus {
+      background: $blackColor;
+    }
 
-.slick-next {
-  left: 60px;
-  background-color: $blackColor;
-  border-radius: 0 24px 0 0;
-
-  &:before {
-    color: $whiteColor;
-    opacity: 1;
+    &:hover {
+      background: $blackColor;
+    }
   }
 
-  &:focus {
-    background: $blackColor;
-  }
+  .slick-prev {
+    background-color: $whiteSmoke;
+    left: 0;
 
-  &:hover {
-    background: $blackColor;
-  }
-}
+    &:before {
+      color: $blackColor;
+      opacity: 1;
+    }
 
-.slick-prev {
-  background-color: $whiteSmoke;
-  left: 0;
+    &:focus {
+      background: $whiteSmoke;
+    }
 
-  &:before {
-    color: $blackColor;
-    opacity: 1;
-  }
-
-  &:focus {
-    background: $whiteSmoke;
-  }
-
-  &:hover {
-    background: $whiteSmoke;
-    color: $whiteSmoke;
+    &:hover {
+      background: $whiteSmoke;
+      color: $whiteSmoke;
+    }
   }
 }
