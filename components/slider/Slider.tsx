@@ -17,6 +17,7 @@ const CustomPaging: React.FC<ImagesProps> = ({ images, setOpenSlider, initialInd
         slidesToScroll: 1,
         focusOnSelect: true,
         initialSlide: initialIndex,
+        adaptiveHeight: true,
         className: 'sliderGallery'
     };
 
@@ -49,6 +50,51 @@ const CustomPaging: React.FC<ImagesProps> = ({ images, setOpenSlider, initialInd
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, [setOpenSlider]);
+
+    useEffect(() => {
+        const handleImageLoad = (event: Event) => {
+            const img = event.target as HTMLImageElement;
+            if (window.innerWidth <= 479) {
+                if (img.naturalHeight > img.naturalWidth) {
+                    img.classList.add('rotate-portrait');
+                } else {
+                    img.classList.add('rotate-landscape');
+                }
+            } else {
+                img.classList.remove('rotate-portrait', 'rotate-landscape');
+            }
+        };
+
+        const images = document.querySelectorAll('.paging__image');
+        images.forEach((img) => {
+            const imageElement = img as HTMLImageElement;
+            if (imageElement.complete) {
+                handleImageLoad({target: imageElement} as unknown as Event);
+            } else {
+                imageElement.addEventListener('load', handleImageLoad);
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            images.forEach((img) => {
+                const imageElement = img as HTMLImageElement;
+                handleImageLoad({target: imageElement} as unknown as Event);
+            });
+        });
+
+        return () => {
+            images.forEach((img) => {
+                const imageElement = img as HTMLImageElement;
+                imageElement.removeEventListener('load', handleImageLoad);
+            });
+            window.removeEventListener('resize', () => {
+                images.forEach((img) => {
+                    const imageElement = img as HTMLImageElement;
+                    handleImageLoad({target: imageElement} as unknown as Event);
+                });
+            });
+        };
+    }, []);
 
     return (
         <>

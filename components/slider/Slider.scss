@@ -1,3 +1,6 @@
+@import 'styles/constants';
+@import 'styles/mixins';
+
 .darkBG {
   background-color: gray;
   width: 100vw;
@@ -26,6 +29,22 @@
   object-fit: cover;
 }
 
+.rotate-portrait {
+
+  @include media-mobile {
+    transform: rotate(90deg);
+  }
+
+}
+
+.rotate-landscape {
+
+  @include media-mobile {
+    transform: rotate(0deg);
+  }
+
+}
+
 .sliderGallery {
   .slick-list {
     width: 90vw;
@@ -34,11 +53,6 @@
 
   .slick-track {
     overflow: hidden;
-  }
-
-  .slick-cloned {
-    display: none;
-    opacity: 0;
   }
 
   .slick-prev,

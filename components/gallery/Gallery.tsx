@@ -49,7 +49,7 @@ const Gallery = ({tabs, images, title, defaultTag}: {
         )
     })
     const onClickImageHandler = (imageId: number) => {
-      setInitialIndex(imageId -1);
+      setInitialIndex(imageId);
       setOpenSlider(true)
     }
     const filteredImages = activeTab === 'all' ? images : images.filter((image: { tag: string | string[]; }) => image.tag.includes(activeTab))
