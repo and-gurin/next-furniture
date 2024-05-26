@@ -19,7 +19,7 @@
     padding: 48px 0 72px 40px;
 
     @include media-laptop {
-      grid-template-columns: 1fr;
+      grid-template-columns: 100%;
       padding: 48px 16px 72px 16px;
     }
 

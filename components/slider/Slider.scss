@@ -23,32 +23,24 @@
 .paging__figure {
   position: relative;
   height: 100vh;
+
+  @include media-tablet {
+    height: 60vh;
+  }
 }
 
 .paging__image {
   object-fit: cover;
 }
 
-.rotate-portrait {
-
-  @include media-mobile {
-    transform: rotate(90deg);
-  }
-
-}
-
-.rotate-landscape {
-
-  @include media-mobile {
-    transform: rotate(0deg);
-  }
-
-}
-
 .sliderGallery {
   .slick-list {
     width: 90vw;
     overflow: hidden;
+
+    @include media-tablet {
+      width: 100vw;
+    }
   }
 
   .slick-track {
