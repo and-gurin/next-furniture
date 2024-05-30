@@ -7,7 +7,7 @@ import Image from "next/image";
 import arrowDown from "@/public/arrow-down-339-svgrepo-com.svg";
 import {raleWay} from '@/app/fonts';
 import Logo from "@/components/logo/Logo";
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import Link from "next/link";
 import kitchen1 from "@/public/Kitchen/Modern/Modern-8.jpg";
 import kitchen2 from "@/public/Kitchen/Classic/Classic-3.jpg";
@@ -40,14 +40,44 @@ const Header = () => {
         setOpenBurger(!openBurger)
     }
 
+    const headerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+                setOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [setOpen]);
+
+    const burgerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (burgerRef.current && !burgerRef.current.contains(event.target as Node)) {
+                setOpenBurger(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [setOpenBurger]);
+
     return (
-        <header className={raleWay.className + ' ' + style.header}>
+        <header className={raleWay.className + ' ' + style.header} ref={headerRef}>
             <div className={`wrapper  ${style.header__wrapper}`} >
                 <Logo/>
                 <nav className={style.header__navigation}>
                     <div className={style.header__products}
-                         //onMouseEnter={() => setOpen(!open)}
-                         //onMouseLeave={() => setOpen(open === false)}
                          onClick={() => setOpen(!open)}>
                         Produkty
                         <Image
@@ -55,7 +85,7 @@ const Header = () => {
                             src={arrowDown}
                             width='16'
                             height='16'
-                            alt='arrow-down'
+                            alt='Strzałka w dół'
                         />
                     </div>
                     <ul className={style.header__links}>
@@ -65,14 +95,14 @@ const Header = () => {
                 <div className={style.header__burger} onClick={() => setOpenBurger(!openBurger)}>
                     <Image
                         src={openBurger ? close : burger}
-                        alt='burger-menu'
+                        alt='Burger menu'
                         width='32'
                         height='32'
                     />
                 </div>
             </div>
             {openBurger && !openBottomMenu &&
-                <nav className={style.header__navigation_burger}>
+                <nav className={style.header__navigation_burger} ref={burgerRef}>
                     <div className={style.header__products}
                          onClick={() => setOpenBottomMenu(!openBottomMenu)}>
                         Produkty
@@ -80,7 +110,7 @@ const Header = () => {
                             src={arrowRight}
                             width='16'
                             height='16'
-                            alt='arrow-down'
+                            alt='Strzałka w prawo'
                         />
                     </div>
                     <ul className={style.header__links_burger}>
@@ -91,7 +121,7 @@ const Header = () => {
                             src={handset}
                             width='24'
                             height='24'
-                            alt='handset'
+                            alt='Słuchawka'
                         />
                         Zadzwoń do nas teraz
                     </a>
@@ -101,7 +131,7 @@ const Header = () => {
                 : style.header__bottomMenu + ' ' +style.header__bottomMenu_burger}>
                 <div className={style.header__arrowLeft}  onClick={() => setOpenBottomMenu(!openBottomMenu)}>
                     <Image src={arrowLeft}
-                           alt='arrow-left'
+                           alt='Strzałka w lewo'
                            width='40'
                            height='16'
                     />
@@ -261,23 +291,23 @@ const Header = () => {
                 <div className={style.header__figure}>
                     {
                         productImage === 'kitchen1'
-                        ? <Image className={style.header__image} src={kitchen1} alt={'products photo'}/>
+                        ? <Image className={style.header__image} src={kitchen1} alt={'Nowoczesna kuchnia na wymiar'}/>
                         : productImage === 'kitchen2'
-                                ? <Image className={style.header__image} src={kitchen2} alt={'products photo'}/>
+                                ? <Image className={style.header__image} src={kitchen2} alt={'Klasyczna kuchnia na wymiar'}/>
                                 : productImage === 'kitchen3'
-                                    ? <Image className={style.header__image} src={kitchen3} alt={'products photo'}/>
+                                    ? <Image className={style.header__image} src={kitchen3} alt={'High tech kuchnia na wymiar'}/>
                                     : productImage === 'wardrobe1'
-                                        ? <Image className={style.header__image} src={wardrobe1} alt={'products photo'}/>
+                                        ? <Image className={style.header__image} src={wardrobe1} alt={'Garderoba na wymiar'}/>
                                         : productImage === 'wardrobe2'
-                                            ? <Image className={style.header__image} src={wardrobeSwing} alt={'products photo'}/>
+                                            ? <Image className={style.header__image} src={wardrobeSwing} alt={'Szafa na wymiar'}/>
                                             : productImage === 'wardrobe3'
-                                                ? <Image className={style.header__image} src={wardrobeSliding} alt={'products photo'}/>
+                                                ? <Image className={style.header__image} src={wardrobeSliding} alt={'Szafa na wymiar'}/>
                                                 : productImage === 'bath'
-                                                    ? <Image className={style.header__image} src={bathRoom} alt={'products photo'}/>
+                                                    ? <Image className={style.header__image} src={bathRoom} alt={'Meble do lazienki na wymiar'}/>
                                                     : productImage === 'living'
-                                                        ? <Image className={style.header__image} src={livingRoom} alt={'products photo'}/>
+                                                        ? <Image className={style.header__image} src={livingRoom} alt={'Meble do salonu na wymiar'}/>
                                                         : productImage === 'custom'
-                                                            ? <Image className={style.header__image} src={customRoom} alt={'products photo'}/>
+                                                            ? <Image className={style.header__image} src={customRoom} alt={'Meble na wymiar'}/>
                                 : <Image className={style.header__image} src={kitchen1} alt={'products photo'}/>
                     }
                 </div>

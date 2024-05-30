@@ -24,7 +24,8 @@
     }
 
     @include media-mobile {
-      border-radius: 12px
+      border-radius: 12px;
+      padding: 38px 16px 72px 16px;
     }
   }
 

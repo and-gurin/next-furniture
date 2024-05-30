@@ -58,15 +58,15 @@ const CustomPaging: React.FC<ImagesProps> = ({ images, setOpenSlider, initialInd
                 <div ref={sliderRef} className="slider-container">
                     <Slider {...settingsGallery}>
                         {images.map((image) => (
-                            <div key={image.id} className={'paging__figure'}>
+                            <figure key={image.id} className={'paging__figure'}>
                                 <Image
                                     className={'paging__image'}
                                     fill
                                     sizes="(min-width: 200px) 50vw, 100vw"
                                     src={image.src}
-                                    alt="slider image of furniture"
+                                    alt="Nowoczesna meble na wymiar"
                                 />
-                            </div>
+                            </figure>
                         ))}
                     </Slider>
                 </div>

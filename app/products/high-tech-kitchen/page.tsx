@@ -3,7 +3,11 @@ import FurnitureDetails from "@/components/details/FurnitureDetails";
 import ht from "@/public/Kitchen/HIGH-TECH/high-tech-6.jpg"
 import Stages from "@/components/stages/Stages";
 import GalleryKitchen from "@/components/gallery/gallery-kitchen/GalleryKitchen";
+import {Metadata} from "next";
 
+export const metadata: Metadata = {
+    title: 'Kuchnie w stylu High Tech | InHouse meble'
+}
 const HighTechKitchen = () => {
     return (
         <>

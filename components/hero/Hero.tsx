@@ -107,15 +107,15 @@ const Hero = () => {
                     <div className='slider'>
                         <Slider {...settingsHero}>
                             {images.map((image) =>
-                                <div className='hero__figure' key={image.id}>
+                                <figure className='hero__figure' key={image.id}>
                                     <Image
                                         className='hero__image'
                                         fill
                                         sizes="(min-width: 200px) 50vw, 100vw"
                                         src={image.src}
-                                        alt="slider image of furniture"
+                                        alt="Nowoczesna meble na wymiar"
                                     />
-                                </div>
+                                </figure>
                             )}
                         </Slider>
                     </div>

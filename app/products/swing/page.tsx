@@ -3,6 +3,11 @@ import FurnitureDetails from "@/components/details/FurnitureDetails";
 import classic from "@/public/Wardrobe/Collage/Swing-wardrobe-11.jpg"
 import Stages from "@/components/stages/Stages";
 import GalleryWardrobe from "@/components/gallery/gallery-wardrobe/GalleryWardrobe";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: 'Szafy z drzwiami skrzydłowymi | InHouse meble'
+}
 
 const SwingWardrobe = () => {
     return (

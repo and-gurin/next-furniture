@@ -7,10 +7,11 @@ import {raleWay} from '@/app/fonts';
 import Footer from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
-  title: 'Twój dom, twoje zasady. Od kuchni i przedpokoju po łazienkę i pokoje dziecięce: wykonane na wymiar.',
-  description: 'Od ponad 20 lat wykonujemy meble na wymiar: Kuchnie, Szafy, garderoby, meble do ' +
-      'łazienek, pokoi dziecięcych, salonów, sypialni, przedpokojów, a także pomieszczeń biurowych. ' +
-      '2 unikalne projekty przyszłych mebli w prezencie.',
+  title: 'Twój dom, twoje zasady: meble wykonane na wymiar',
+  description: 'Meble na wymiar ⭐ 2 unikalne projekty mebli w prezencie' +
+      ' ⭐ Kuchnie, szafy, garderoby, meble do domu i biura' +
+      ' ⭐ Ponad 20 lat doświadczenia'
+      ,
   keywords: 'szafa do garderoby\n' +
       'meble do garderoby\n' +
       'garderoby\n' +
@@ -113,7 +114,21 @@ export const metadata: Metadata = {
       'meble do pokoju chłopca\n' +
       'pokój młodzieżowy dla chłopca\n' +
       'regały kuchenne\n' +
-      'regały na zabawki'
+      'regały na zabawki',
+  openGraph: {
+    type: "website",
+    url: 'https://inhouse-meble.pl/',
+    title: 'Twój dom, twoje zasady: meble wykonane na wymiar',
+    description: 'Meble na wymiar ⭐ 2 unikalne projekty mebli w prezencie'  +
+        ' ⭐ Kuchnie, szafy, garderoby, meble do domu i biura' +
+        ' ⭐ Ponad 20 lat doświadczenia',
+    images: [
+      {
+        url: 'https://inhouse-meble.pl/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FModern-6-1.4ceba366.jpg&w=1080&q=75',
+        alt: 'Nowoczesna kuchnia na wymiar'
+      }
+    ],
+  }
 }
 
 export default function RootLayout({

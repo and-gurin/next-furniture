@@ -3,6 +3,11 @@ import FurnitureDetails from "@/components/details/FurnitureDetails";
 import classic from "@/public/Kitchen/Classic/Classic-3.jpg"
 import Stages from "@/components/stages/Stages";
 import GalleryKitchen from "@/components/gallery/gallery-kitchen/GalleryKitchen";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: 'Kuchnie w stylu klasycznym | InHouse meble'
+}
 
 const ClassicKitchen = () => {
     return (

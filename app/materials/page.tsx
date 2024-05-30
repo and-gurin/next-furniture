@@ -1,10 +1,12 @@
-"use client";
-
 import "@/styles/wrapper.scss"
 import style from "./page.module.scss"
 import {baskerville} from "@/app/fonts";
 import Stages from "@/components/stages/Stages";
+import {Metadata} from "next";
 
+export const metadata: Metadata = {
+    title: 'Materiały | InHouse meble'
+}
 export default function Materials () {
 
     return (

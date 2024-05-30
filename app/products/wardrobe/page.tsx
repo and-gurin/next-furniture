@@ -3,7 +3,11 @@ import FurnitureDetails from "@/components/details/FurnitureDetails";
 import classic from "@/public/Wardrobe/Collage/Wardrobe-8.jpg"
 import Stages from "@/components/stages/Stages";
 import GalleryWardrobe from "@/components/gallery/gallery-wardrobe/GalleryWardrobe";
+import {Metadata} from "next";
 
+export const metadata: Metadata = {
+    title: 'Garderoby | InHouse meble'
+}
 const Wardrobe = () => {
     return (
         <>

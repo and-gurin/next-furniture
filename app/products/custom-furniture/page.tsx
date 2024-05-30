@@ -3,6 +3,11 @@ import FurnitureDetails from "@/components/details/FurnitureDetails";
 import classic from "@/public/Custom/Collage/bed-room-3.jpg"
 import Stages from "@/components/stages/Stages";
 import GalleryCustom from "@/components/gallery/gallery-custom/GalleryCustom";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: 'Meble na wymiar | InHouse meble'
+}
 
 const CustomFurniture = () => {
     return (

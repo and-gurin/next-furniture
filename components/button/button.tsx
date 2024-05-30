@@ -5,9 +5,12 @@ import {raleWay} from "@/app/fonts";
 
 const Button = () => {
     return (
-        <Link href={'/contacts'} className={raleWay.className + ' ' + style.button}>
-            Skontaktuj się z nami →
-        </Link>
+        <button className={style.button}>
+            <Link href={'/contacts'} className={raleWay.className}>
+                Skontaktuj się z nami →
+            </Link>
+        </button>
+
     );
 };
 

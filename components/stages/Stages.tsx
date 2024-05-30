@@ -61,44 +61,46 @@ const Stages = ({background}: {background?: string}) => {
                         Wykonywanie mebli – krok po kroku
                     </h2>
                 </Fade>
+                <ul>
                     {stages.map(stage =>
-                        <Fade direction={"up"} triggerOnce={true} fraction={0} key={stage.id}>
-                            <div  className={style.stages__content}>
-                                <div className={style.stages__figure}>
-                                    <Image src={stage.src}
-                                           fill
-                                           sizes="(min-width: 200px) 50vw, 100vw"
-                                           alt='stages-of-work'
-                                    />
-                                </div>
-                                <div className={style.stages__description}>
-                                    <div className={style.stages__number}>
-                                        <p className={baskerville.className + ' ' + style.stages__subtitle}>{stage.id}</p>
-                                        <p className={style.stages__verticalLine}></p>
+                        <li key={stage.id}>
+                            <Fade direction={"up"} triggerOnce={true} fraction={0}>
+                                <div  className={style.stages__content}>
+                                    <figure className={style.stages__figure}>
+                                        <Image src={stage.src}
+                                               fill
+                                               sizes="(min-width: 200px) 50vw, 100vw"
+                                               alt='Etap pracy z klientem'
+                                        />
+                                    </figure>
+                                    <div className={style.stages__description}>
+                                        <div className={style.stages__number}>
+                                            <p className={baskerville.className + ' ' + style.stages__subtitle}>{stage.id}</p>
+                                            <p className={style.stages__verticalLine}></p>
+                                        </div>
+                                        <div>
+                                            <p className={baskerville.className + ' ' + style.stages__subtitle}>
+                                                {stage.title}
+                                            </p>
+                                            <p className={style.stages__description}>
+                                                {stage.description}
+                                            </p>
+                                            <br/>
+                                            {stage.list &&
+                                                <ul className={style.stages_list}>
+                                                    <li>- pomiar</li>
+                                                    <li>- tworzenie projektu</li>
+                                                    <li>- wybór materiałów</li>
+                                                </ul>
+                                            }
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p className={baskerville.className + ' ' + style.stages__subtitle}>
-                                            {stage.title}
-                                        </p>
-                                        <p className={style.stages__description}>
-                                            {stage.description}
-                                        </p>
-                                        <br/>
-                                        {stage.list &&
-                                            <ul className={style.stages_list}>
-                                                <li>- pomiar</li>
-                                                <li>- tworzenie projektu</li>
-                                                <li>- wybór materiałów</li>
-                                            </ul>
-                                        }
-                                    </div>
-
                                 </div>
-                            </div>
-                        </Fade>
-
-
+                            </Fade>
+                        </li>
                     )}
+                </ul>
+
             </div>
         </section>
     );

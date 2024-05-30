@@ -27,14 +27,14 @@ const FurnitureDetails = ({image, title, description}: {
                             <Button/>
                             <Advantages/>
                         </div>
-                        <div className={style.details__figure}>
+                        <figure className={style.details__figure}>
                             <Image className={style.details__image}
                                    src={image.src}
-                                   alt='image-of-furniture'
+                                   alt='Nowoczesna meble na wymiar'
                                    fill
                                    sizes="(min-width: 200px) 50vw, 100vw"
                             />
-                        </div>
+                        </figure>
                     </div>
                 </div>
             </section>

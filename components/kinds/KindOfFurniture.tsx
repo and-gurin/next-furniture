@@ -48,12 +48,13 @@ const KindOfFurniture = ({images, descriptions, location}: {
                                 <p className={style.kind__subtitle}>
                                     {descriptions.description}
                                 </p>
-                                <div>
+                                <ul>
                                     {descriptions.furnitureTypes.map(type => {
-                                        return <Fade key={type.type} direction={location !== 'image-on-left'
-                                            ? 'left' : 'right'}>
-                                            <Link href={type.link} className={style.kind__details}>
-                                                <p>{type.type}</p>
+                                        return <li key={type.type}>
+                                            <Fade  direction={location !== 'image-on-left'
+                                                ? 'left' : 'right'}>
+                                                <Link href={type.link} className={style.kind__details}>
+                                                    <p>{type.type}</p>
                                                     <div className={style.kind__more}>
                                                         <p className={baskerville.className + ' ' + style.kind__details_copy}>
                                                             Więcej
@@ -64,10 +65,11 @@ const KindOfFurniture = ({images, descriptions, location}: {
                                                                height='16'
                                                         />
                                                     </div>
-                                            </Link>
-                                        </Fade>
+                                                </Link>
+                                            </Fade>
+                                        </li>
                                     })}
-                                </div>
+                                </ul>
                             </div>
                         </div>
                         <div className={style.kind__images}>

@@ -33,7 +33,7 @@ const Advantages = () => {
                     <div key={adv.id} className={style.advantages}>
                         <Image
                             src={adv.src}
-                            alt='advantages icon'
+                            alt='Ikona korzyści'
                             width={34}
                             height={34}
                         />

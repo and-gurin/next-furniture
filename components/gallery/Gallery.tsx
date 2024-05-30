@@ -41,11 +41,11 @@ const Gallery = ({tabs, images, title, defaultTag}: {
             ? style.gallery__button + ' ' + style.gallery__button_active
             : style.gallery__button;
         return (
-            <div key={tab.title}>
+            <li key={tab.title}>
                 <span  className={finalClassName} onClick={() => setActiveTab(tab.tag)}>
                     {tab.title}
                 </span>
-            </div>
+            </li>
         )
     })
     const onClickImageHandler = (imageId: number) => {
@@ -61,21 +61,21 @@ const Gallery = ({tabs, images, title, defaultTag}: {
                     <h2 className={baskerville.className + ' ' + style.gallery__title}>
                         {title}
                     </h2>
-                    <div className={style.gallery__buttons}>
+                    <ul className={style.gallery__buttons}>
                         {tabList}
-                    </div>
+                    </ul>
                 </div>
                 <div className={style.gallery__grid}>
                     {filteredImages.map((image: { id: React.Key | null | undefined; src: string | StaticImport; }, index) => {
                         return (
-                            <div key={image.id}
+                            <figure key={image.id}
                                  onClick={() => onClickImageHandler(index)}
                                  className={style.gallery__figure}>
                                 <Image src={image.src}
                                        className={style.gallery__image}
                                        sizes="(min-width: 100px) 50vw, 100vw"
-                                       alt='image of furniture'/>
-                            </div>
+                                       alt='Nowoczesna meble na wymiar'/>
+                            </figure>
                         )
                     })}
                     {openSlider &&
