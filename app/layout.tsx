@@ -12,6 +12,7 @@ export const metadata: Metadata = {
       ' ⭐ Kuchnie, szafy, garderoby, meble do domu i biura' +
       ' ⭐ Ponad 20 lat doświadczenia'
       ,
+
   keywords: 'szafa do garderoby\n' +
       'meble do garderoby\n' +
       'garderoby\n' +

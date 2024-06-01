@@ -35,16 +35,12 @@
 
 .sliderGallery {
   .slick-list {
-    width: 90vw;
+    width: 50vw;
     overflow: hidden;
 
     @include media-tablet {
       width: 100vw;
     }
-  }
-
-  .slick-track {
-    overflow: hidden;
   }
 
   .slick-prev,

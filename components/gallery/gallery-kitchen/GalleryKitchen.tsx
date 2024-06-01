@@ -28,6 +28,19 @@ import modern163 from "@/public/Kitchen/Modern/Modern-16-3.jpg";
 import modern171 from "@/public/Kitchen/Modern/Modern-17-1.jpg";
 import modern172 from "@/public/Kitchen/Modern/Modern-17-2.jpg";
 import modern18 from "@/public/Kitchen/Modern/Modern-18.jpg";
+import modern191 from "@/public/Kitchen/Modern/Modern-19-1.jpg";
+import modern192 from "@/public/Kitchen/Modern/Modern-19-2.jpg";
+import modern193 from "@/public/Kitchen/Modern/Modern-19-3.jpg";
+import modern194 from "@/public/Kitchen/Modern/Modern-19-4.jpg";
+import modern195 from "@/public/Kitchen/Modern/Modern-19-5.jpg";
+import modern196 from "@/public/Kitchen/Modern/Modern-19-6.jpg";
+import modern197 from "@/public/Kitchen/Modern/Modern-19-7.jpg";
+import modern201 from "@/public/Kitchen/Modern/Modern-20-1.jpg";
+import modern202 from "@/public/Kitchen/Modern/Modern-20-2.jpg";
+import modern203 from "@/public/Kitchen/Modern/Modern-20-3.jpg";
+import modern204 from "@/public/Kitchen/Modern/Modern-20-4.jpg";
+import modern23 from "@/public/Kitchen/Modern/Modern-21.jpg";
+import modern24 from "@/public/Kitchen/Modern/Modern-22.jpg";
 import classic21 from "@/public/Kitchen/Classic/Classic-2-1.jpg";
 import classic22 from "@/public/Kitchen/Classic/Classic-2-2.jpg";
 import classic23 from "@/public/Kitchen/Classic/Classic-2-3.jpg";
@@ -90,6 +103,19 @@ const images = [
     {id: '26', src: modern171, tag: 'modern'},
     {id: '27', src: modern172, tag: 'modern'},
     {id: '28', src: modern18, tag: 'modern'},
+    {id: '28', src: modern191, tag: 'modern'},
+    {id: '28', src: modern192, tag: 'modern'},
+    {id: '28', src: modern193, tag: 'modern'},
+    {id: '28', src: modern194, tag: 'modern'},
+    {id: '28', src: modern195, tag: 'modern'},
+    {id: '28', src: modern196, tag: 'modern'},
+    {id: '28', src: modern197, tag: 'modern'},
+    {id: '28', src: modern201, tag: 'modern'},
+    {id: '28', src: modern202, tag: 'modern'},
+    {id: '28', src: modern203, tag: 'modern'},
+    {id: '28', src: modern204, tag: 'modern'},
+    {id: '28', src: modern23, tag: 'modern'},
+    {id: '28', src: modern24, tag: 'modern'},
     {id: '29', src: classic21, tag: 'classic'},
     {id: '30', src: classic22, tag: 'classic'},
     {id: '31', src: classic23, tag: 'classic'},
