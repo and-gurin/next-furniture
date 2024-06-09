@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import style from "./FurnitureDetails.module.scss"
 import Image, {StaticImageData} from "next/image";

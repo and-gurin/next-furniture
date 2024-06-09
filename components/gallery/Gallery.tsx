@@ -27,7 +27,7 @@ export type ImagesProps = {
 }
 
 const Gallery = ({tabs, images, title, defaultTag}: {
-    tabs: TabsProps[],
+    tabs?: TabsProps[],
     images: ImageProps[],
     title: string,
     defaultTag: string
@@ -36,7 +36,7 @@ const Gallery = ({tabs, images, title, defaultTag}: {
     const [activeTab, setActiveTab] = React.useState(defaultTag);
     const [openSlider, setOpenSlider] = React.useState(false);
     const [initialIndex, setInitialIndex] = React.useState(0);
-    const tabList = tabs.map(tab => {
+    const tabList = tabs?.map(tab => {
         const finalClassName = activeTab === tab.tag
             ? style.gallery__button + ' ' + style.gallery__button_active
             : style.gallery__button;
@@ -61,9 +61,9 @@ const Gallery = ({tabs, images, title, defaultTag}: {
                     <h2 className={baskerville.className + ' ' + style.gallery__title}>
                         {title}
                     </h2>
-                    <ul className={style.gallery__buttons}>
+                    {tabs && <ul className={style.gallery__buttons}>
                         {tabList}
-                    </ul>
+                    </ul>}
                 </div>
                 <div className={style.gallery__grid}>
                     {filteredImages.map((image: { id: React.Key | null | undefined; src: string | StaticImport; }, index) => {
