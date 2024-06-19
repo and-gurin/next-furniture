@@ -66,5 +66,44 @@
     color: $blackColor;
     line-height: 30px;
     padding: 10px;
+    border: none;
+
+    &:hover {
+      background-color: #aaaaaa;
+    }
+  }
+}
+
+.upload {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  &__field {
+    display: none; // Скрыть стандартный input типа file
+  }
+
+  &__button {
+    background-color: $whiteColor;
+    color: $blackColor;
+    line-height: 30px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #aaaaaa;
+    }
+  }
+
+  &__filename {
+
+    font-size: 16px;
+    color: #333;
   }
 }

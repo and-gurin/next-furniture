@@ -36,7 +36,9 @@ export default function Contacts () {
                             <br/>
                             <div className={style.contacts__link}>
                                 <p className={style.contacts__link_left}>E-mail:</p>
-                                <a className={style.contacts__link_right} href="mailto:inhouse.pol@gmail.com">inhouse.pol@gmail.com</a>
+                                <a className={style.contacts__link_right} href="mailto:inhouse.biuro@gmail.com">
+                                    inhouse.biuro@gmail.com
+                                </a>
                             </div>
                             <br/>
                             <div className={style.contacts__link}>

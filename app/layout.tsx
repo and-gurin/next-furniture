@@ -5,6 +5,7 @@ import React from 'react';
 import Header from '@/components/header/Header';
 import {raleWay} from '@/app/fonts';
 import Footer from "@/components/footer/Footer";
+import CookieConsent from "@/components/cookie/CookieConsent";
 
 export const metadata: Metadata = {
   title: 'Twój dom, twoje zasady: meble wykonane na wymiar',
@@ -141,6 +142,7 @@ export default function RootLayout({
     <html lang="pl">
     <body >
     <Header/>
+    <CookieConsent/>
     <main className={raleWay.className}>{children}</main>
     <Footer/>
     </body>

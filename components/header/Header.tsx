@@ -27,6 +27,7 @@ import handset from "@/public/handset-svgrepo-com.svg"
 const links = [
     {id: 1, title: 'Materiały', href: '/materials'},
     {id: 2, title: 'Kontakt', href: '/contacts'},
+    {id: 3, title: 'Współpraca', href: '/cooperation'},
 ]
 
 const Header = () => {

@@ -62,6 +62,12 @@
     }
   }
 
+  &__link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__copyright {
     padding: 16px 0;
     margin-left: auto;
