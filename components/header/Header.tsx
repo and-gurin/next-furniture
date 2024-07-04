@@ -61,7 +61,7 @@ const Header = () => {
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
-            if (burgerRef.current && !burgerRef.current.contains(event.target as Node)) {
+            if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
                 setOpenBurger(false);
             }
         };

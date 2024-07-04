@@ -47,6 +47,7 @@
     @include media-tablet {
       font-size: 48px;
       line-height: 52px;
+      margin-bottom: 32px;
     }
 
     @include media-mobile {

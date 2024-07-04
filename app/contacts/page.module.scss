@@ -11,7 +11,6 @@
   &__wrapper {
     grid-auto-columns: 1fr;
     display: grid;
-    grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
     background-color: $whiteSmoke;
     border-radius: 24px 24px 24px 24px;
@@ -29,6 +28,10 @@
     align-self: center;
     padding-left: 40px;
     border-radius: 24px 0 0 24px;
+
+    @include media-laptop {
+      padding: 10px 16px;
+    }
   }
 
   &__title {
@@ -39,6 +42,7 @@
 
     @include media-mobile {
       font-size: 36px;
+      margin: 0 0 22px 0;
     }
   }
 

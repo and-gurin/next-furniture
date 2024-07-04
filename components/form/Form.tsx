@@ -3,7 +3,7 @@
 import "@/styles/wrapper.scss"
 import style from "./Form.module.scss"
 import {baskerville} from "@/app/fonts";
-import {ChangeEvent, useRef, useState} from "react";
+import {useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
 import Modal from "@/components/modal/Modal";
 
@@ -12,7 +12,7 @@ export default function Form() {
     const form = useRef<HTMLFormElement>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalMessage, setModalMessage] = useState("");
-    const [fileName, setFileName] = useState("");
+    //const [fileName, setFileName] = useState("");
 
 
     const sendEmail = (e?: { preventDefault: () => void; }) => {
@@ -34,13 +34,13 @@ export default function Form() {
 
     };
 
-    const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
-        if (e.target.files && e.target.files[0]) {
-            setFileName(e.target.files[0].name);
-        } else {
-            setFileName("");
-        }
-    };
+    // const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    //     if (e.target.files && e.target.files[0]) {
+    //         setFileName(e.target.files[0].name);
+    //     } else {
+    //         setFileName("");
+    //     }
+    // };
 
     return (
         <div className={style.form}>
@@ -67,19 +67,19 @@ export default function Form() {
                        className={style.form__field}
                        type="tel"
                 />
-                <div className={style.upload}>
-                    <label className={style.upload__button} htmlFor="file-upload">
-                        Dodaj plik nie więcej niż 50 Kb
-                    </label>
-                    <span className={style.upload__filename}>{fileName || "Nie wybrano pliku"}</span>
-                    <input
-                        id="file-upload"
-                        name="file"
-                        className={style.upload__field}
-                        type="file"
-                        onChange={handleFileChange}
-                    />
-                </div>
+                {/*<div className={style.upload}>*/}
+                {/*    <label className={style.upload__button} htmlFor="file-upload">*/}
+                {/*        Dodaj plik nie więcej niż 50 Kb*/}
+                {/*    </label>*/}
+                {/*    <span className={style.upload__filename}>{fileName || "Nie wybrano pliku"}</span>*/}
+                {/*    <input*/}
+                {/*        id="file-upload"*/}
+                {/*        name="file"*/}
+                {/*        className={style.upload__field}*/}
+                {/*        type="file"*/}
+                {/*        onChange={handleFileChange}*/}
+                {/*    />*/}
+                {/*</div>*/}
                 <textarea className={style.form__field + ' ' + style.form__field_area}
                           rows={7} cols={45}
                           placeholder='Wiadomość...'
