@@ -18,12 +18,16 @@ export default function Cooperation() {
                             Współpraca
                         </h2>
                         <p className={style.cooperation__subtitle}>
-                            Firma InHouse nawiąże współpracę ze sklepami mebli, stolarzami, studiami kuchennymi,
-                            agencjami reklamowymi oraz projektantami w zakresie produkcji mebli na zamówienie. (meble
-                            kuchenne, meble pokojowe, meble biurowe, meble łazienkowe).
+                            Firma InHouse zaprasza do współpracy projektantów wnętrz.
+                            Mamy ponad 20 lat doświadczenia w produkcji mebli: meble kuchenne,
+                            meble pokojowe, meble biurowe, meble łazienkowe.
                         </p>
                         <p className={style.cooperation__subtitle}>
-                            Wszelkie informacje pod nr tel. &nbsp;
+                            Chętnie nawiążemy również współpracę ze sklepami meblowymi,
+                            stolarzami, pracowniami kuchennymi, agencjami reklamowymi.
+                        </p>
+                        <p className={style.cooperation__subtitle}>
+                            Więcej informacje pod nr tel. &nbsp;
                             <a className={style.cooperation__link_right} href="tel:+48511944302">511944302</a>
                         </p>
                     </article>

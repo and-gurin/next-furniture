@@ -43,6 +43,7 @@ import Advantages from "@/components/advantages/Advantages";
 import Button from "@/components/button/button";
 
 const images = [
+    {id: 17,  src: modern5},
     {id: 14,  src: modern21},
     {id: 15,  src: modern22},
     {id: 22,  src: wardrobe1},
@@ -52,7 +53,6 @@ const images = [
     {id: 7,  src: living1},
     {id: 8,  src: living21},
     {id: 16,  src: modern4},
-    {id: 17,  src: modern5},
     {id: 24,  src: wardrobe4},
     {id: 25,  src: wardrobe5},
     {id: 31,  src: swingWardrobe5},
