@@ -11,6 +11,9 @@ import wardrobe8 from "@/public/Wardrobe/wardrobe-8.jpg";
 import wardrobe91 from "@/public/Wardrobe/wardrobe-9-1.jpg";
 import wardrobe92 from "@/public/Wardrobe/wardrobe-9-2.jpg";
 import wardrobe10 from "@/public/Wardrobe/wardrobe-10.jpg";
+import wardrobe11 from "@/public/Wardrobe/wardrobe-3-1.jpg";
+import wardrobe12 from "@/public/Wardrobe/wardrobe-3-2.jpg";
+import wardrobe13 from "@/public/Wardrobe/wardrobe-4.jpg";
 import hallwayWardrobe1 from "@/public/Wardrobe/Hallway-1-1.jpg";
 import hallwayWardrobe2 from "@/public/Wardrobe/Hallway-1-2.jpg";
 import hallwayWardrobe3 from "@/public/Wardrobe/Hallway-1-3.jpg";
@@ -135,6 +138,9 @@ const images = [
     {id: '9', src: wardrobe91, tag: 'wardrobe'},
     {id: '10', src: wardrobe92, tag: 'wardrobe'},
     {id: '11', src: wardrobe10, tag: 'wardrobe'},
+    {id: '111', src: wardrobe11, tag: 'wardrobe'},
+    {id: '112', src: wardrobe12, tag: 'wardrobe'},
+    {id: '113', src: wardrobe13, tag: 'wardrobe'},
     {id: '12', src: hallwayWardrobe1, tag: 'hallway'},
     {id: '13', src: hallwayWardrobe2, tag: 'hallway'},
     {id: '14', src: hallwayWardrobe3, tag: 'hallway'},
