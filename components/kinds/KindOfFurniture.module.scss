@@ -51,7 +51,9 @@
 
   &__copy {
     font-style: italic;
+    text-decoration: underline;
     font-weight: 400;
+    margin-bottom: 24px;
 
     @include media-laptop {
       margin-bottom: 80px;
@@ -63,11 +65,11 @@
     font-weight: 700;
     line-height: 48px;
     color: $blackColor;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
   }
 
   &__subtitle {
-    margin-bottom: 56px;
+    margin-bottom: 20px;
   }
 
   &__images {
@@ -111,6 +113,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__nobilia {
+    margin-right: auto;
+    margin-left: 10px;
   }
 }
 

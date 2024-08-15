@@ -17,7 +17,7 @@ export type TabsProps = {
 export type ImageProps = {
     id: string,
     tag: string,
-    src: StaticImageData | string
+    src: StaticImageData | string,
 }
 
 export type ImagesProps = {
@@ -26,11 +26,12 @@ export type ImagesProps = {
     initialIndex?: number,
 }
 
-const Gallery = ({tabs, images, title, defaultTag}: {
+const Gallery = ({tabs, images, title, defaultTag, height}: {
     tabs?: TabsProps[],
     images: ImageProps[],
     title: string,
-    defaultTag: string
+    defaultTag: string,
+    height?: string
 }) => {
 
     const [activeTab, setActiveTab] = React.useState(defaultTag);
@@ -80,6 +81,7 @@ const Gallery = ({tabs, images, title, defaultTag}: {
                     })}
                     {openSlider &&
                         <CustomPaging
+                            height={height}
                             images={filteredImages}
                             setOpenSlider={setOpenSlider}
                             initialIndex={initialIndex}/>

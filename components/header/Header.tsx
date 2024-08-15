@@ -11,10 +11,14 @@ import {useEffect, useRef, useState} from "react";
 import Link from "next/link";
 import kitchen1 from "@/public/Kitchen/Modern/Modern-8.jpg";
 import kitchen2 from "@/public/Kitchen/Classic/Classic-3.jpg";
-import kitchen3 from "@/public/Kitchen/HIGH-TECH/high-tech-1.jpg";
+import kitchen3 from "@/public/Kitchen/Nobilia/nobilia-5.jpg";
 import wardrobe1 from "@/public/Wardrobe/Collage/Wardrobe-8.jpg";
 import wardrobeSliding from "@/public/Wardrobe/Collage/Sliding-wardrobe-3.jpg";
-import wardrobeSwing from "@/public/Wardrobe/Collage/Swing-wardrobe-11.jpg";
+import wardrobeSwing from "@/public/Wardrobe/Hallway-2-1.jpg";
+import wardrobeBedroom from "@/public/Wardrobe/bedroom-3.jpg";
+import wardrobeNiche from "@/public/Wardrobe/niche-5.jpg";
+import wardrobeCorner from "@/public/Wardrobe/corner-1-2.jpg";
+import wardrobeBevel from "@/public/Wardrobe/bevel-1.jpg";
 import bathRoom from "@/public/Custom/Collage/bath-4.jpg";
 import livingRoom from "@/public/Custom/Collage/living-room-1.jpg";
 import customRoom from "@/public/Custom/Collage/bed-room-3.jpg";
@@ -155,11 +159,11 @@ const Header = () => {
                         Kuchnie w stylu klasycznym
                     </Link>
                     <Link
-                        href={'/products/high-tech-kitchen'}
+                        href={'/products/german-kitchen'}
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Kuchnie w stylu High Tech
+                        Niemieckie kuchnie Nobilia
                     </Link>
                 </div>
                 <div className={style.header__categories}>
@@ -171,11 +175,11 @@ const Header = () => {
                         Garderoby
                     </Link>
                     <Link
-                        href={'/products/swing'}
+                        href={'/products/hallway'}
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Szafy z drzwiami skrzydłowymi
+                        Szafy do przedpokoju
                     </Link>
                     <Link
                         href={'/products/sliding'}
@@ -183,6 +187,34 @@ const Header = () => {
                         onClick={onClickBottomMenuLinks}
                     >
                         Szafy z drzwiami przesuwnymi
+                    </Link>
+                    <Link
+                        href={'/products/bedroom'}
+                        className={style.header__category}
+                        onClick={onClickBottomMenuLinks}
+                    >
+                        Szafy do sypialni
+                    </Link>
+                    <Link
+                        href={'/products/niche'}
+                        className={style.header__category}
+                        onClick={onClickBottomMenuLinks}
+                    >
+                        Szafy wnekowe
+                    </Link>
+                    <Link
+                        href={'/products/corner'}
+                        className={style.header__category}
+                        onClick={onClickBottomMenuLinks}
+                    >
+                        Szafy narożne
+                    </Link>
+                    <Link
+                        href={'/products/bevel'}
+                        className={style.header__category}
+                        onClick={onClickBottomMenuLinks}
+                    >
+                        Szafy pod skos
                     </Link>
                 </div>
                 <div className={style.header__categories}>
@@ -229,12 +261,12 @@ const Header = () => {
                         Kuchnie w stylu klasycznym
                     </Link>
                     <Link
-                        href={'/products/high-tech-kitchen'}
+                        href={'/products/german-kitchen'}
                         className={style.header__category}
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('kitchen3')}
                     >
-                        Kuchnie w stylu High Tech
+                        Niemieckie kuchnie Nobilia
                     </Link>
                 </div>
                 <div className={style.header__categories}>
@@ -247,12 +279,12 @@ const Header = () => {
                         Garderoby
                     </Link>
                     <Link
-                        href={'/products/swing'}
+                        href={'/products/hallway'}
                         className={style.header__category}
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('wardrobe2')}
                     >
-                        Szafy z drzwiami skrzydłowymi
+                        Szafa do przedpokoju
                     </Link>
                     <Link
                         href={'/products/sliding'}
@@ -261,6 +293,38 @@ const Header = () => {
                         onMouseEnter={() => setProductImage('wardrobe3')}
                     >
                         Szafy z drzwiami przesuwnymi
+                    </Link>
+                    <Link
+                        href={'/products/bedroom'}
+                        className={style.header__category}
+                        onClick={() => setOpen(!open)}
+                        onMouseEnter={() => setProductImage('wardrobe4')}
+                    >
+                        Szafy do sypialni
+                    </Link>
+                    <Link
+                        href={'/products/niche'}
+                        className={style.header__category}
+                        onClick={() => setOpen(!open)}
+                        onMouseEnter={() => setProductImage('wardrobe5')}
+                    >
+                        Szafy wnekowe
+                    </Link>
+                    <Link
+                        href={'/products/corner'}
+                        className={style.header__category}
+                        onClick={() => setOpen(!open)}
+                        onMouseEnter={() => setProductImage('wardrobe6')}
+                    >
+                        Szafy narożne
+                    </Link>
+                    <Link
+                        href={'/products/bevel'}
+                        className={style.header__category}
+                        onClick={() => setOpen(!open)}
+                        onMouseEnter={() => setProductImage('wardrobe7')}
+                    >
+                        Szafy pod skos
                     </Link>
                 </div>
                 <div className={style.header__categories}>
@@ -303,6 +367,14 @@ const Header = () => {
                                             ? <Image className={style.header__image} src={wardrobeSwing} alt={'Szafa na wymiar'}/>
                                             : productImage === 'wardrobe3'
                                                 ? <Image className={style.header__image} src={wardrobeSliding} alt={'Szafa na wymiar'}/>
+                                                : productImage === 'wardrobe4'
+                                                    ? <Image className={style.header__image} src={wardrobeBedroom} alt={'Szafa na wymiar'}/>
+                                                    : productImage === 'wardrobe5'
+                                                        ? <Image className={style.header__image} src={wardrobeNiche} alt={'Szafa na wymiar'}/>
+                                                        : productImage === 'wardrobe6'
+                                                            ? <Image className={style.header__image} src={wardrobeCorner} alt={'Szafa na wymiar'}/>
+                                                            : productImage === 'wardrobe7'
+                                                                ? <Image className={style.header__image} src={wardrobeBevel} alt={'Szafa na wymiar'}/>
                                                 : productImage === 'bath'
                                                     ? <Image className={style.header__image} src={bathRoom} alt={'Meble do lazienki na wymiar'}/>
                                                     : productImage === 'living'

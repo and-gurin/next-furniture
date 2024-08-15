@@ -45,6 +45,7 @@ import classic4 from "@/public/Kitchen/Classic/Classic-4.jpg";
 import classic51 from "@/public/Kitchen/Classic/Classic-5-1.jpg";
 import classic52 from "@/public/Kitchen/Classic/Classic-5-2.jpg";
 import high1 from "@/public/Kitchen/HIGH-TECH/high-tech-1.jpg";
+import high22 from "@/public/Kitchen/HIGH-TECH/high-tech-2-2.jpg";
 import high23 from "@/public/Kitchen/HIGH-TECH/high-tech-2-3.jpg";
 import high24 from "@/public/Kitchen/HIGH-TECH/high-tech-2-4.jpg";
 import high25 from "@/public/Kitchen/HIGH-TECH/high-tech-2-5.jpg";
@@ -62,11 +63,29 @@ import high92 from "@/public/Kitchen/HIGH-TECH/high-tech-9-2.jpg";
 import high101 from "@/public/Kitchen/HIGH-TECH/high-tech-10-1.jpg";
 import high102 from "@/public/Kitchen/HIGH-TECH/high-tech-10-2.jpg";
 import high103 from "@/public/Kitchen/HIGH-TECH/high-tech-10-3.jpg";
+import high11 from "@/public/Kitchen/HIGH-TECH/high-tech-11-1.jpg";
+import high12 from "@/public/Kitchen/HIGH-TECH/high-tech-11-2.jpg";
+import high13 from "@/public/Kitchen/HIGH-TECH/high-tech-11-3.jpg";
+import high14 from "@/public/Kitchen/HIGH-TECH/high-tech-12-1.jpg";
+import high15 from "@/public/Kitchen/HIGH-TECH/high-tech-12-2.jpg";
+import high16 from "@/public/Kitchen/HIGH-TECH/high-tech-12-3.jpg";
+import nob1 from "@/public/Kitchen/Nobilia/nobilia-1.jpg";
+import nob2 from "@/public/Kitchen/Nobilia/nobilia-2.jpg";
+import nob3 from "@/public/Kitchen/Nobilia/nobilia-3.jpg";
+import nob4 from "@/public/Kitchen/Nobilia/nobilia-4.jpg";
+import nob5 from "@/public/Kitchen/Nobilia/nobilia-5.jpg";
+import nob6 from "@/public/Kitchen/Nobilia/nobilia-6.jpg";
+import nob7 from "@/public/Kitchen/Nobilia/nobilia-7.jpg";
+import nob8 from "@/public/Kitchen/Nobilia/nobilia-8.jpg";
+import nob9 from "@/public/Kitchen/Nobilia/nobilia-9.jpg";
+import nob10 from "@/public/Kitchen/Nobilia/nobilia-10.jpg";
+import nob11 from "@/public/Kitchen/Nobilia/nobilia-11.jpg";
+import nob12 from "@/public/Kitchen/Nobilia/nobilia-12.jpg";
 
 const tabs = [
     {tag: 'all', title: 'Wszystkie'},
     {tag: 'modern', title: 'Nowoczesny'},
-    {tag: 'high', title: 'High-Tech'},
+    {tag: 'high', title: 'NOBILIA'},
     {tag: 'classic', title: 'Klasyczny'},
 ]
 
@@ -115,24 +134,43 @@ const images = [
     {id: '46', src: classic4, tag: 'classic'},
     {id: '47', src: classic51, tag: 'classic'},
     {id: '48', src: classic52, tag: 'classic'},
-    {id: '49', src: high1, tag: 'high'},
-    {id: '50', src: high23, tag: 'high'},
-    {id: '51', src: high24, tag: 'high'},
-    {id: '52', src: high25, tag: 'high'},
-    {id: '53', src: high3, tag: 'high'},
-    {id: '54', src: high41, tag: 'high'},
-    {id: '55', src: high42, tag: 'high'},
-    {id: '56', src: high5, tag: 'high'},
-    {id: '57', src: high6, tag: 'high'},
-    {id: '58', src: high62, tag: 'high'},
-    {id: '59', src: high63, tag: 'high'},
-    {id: '60', src: high7, tag: 'high'},
-    {id: '61', src: high8, tag: 'high'},
-    {id: '62', src: high91, tag: 'high'},
-    {id: '63', src: high92, tag: 'high'},
-    {id: '64', src: high101, tag: 'high'},
-    {id: '65', src: high102, tag: 'high'},
-    {id: '66', src: high103, tag: 'high'},
+    {id: '49', src: high1, tag: 'modern'},
+    {id: '501', src: high22, tag: 'modern'},
+    {id: '50', src: high23, tag: 'modern'},
+    {id: '51', src: high24, tag: 'modern'},
+    {id: '52', src: high25, tag: 'modern'},
+    {id: '53', src: high3, tag: 'modern'},
+    {id: '54', src: high41, tag: 'modern'},
+    {id: '55', src: high42, tag: 'modern'},
+    {id: '56', src: high5, tag: 'modern'},
+    {id: '57', src: high6, tag: 'modern'},
+    {id: '58', src: high62, tag: 'modern'},
+    {id: '59', src: high63, tag: 'modern'},
+    {id: '60', src: high7, tag: 'modern'},
+    {id: '61', src: high8, tag: 'modern'},
+    {id: '62', src: high91, tag: 'modern'},
+    {id: '63', src: high92, tag: 'modern'},
+    {id: '64', src: high101, tag: 'modern'},
+    {id: '65', src: high102, tag: 'modern'},
+    {id: '66', src: high103, tag: 'modern'},
+    {id: '66', src: high11, tag: 'modern'},
+    {id: '66', src: high12, tag: 'modern'},
+    {id: '66', src: high13, tag: 'modern'},
+    {id: '66', src: high14, tag: 'modern'},
+    {id: '66', src: high15, tag: 'modern'},
+    {id: '66', src: high16, tag: 'modern'},
+    {id: '67', src: nob1, tag: 'high'},
+    {id: '68', src: nob2, tag: 'high'},
+    {id: '69', src: nob3, tag: 'high'},
+    {id: '70', src: nob4, tag: 'high'},
+    {id: '71', src: nob5, tag: 'high'},
+    {id: '72', src: nob6, tag: 'high'},
+    {id: '73', src: nob7, tag: 'high'},
+    {id: '74', src: nob8, tag: 'high'},
+    {id: '75', src: nob9, tag: 'high'},
+    {id: '76', src: nob10, tag: 'high'},
+    {id: '77', src: nob11, tag: 'high'},
+    {id: '78', src: nob12, tag: 'high'},
 ]
 
 const GalleryKitchen = ({defaultTag}: {defaultTag: string}) => {
@@ -142,6 +180,7 @@ const GalleryKitchen = ({defaultTag}: {defaultTag: string}) => {
             images={images}
             title={'Galeria realizacji'}
             defaultTag={defaultTag}
+            height={'kitchen'}
         />
     );
 };

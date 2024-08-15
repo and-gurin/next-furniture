@@ -2,13 +2,23 @@
 
 import React, {useEffect, useRef} from "react";
 import Slider from "react-slick";
-import {ImagesProps} from "@/components/gallery/Gallery";
+import {ImageProps} from "@/components/gallery/Gallery";
 import Image from "next/image";
 import "./Slider.scss"
 import "slick-carousel/slick/slick.scss";
 import "slick-carousel/slick/slick-theme.scss";
 
-const CustomPaging: React.FC<ImagesProps> = ({ images, setOpenSlider, initialIndex }) => {
+const CustomPaging = ({
+                                                 images,
+                                                 setOpenSlider,
+                                                 initialIndex,
+    height
+}: {
+    images: ImageProps[],
+    setOpenSlider:(isOpen: boolean) => void,
+    initialIndex?: number,
+    height?: string
+}) => {
 
     const settingsGallery = {
         infinite: true,
@@ -58,7 +68,7 @@ const CustomPaging: React.FC<ImagesProps> = ({ images, setOpenSlider, initialInd
                 <div ref={sliderRef} className="slider-container">
                     <Slider {...settingsGallery}>
                         {images.map((image) => (
-                            <figure key={image.id} className={'paging__figure'}>
+                            <figure key={image.id} className={height === 'kitchen' ? 'paging__figure_kitchen' : 'paging__figure_wardrobe'}>
                                 <Image
                                     className={'paging__image'}
                                     fill

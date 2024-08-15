@@ -6,6 +6,8 @@ import Image, {StaticImageData} from "next/image";
 import {baskerville} from "@/app/fonts";
 import Link from "next/link";
 import {Fade} from "react-awesome-reveal";
+import React from "react";
+import nobKitchen from "@/public/Nobilia_Logo.svg"
 
 export type ImagePropsType = {
     id: string,
@@ -19,15 +21,18 @@ export type FurnitureTypes = {
 
 export type FurnitureDescriptionType = {
     kindOfFurniture: string,
+    link: string,
     title: string,
     description: string,
     furnitureTypes: FurnitureTypes[],
 }
 
-const KindOfFurniture = ({images, descriptions, location}: {
+const KindOfFurniture = ({images, descriptions, location, german, custom}: {
     images: ImagePropsType[],
     descriptions: FurnitureDescriptionType,
-    location?: string
+    location?: string,
+    german?: boolean,
+    custom?: boolean
 }) => {
     return (
 
@@ -38,9 +43,14 @@ const KindOfFurniture = ({images, descriptions, location}: {
                         ? style.kind__grid
                         : style.kind__grid + ' ' + style.kind__grid_left}>
                         <div className={style.kind__description}>
-                            <p className={baskerville.className + ' ' + style.kind__copy}>
+                            {custom ? <p className={baskerville.className + ' ' + style.kind__copy}>
                                 {descriptions.kindOfFurniture}
-                            </p>
+                            </p> : <Link href={descriptions.link}>
+                                <p className={baskerville.className + ' ' + style.kind__copy}>
+                                    {descriptions.kindOfFurniture}
+                                </p>
+                            </Link>}
+
                             <div>
                                 <h2 className={baskerville.className + ' ' + style.kind__title}>
                                     {descriptions.title}
@@ -69,6 +79,33 @@ const KindOfFurniture = ({images, descriptions, location}: {
                                             </Fade>
                                         </li>
                                     })}
+                                    {german &&  <li>
+                                        <Fade  direction={location !== 'image-on-left'
+                                            ? 'left' : 'right'}>
+                                            <Link href={'/products/german-kitchen'} className={style.kind__details}>
+                                                <p>{'Kuchnie'}</p>
+                                                <p className={style.kind__nobilia}>
+                                                    {german ? <Image
+                                                        src={nobKitchen}
+
+                                                        alt='Nobilia'
+                                                        width={88}
+                                                        height={20}
+                                                    /> : ''}
+                                                </p>
+                                                <div className={style.kind__more}>
+                                                    <p className={baskerville.className + ' ' + style.kind__details_copy}>
+                                                        Więcej
+                                                    </p>
+                                                    <Image src={arrowRight}
+                                                           alt='arrow-right'
+                                                           width='40'
+                                                           height='16'
+                                                    />
+                                                </div>
+                                            </Link>
+                                        </Fade>
+                                    </li>}
                                 </ul>
                             </div>
                         </div>

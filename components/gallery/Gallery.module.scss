@@ -45,6 +45,8 @@
     display: flex;
     gap: 16px;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__button {
@@ -83,7 +85,7 @@
 
   &__figure {
     width: 100%;
-    height: 240px;
+    height: 340px;
     border-radius: 12px;
     cursor: pointer;
 

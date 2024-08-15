@@ -31,33 +31,39 @@ const customFurnitureImages = [
 ]
 
 const kitchenDescriptions = {
-        kindOfFurniture: 'kuchnia',
-        title: 'Kto dziś robi śniadanie?',
-        description: 'To nie ma znaczenia. W kuchni na zamówienie każdy, kto chce przygotować ' +
-            'śniadanie, poczuje się jak szef kuchni. W Twojej kuchni ' +
-            'uwzględnimy preferencje każdego członka rodziny.',
-        furnitureTypes: [
-            {type: 'Kuchnie w nowoczesnym stylu', link: '/products/modern-kitchen'},
-            {type: 'Kuchnie w stylu klasycznym', link: '/products/classic-kitchen'},
-            {type: 'Kuchnie w stylu High-Tech', link: '/products/high-tech-kitchen'},
-        ],
-    }
+    kindOfFurniture: 'kuchnia',
+    link: '/products/kitchens',
+    title: 'Kto dziś robi śniadanie?',
+    description: 'To nie ma znaczenia. W kuchni na zamówienie każdy, kto chce przygotować ' +
+        'śniadanie, poczuje się jak szef kuchni. W Twojej kuchni ' +
+        'uwzględnimy preferencje każdego członka rodziny.',
+    furnitureTypes: [
+        {type: 'Kuchnie w nowoczesnym stylu', link: '/products/modern-kitchen'},
+        {type: 'Kuchnie w stylu klasycznym', link: '/products/classic-kitchen'},
+    ],
+}
 
 const wardrobeDescriptions = {
-    kindOfFurniture: 'szafy',
+    kindOfFurniture: 'szafa',
+    link: '/products/wardrobes',
     title: 'Widziałeś moje skarpetki?',
     description: 'Wypowiedz totalną wojnę z bałaganem. ' +
         'Od teraz i na zawsze każda rzecz jest na swoim miejscu. ' +
         'Tylko w szafie wykonanej według indywidualnego projektu.',
     furnitureTypes: [
         {type: 'Garderoby', link: '/products/wardrobe'},
-        {type: 'Szafy z drzwiami skrzydłowymi', link: '/products/swing'},
-        {type: 'Szafy z drzwiami przesuwnymi', link: '/products/sliding'},
+        {type: 'Szafy do przedpokoju', link: '/products/hallway'},
+        {type: 'Szafy przesuwne', link: '/products/sliding'},
+        {type: 'Szafy do sypialni', link: '/products/bedroom'},
+        {type: 'Szafy wnekowe', link: '/products/niche'},
+        {type: 'Szafy narożne', link: '/products/corner'},
+        {type: 'Szafy pod skos', link: '/products/bevel'},
     ],
 }
 
 const customFurnitureDescriptions = {
     kindOfFurniture: 'meble na wymiar',
+    link: '/products/customs',
     title: 'Twoje pomysły są naszą pracą.',
     description: 'Od pomysłu do realizacji - ' +
         'stworzymy Meble, które idealnie pasują do Twojej przestrzeni i ' +
@@ -65,7 +71,7 @@ const customFurnitureDescriptions = {
     furnitureTypes: [
         {type: 'Łazienka', link: '/products/bath-room'},
         {type: 'Salon', link: '/products/living-room'},
-        {type: 'Meble na wymiar', link: '/products/custom-furniture'},
+        // {type: 'Meble na wymiar', link: '/products/custom-furniture'},
     ],
 }
 
@@ -73,9 +79,13 @@ export default function Home() {
     return (
         <>
             <Hero/>
-            <KindOfFurniture images={kitchenImages} descriptions={kitchenDescriptions}/>
-            <KindOfFurniture location={'image-on-left'} images={wardrobeImages} descriptions={wardrobeDescriptions}/>
-            <KindOfFurniture images={customFurnitureImages} descriptions={customFurnitureDescriptions}/>
+            <KindOfFurniture images={kitchenImages} german={true} descriptions={kitchenDescriptions}/>
+            <KindOfFurniture
+                location={'image-on-left'}
+                images={wardrobeImages}
+                descriptions={wardrobeDescriptions}
+            />
+            <KindOfFurniture images={customFurnitureImages} custom={true} descriptions={customFurnitureDescriptions}/>
             <Stages/>
         </>
     )

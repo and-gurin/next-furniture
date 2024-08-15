@@ -20,12 +20,21 @@
   z-index: 17;
 }
 
-.paging__figure {
+.paging__figure_kitchen {
   position: relative;
   height: 100vh;
 
   @include media-tablet {
-    height: 80vh;
+    height: 50vh;
+  }
+}
+
+.paging__figure_wardrobe {
+  position: relative;
+  height: 100vh;
+
+  @include media-tablet {
+    height: 90vh;
   }
 }
 
