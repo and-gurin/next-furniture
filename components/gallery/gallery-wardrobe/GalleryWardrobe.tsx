@@ -1,6 +1,5 @@
 import React from 'react';
 import Gallery from "@/components/gallery/Gallery";
-import wardrobe1 from "@/public/Wardrobe/wardrobe-1.jpg";
 import wardrobe2 from "@/public/Wardrobe/wardrobe-2.jpg";
 import wardrobe41 from "@/public/Wardrobe/wardrobe-4-1.jpg";
 import wardrobe42 from "@/public/Wardrobe/wardrobe-4-2.jpg";
@@ -127,7 +126,6 @@ const tabs = [
 ]
 
 const images = [
-    {id: '1', src: wardrobe1, tag: 'wardrobe'},
     {id: '2', src: wardrobe2, tag: 'wardrobe'},
     {id: '3', src: wardrobe41, tag: 'wardrobe'},
     {id: '4', src: wardrobe42, tag: 'wardrobe'},
