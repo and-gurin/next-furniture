@@ -1,8 +1,6 @@
 import React from 'react';
 import Gallery from "@/components/gallery/Gallery";
-import wardrobe2 from "@/public/Wardrobe/wardrobe-2.jpg";
 import wardrobe41 from "@/public/Wardrobe/wardrobe-4-1.jpg";
-import wardrobe42 from "@/public/Wardrobe/wardrobe-4-2.jpg";
 import wardrobe5 from "@/public/Wardrobe/wardrobe-5.jpg";
 import wardrobe6 from "@/public/Wardrobe/wardrobe-6.jpg";
 import wardrobe7 from "@/public/Wardrobe/wardrobe-7.jpg";
@@ -12,7 +10,6 @@ import wardrobe92 from "@/public/Wardrobe/wardrobe-9-2.jpg";
 import wardrobe10 from "@/public/Wardrobe/wardrobe-10.jpg";
 import wardrobe11 from "@/public/Wardrobe/wardrobe-3-1.jpg";
 import wardrobe12 from "@/public/Wardrobe/wardrobe-3-2.jpg";
-import wardrobe13 from "@/public/Wardrobe/wardrobe-4.jpg";
 import hallwayWardrobe1 from "@/public/Wardrobe/Hallway-1-1.jpg";
 import hallwayWardrobe2 from "@/public/Wardrobe/Hallway-1-2.jpg";
 import hallwayWardrobe3 from "@/public/Wardrobe/Hallway-1-3.jpg";
@@ -126,9 +123,7 @@ const tabs = [
 ]
 
 const images = [
-    {id: '2', src: wardrobe2, tag: 'wardrobe'},
     {id: '3', src: wardrobe41, tag: 'wardrobe'},
-    {id: '4', src: wardrobe42, tag: 'wardrobe'},
     {id: '5', src: wardrobe5, tag: 'wardrobe'},
     {id: '6', src: wardrobe6, tag: 'wardrobe'},
     {id: '7', src: wardrobe7, tag: 'wardrobe'},
@@ -138,7 +133,6 @@ const images = [
     {id: '11', src: wardrobe10, tag: 'wardrobe'},
     {id: '111', src: wardrobe11, tag: 'wardrobe'},
     {id: '112', src: wardrobe12, tag: 'wardrobe'},
-    {id: '113', src: wardrobe13, tag: 'wardrobe'},
     {id: '12', src: hallwayWardrobe1, tag: 'hallway'},
     {id: '13', src: hallwayWardrobe2, tag: 'hallway'},
     {id: '14', src: hallwayWardrobe3, tag: 'hallway'},
