@@ -6,7 +6,8 @@ import Header from '@/components/header/Header';
 import {raleWay} from '@/app/fonts';
 import Footer from "@/components/footer/Footer";
 import CookieConsent from "@/components/cookie/CookieConsent";
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Twój dom, twoje zasady: meble wykonane na wymiar',
@@ -14,7 +15,9 @@ export const metadata: Metadata = {
       ' ⭐ Kuchnie, szafy, garderoby, meble do domu i biura' +
       ' ⭐ Ponad 20 lat doświadczenia'
       ,
-
+  other: {
+    'script-id': 'cookieyes', // Добавьте идентификатор
+  },
   keywords: 'szafa do garderoby\n' +
       'meble do garderoby\n' +
       'garderoby\n' +
@@ -141,26 +144,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl">
-    {/*<Head>*/}
-    {/*  <script dangerouslySetInnerHTML={{ __html: `*/}
-    {/*      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':*/}
-    {/*      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],*/}
-    {/*      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=*/}
-    {/*      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);*/}
-    {/*      })(window,document,'script','dataLayer','GTM-MXS2CNJS');*/}
-    {/*    ` }} />*/}
-    {/*</Head>*/}
+    <head>
+      <Script
+          id="cookieyes"
+          src="/scripts/script.js"
+          strategy="afterInteractive"
+      ></Script>
+    </head>
     <body >
-    {/*<Script*/}
-    {/*    id="gtm-noscript"*/}
-    {/*    strategy="afterInteractive"*/}
-    {/*    dangerouslySetInnerHTML={{*/}
-    {/*      __html: `*/}
-    {/*          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXS2CNJS"*/}
-    {/*          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>*/}
-    {/*        `,*/}
-    {/*    }}*/}
-    {/*/>*/}
     <Header/>
     <CookieConsent/>
     <main className={raleWay.className}>{children}</main>
