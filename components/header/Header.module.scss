@@ -26,6 +26,11 @@
     align-items: center;
   }
 
+  &__flag {
+    margin-left: auto;
+    margin-right: 12px;
+  }
+
   &__navigation {
     @include flex( $gap:20px);
 
@@ -83,7 +88,7 @@
   &__phone {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
     margin-left: auto;
   }
 

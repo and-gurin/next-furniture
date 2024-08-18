@@ -24,9 +24,10 @@ import livingRoom from "@/public/Custom/Collage/living-room-1.jpg";
 import customRoom from "@/public/Custom/Collage/bed-room-3.jpg";
 import burger from "@/public/icons8-menu.svg";
 import close from "@/public/close-bold-svgrepo-com.svg";
-import arrowRight from "@/public/right-arrow-svgrepo-com.svg"
-import arrowLeft from "@/public/left-arrow-svgrepo-com.svg"
-import handset from "@/public/handset-svgrepo-com.svg"
+import arrowRight from "@/public/right-arrow-svgrepo-com.svg";
+import arrowLeft from "@/public/left-arrow-svgrepo-com.svg";
+import handset from "@/public/handset-svgrepo-com.svg";
+import ukraine from "@/public/flag-for-ukraine-svgrepo-com.svg"
 
 const links = [
     {id: 1, title: 'Materiały', href: '/materials'},
@@ -81,6 +82,22 @@ const Header = () => {
         <header className={raleWay.className + ' ' + style.header} ref={headerRef}>
             <div className={`wrapper  ${style.header__wrapper}`} >
                 <Logo/>
+                {/*<a href="tel:+48511944302" className={style.header__phone}>*/}
+                {/*    <Image*/}
+                {/*        src={handset}*/}
+                {/*        width='24'*/}
+                {/*        height='24'*/}
+                {/*        alt='Słuchawka'*/}
+                {/*    />*/}
+                {/*    8:00-19:00*/}
+                {/*</a>*/}
+                <Image
+                    className={style.header__flag}
+                    src={ukraine}
+                    width='32'
+                    height='32'
+                    alt='Flaga Ukrainy'
+                />
                 <nav className={style.header__navigation}>
                     <div className={style.header__products}
                          onClick={() => setOpen(!open)}>
@@ -128,7 +145,7 @@ const Header = () => {
                             height='24'
                             alt='Słuchawka'
                         />
-                        Zadzwoń do nas teraz
+                        Pon-Sob: 8-00 : 20-00
                     </a>
                 </nav>
             }

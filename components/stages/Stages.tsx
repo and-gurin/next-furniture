@@ -47,8 +47,8 @@ const stages = [
         id: '04',
         src: stageFour,
         title: 'Montaż',
-        description: 'Installation of furniture. We will install the furniture, ' +
-            'adjust the mechanisms and make sure that you got what you wanted.',
+        description: 'Montaż mebli. Zainstalujemy meble, ' +
+            'dostosujemy mechanizmy i upewnimy się, że masz to, czego chciałeś.',
         list: ''
     },
 ]
