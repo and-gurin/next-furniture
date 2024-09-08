@@ -43,7 +43,7 @@ export default function Contacts () {
                             <br/>
                             <div className={style.contacts__link}>
                                 <p className={style.contacts__link_left}>Adres:</p>
-                                <a className={style.contacts__link_right} href="https://goo.gl/maps/ZgnfN5Z5FdkxQxpr9">Niemena 4, 95-070 Aleksandrów Łódzki</a>
+                                <a className={style.contacts__link_right} href="https://maps.app.goo.gl/9vVgANhEb4Hhn8Pr5">Błażeja 76B, 61-608 Poznań</a>
                             </div>
                         </address>
                     </div>

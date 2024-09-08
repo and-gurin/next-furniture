@@ -12,10 +12,10 @@ const Footer = () => {
                 <nav className={style.footer__contacts}>
                     <div className={style.footer__address}>
                         <Logo/>
-                        <a href="https://goo.gl/maps/ZgnfN5Z5FdkxQxpr9">
-                            Niemena 4,
+                        <a href="https://maps.app.goo.gl/9vVgANhEb4Hhn8Pr5">
+                            Błażeja 76B,
                             <br/>
-                            95-070 Aleksandrów Łódzki
+                            61-608 Poznań
                         </a>
                     </div>
                     <address className={style.footer__links}>
@@ -27,11 +27,11 @@ const Footer = () => {
                         </a>
                     </address>
                     <div className={style.footer__social}>
-                        <a target='_blank'
-                        className={style.footer__link}
-                           href="https://www.facebook.com/andrei.hurynovich.18/">
-                            Facebook
-                        </a>
+                        {/*<a target='_blank'*/}
+                        {/*className={style.footer__link}*/}
+                        {/*   href="https://www.facebook.com/andrei.hurynovich.18/">*/}
+                        {/*    Facebook*/}
+                        {/*</a>*/}
                         <a target='_blank'
                            className={style.footer__link}
                            href="https://www.instagram.com/and_gurin/">

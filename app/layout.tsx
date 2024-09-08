@@ -5,7 +5,6 @@ import React from 'react';
 import Header from '@/components/header/Header';
 import {raleWay} from '@/app/fonts';
 import Footer from "@/components/footer/Footer";
-import CookieConsent from "@/components/cookie/CookieConsent";
 import { GoogleTagManager } from '@next/third-parties/google';
 import Script from 'next/script';
 
@@ -153,11 +152,11 @@ export default function RootLayout({
     </head>
     <body >
     <Header/>
-    <CookieConsent/>
+    {/*<CookieConsent/>*/}
     <main className={raleWay.className}>{children}</main>
     <Footer/>
     </body>
-    <GoogleTagManager gtmId="GTM-MXS2CNJS" />
+    <GoogleTagManager gtmId="GTM-PZ2SQWZ8" />
     </html>
   )
 }

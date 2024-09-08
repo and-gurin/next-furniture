@@ -29,8 +29,8 @@ export default function PrivacyPolicy() {
                             <li>
                                 <strong>2. Administrator Danych Osobowych</strong>
                                 <p className={style.privacy__subtitle}>
-                                    Administratorem Twoich danych osobowych jest Andrei Hurynovich, z siedzibą w Niemena
-                                    4, 95-070 Kolonia Brużyca. Możesz skontaktować się z nami pod
+                                    Administratorem Twoich danych osobowych jest Andrei Hurynovich, z siedzibą w
+                                    Błażeja 76B, 61-608 Poznań. Możesz skontaktować się z nami pod
                                     adresem e-mail: &nbsp;
                                     <a className={style.privacy__link} href="mailto:inhouse.biuro@gmail.com">
                                         inhouse.biuro@gmail.com
