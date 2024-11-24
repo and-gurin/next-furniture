@@ -7,10 +7,11 @@ import {baskerville} from "@/app/fonts";
 import Button from "@/components/button/button";
 import Advantages from "@/components/advantages/Advantages";
 
-const FurnitureDetails = ({image, title, description}: {
+const FurnitureDetails = ({image, title, description, text}: {
     image: StaticImageData,
     title: string,
     description: string,
+    text?: string,
 }) => {
     return (
         <Fade direction={'up'} triggerOnce={true} fraction={0}>
@@ -24,7 +25,7 @@ const FurnitureDetails = ({image, title, description}: {
                             <p className={style.details__subtitle}>
                                 {description}
                             </p>
-                            <Button/>
+                            <Button text={text}/>
                             <Advantages/>
                         </div>
                             <figure className={style.details__figure}>

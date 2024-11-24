@@ -1,6 +1,6 @@
 import React from 'react';
 import FurnitureDetails from "@/components/details/FurnitureDetails";
-import classic from "@/public/Wardrobe/niche-5.jpg"
+import classic from "@/public/Wardrobe/niche-6.jpg"
 import Stages from "@/components/stages/Stages";
 import GalleryWardrobe from "@/components/gallery/gallery-wardrobe/GalleryWardrobe";
 import {Metadata} from "next";
@@ -13,7 +13,7 @@ const NicheWardrobe = () => {
         <>
             <FurnitureDetails
                 image={classic}
-                title={'Szafy Wnekowe'}
+                title={'Zabudowa wnęki na wymiar'}
                 description={'Czy masz wolną niszę? Zróbmy tam szafę. W końcu miejsce do przechowywania ' +
                     'nigdy nie jest zbędne.'}/>
             <GalleryWardrobe defaultTag={'niche'}/>

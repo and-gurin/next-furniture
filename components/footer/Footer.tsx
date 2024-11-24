@@ -34,7 +34,7 @@ const Footer = () => {
                         {/*</a>*/}
                         <a target='_blank'
                            className={style.footer__link}
-                           href="https://www.instagram.com/and_gurin/">
+                           href="https://www.instagram.com/inhousemeble/">
                             Instagram
                         </a>
                     </div>

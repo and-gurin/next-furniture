@@ -9,14 +9,18 @@ import stageFour from "@/public/stages-of-work-4.jpg";
 import "@/styles/wrapper.scss"
 import {baskerville} from "@/app/fonts";
 import {Fade} from "react-awesome-reveal";
+import Link from "next/link";
 
 const stages = [
     {
         id: '01',
         src: stageOne,
-        title: 'Pierwszy kontakt.',
+        title: <Link className={style.stages__link} href={'/contacts'}>
+                Pierwszy kontakt, wycena
+        </Link>,
         description: 'Dzwonisz do nas lub wysyłasz wiadomość, ' +
-            'a my próbujemy sprawdzić, czy możemy pomóc ci rozwiązać twój problem.',
+            'a my próbujemy sprawdzić, czy możemy pomóc ci rozwiązać twój problem.' +
+        ' Na tym etapie wykonamy projekt z wizualizacją i wyceną',
         list: ''
     },
     {
@@ -25,10 +29,9 @@ const stages = [
         title: 'Projekt',
         description: 'To najważniejszy etap. Wyraźnie rozumiemy, ' +
             'że meble na zamówienie muszą być w pełnej harmonii z pomieszczeniem. ' +
-            'Nie poprosimy Cię o odwiedzenie naszego biura ani ' +
-            'przesłanie nam zdjęć swojego pokoju. Przyjedziemy do ' +
+            ' Przyjedziemy do ' +
             'Ciebie z próbkami materiałów, laptopem, na którym ' +
-            'we współpracy z Tobą stworzymy projekt 3d w czasie rzeczywistym. ' +
+            'we współpracy z Tobą stworzymy finalną wersję projektu 3d w czasie rzeczywistym. ' +
             'Na tym etapie wykonamy:',
         list: '1',
     },

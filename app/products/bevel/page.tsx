@@ -14,7 +14,7 @@ const HallwayWardrobe = () => {
         <>
             <FurnitureDetails
                 image={classic}
-                title={'Szafy do przedpokoju'}
+                title={'Zabudowa pod skosem (na poddaszu)'}
                 description={'Stwórz idealną przestrzeń do przechowywania dzięki naszym szafkom przedpokojowym, ' +
                     'w których każdy element jest przemyślany w najdrobniejszych szczegółach ' +
                     'dla Twojej wygody i stylu.'}/>

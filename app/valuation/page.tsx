@@ -6,9 +6,9 @@ import Form from "@/components/form/Form";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-    title: 'Kontakt | InHouse meble'
+    title: 'Wycena | InHouse meble'
 }
-export default function Contacts () {
+export default function Valuation () {
 
     return (
         <>
@@ -16,12 +16,14 @@ export default function Contacts () {
                 <div className={`wrapper ${style.contacts__wrapper}`}>
                     <div className={style.contacts__description}>
                         <h2 className={baskerville.className + ' ' + style.contacts__title}>
-                            Kontakt
+                            Bezpłatna wycena
                         </h2>
                         <p className={style.contacts__subtitle}>
-                            Nasze produkty są unikalne i dostosowane do specyfiki
-                            każdego klienta, a nasi klienci mogą
-                            liczyć na nasze wsparcie i doradztwo na każdym etapie procesu.
+
+                        </p>
+                        <p className={style.contacts__subtitle}>
+                            Masz już projekt kuchni lub innych mebli? Dowiedz się, ile będzie kosztować wdrożenie.
+                            Po prostu wyślij go do nas na e-mail.
                         </p>
                         <address className={style.contacts__links}>
                             <div className={style.contacts__link}>

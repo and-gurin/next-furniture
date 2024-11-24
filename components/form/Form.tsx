@@ -45,10 +45,11 @@ export default function Form() {
     return (
         <div className={style.form}>
             <h3 className={baskerville.className + ' ' + style.form__title}>
-                Bezpłatna wizyta
+                Bezpłatna wycena
             </h3>
             <p className={style.form__subtitle}>
-                Wpisz swoje imię oraz numer telefonu lub adres e-mail, aby umówić się na bezpłatną wizytę.
+                Skontaktuj się z nami już dziś, aby dowiedzieć się więcej o cenie i sposobie realizacji
+                kreacji Twojej wyjątkowej przestrzeni.
             </p>
             <form className={style.contacts__form} ref={form} onSubmit={sendEmail}>
                 <input placeholder='Imię'

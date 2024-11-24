@@ -112,6 +112,13 @@ const Header = () => {
                     </div>
                     <ul className={style.header__links}>
                         <NavItem links={links}/>
+                        <li>
+                            <Link href={'/contacts'}>
+                                <b>
+                                    {'Bezpłatna wycena'}
+                                </b>
+                            </Link>
+                        </li>
                     </ul>
                 </nav>
                 <div className={style.header__burger} onClick={() => setOpenBurger(!openBurger)}>
@@ -137,6 +144,11 @@ const Header = () => {
                     </div>
                     <ul className={style.header__links_burger}>
                         <NavItem links={links} openMenu={() => setOpenBurger(!openBurger)}/>
+                        <Link href={'/contacts'}>
+                            <b>
+                                {'Bezpłatna wycena'}
+                            </b>
+                        </Link>
                     </ul>
                     <a href="tel:+48511944302" className={style.header__phone}>
                         <Image

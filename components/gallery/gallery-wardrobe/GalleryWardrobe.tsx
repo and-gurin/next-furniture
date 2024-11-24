@@ -10,9 +10,6 @@ import wardrobe92 from "@/public/Wardrobe/dressing-9-2.jpg";
 import wardrobe10 from "@/public/Wardrobe/dressing-10.jpg";
 import wardrobe11 from "@/public/Wardrobe/dressing-3-1.jpg";
 import wardrobe12 from "@/public/Wardrobe/dressing-3-2.jpg";
-import hallwayWardrobe1 from "@/public/Wardrobe/Hallway-1-1.jpg";
-import hallwayWardrobe2 from "@/public/Wardrobe/Hallway-1-2.jpg";
-import hallwayWardrobe3 from "@/public/Wardrobe/Hallway-1-3.jpg";
 import hallwayWardrobe4 from "@/public/Wardrobe/Hallway-2-1.jpg";
 import hallwayWardrobe5 from "@/public/Wardrobe/Hallway-2-2.jpg";
 import hallwayWardrobe6 from "@/public/Wardrobe/Hallway-2-3.jpg";
@@ -42,8 +39,6 @@ import slidingWardrobe42 from "@/public/Wardrobe/Sliding-wardrobe-4-2.jpg";
 import slidingWardrobe43 from "@/public/Wardrobe/Sliding-wardrobe-4-3.jpg";
 import slidingWardrobe51 from "@/public/Wardrobe/Sliding-wardrobe-5-1.jpg";
 import slidingWardrobe52 from "@/public/Wardrobe/Sliding-wardrobe-5-2.jpg";
-import slidingWardrobe61 from "@/public/Wardrobe/Sliding-wardrobe-6-1.jpg";
-import slidingWardrobe62 from "@/public/Wardrobe/Sliding-wardrobe-6-2.jpg";
 import slidingWardrobe63 from "@/public/Wardrobe/Sliding-wardrobe-6-3.jpg";
 import slidingWardrobe71 from "@/public/Wardrobe/Sliding-wardrobe-7-1.jpg";
 import slidingWardrobe72 from "@/public/Wardrobe/Sliding-wardrobe-7-2.jpg";
@@ -109,6 +104,7 @@ import cornerWardrobe4 from "@/public/Wardrobe/corner-2-2.jpg";
 import cornerWardrobe5 from "@/public/Wardrobe/corner-2-3.jpg";
 import cornerWardrobe6 from "@/public/Wardrobe/corner-4.jpg";
 import bevelWardrobe1 from "@/public/Wardrobe/bevel-1.jpg";
+import bevelWardrobe2 from "@/public/Wardrobe/bevel-2.jpeg";
 
 
 const tabs = [
@@ -133,9 +129,6 @@ const images = [
     {id: '11', src: wardrobe10, tag: 'wardrobe'},
     {id: '111', src: wardrobe11, tag: 'wardrobe'},
     {id: '112', src: wardrobe12, tag: 'wardrobe'},
-    {id: '12', src: hallwayWardrobe1, tag: 'hallway'},
-    {id: '13', src: hallwayWardrobe2, tag: 'hallway'},
-    {id: '14', src: hallwayWardrobe3, tag: 'hallway'},
     {id: '15', src: hallwayWardrobe4, tag: 'hallway'},
     {id: '16', src: hallwayWardrobe5, tag: 'hallway'},
     {id: '17', src: hallwayWardrobe6, tag: 'hallway'},
@@ -165,14 +158,12 @@ const images = [
     {id: '30', src: slidingWardrobe43, tag: 'sliding'},
     {id: '31', src: slidingWardrobe51, tag: 'sliding'},
     {id: '32', src: slidingWardrobe52, tag: 'sliding'},
-    {id: '33', src: slidingWardrobe61, tag: 'sliding'},
-    {id: '33', src: slidingWardrobe62, tag: 'sliding'},
     {id: '34', src: slidingWardrobe63, tag: 'sliding'},
     {id: '35', src: slidingWardrobe71, tag: 'sliding'},
     {id: '36', src: slidingWardrobe72, tag: 'sliding'},
     {id: '37', src: slidingWardrobe73, tag: 'sliding'},
     {id: '38', src: slidingWardrobe8, tag: 'sliding'},
-    {id: '30', src: slidingWardrobe91, tag: 'sliding'},
+    {id: '39', src: slidingWardrobe91, tag: 'sliding'},
     {id: '40', src: slidingWardrobe92, tag: 'sliding'},
     {id: '41', src: slidingWardrobe93, tag: 'sliding'},
     {id: '42', src: slidingWardrobe94, tag: 'sliding'},
@@ -233,6 +224,8 @@ const images = [
     {id: '70', src: cornerWardrobe5, tag: 'corner'},
     {id: '71', src: cornerWardrobe6, tag: 'corner'},
     {id: '72', src: bevelWardrobe1, tag: 'bevel'},
+    {id: '73', src: bevelWardrobe2, tag: 'bevel'},
+    // {id: '74', src: bevelWardrobe3, tag: 'bevel'},
 ]
 
 const GalleryWardrobe = ({defaultTag}: {defaultTag: string}) => {

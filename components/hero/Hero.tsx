@@ -98,7 +98,7 @@ const Hero = () => {
                         dla Twojego wnętrza! Tworzymy spersonalizowane rozwiązania meblowe,
                         które odzwierciedlają Twoją wyjątkowość i styl.
                     </p>
-                    <Button/>
+                    <Button text={'contact'}/>
                     <div>
                         <Advantages/>
                     </div>
