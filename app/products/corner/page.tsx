@@ -14,9 +14,7 @@ const CornerWardrobe = () => {
             <FurnitureDetails
                 image={classic}
                 title={'Szafy narożne'}
-                description={'Aby zamówić szafkę narożną, musisz być naprawdę odważną osobą. ' +
-                    'Nasze szafki narożne zapewnią maksymalną wygodę i dużo miejsca do ' +
-                    'przechowywania w każdym wnętrzu.'}/>
+                description={'Jeżeli cenisz sobie przestrzeń, szafa narożna będzie dla ciebie idealnym rozwiązaniem'}/>
             <GalleryWardrobe defaultTag={'corner'}/>
             <Stages background={'whiteSmoke'}/>
         </>

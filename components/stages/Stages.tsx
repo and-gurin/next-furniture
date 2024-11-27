@@ -40,10 +40,9 @@ const stages = [
         src: stageThree,
         title: 'Produkcja',
         description: 'Zawarcie umowy i produkcja mebli. Podpiszemy z Tobą umowę i wykonamy meble. ' +
-            'Jesteśmy zwykłymi ludźmi i doskonale zdajemy sobie sprawę, ' +
+            'Doskonale zdajemy sobie sprawę, ' +
             'że po podpisaniu umowy i zatwierdzeniu projektu możesz mieć ' +
-            'genialne pomysły, jak ulepszyć meble. Możesz dokonać nieograniczonej ' +
-            'liczby zmian w projekcie do momentu zakupu materiałów.',
+            'genialne pomysły, jak ulepszyć meble. Możesz dokonać zmiany w projekcie do momentu zakupu materiałów.',
         list: ''
     },
     {

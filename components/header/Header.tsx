@@ -201,14 +201,14 @@ const Header = () => {
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Garderoby
+                        Zabudowa garderoby
                     </Link>
                     <Link
                         href={'/products/hallway'}
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Szafy do przedpokoju
+                        Zabudowa przedpokoju
                     </Link>
                     <Link
                         href={'/products/sliding'}
@@ -229,7 +229,7 @@ const Header = () => {
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Szafy wnekowe
+                        Zabudowa wnek
                     </Link>
                     <Link
                         href={'/products/corner'}
@@ -243,7 +243,7 @@ const Header = () => {
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Szafy pod skos
+                        Zabudowa skosów
                     </Link>
                 </div>
                 <div className={style.header__categories}>

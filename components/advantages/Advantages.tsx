@@ -7,21 +7,20 @@ import style from "./Advantages.module.scss"
 const advantages = [
     {
         id: 1, src: measuring,
-        title: 'Doceniam twój czas.',
-        txt: 'Przyjedziemy na pomiar z próbkami materiałów i wykonamy na ' +
-            'miejscu projekt 3D Twoich mebli. Bezpłatnie.'
+        title: 'Doceniam twój czas',
+        txt: 'Wykonamy project z wizualizacją 3D i wyceną w 24 godziny. Pomiar w Poznaniu + 100 km za darmo!'
     },
     {
         id: 2,
         src: measuring,
-        title: 'Zawsze tam jesteśmy.',
-        txt: 'Projektant jest w kontakcie 24/7 na wszystkich etapach pracy.'
+        title: 'Jesteśmy do twojej dyspozycji',
+        txt: 'Projektant jest w kontakcie 24/7 na wszystkich etapach pracy'
     },
     {
         id: 3,
         src: measuring,
-        title: 'Nie porzucamy naszych.',
-        txt: 'Gwarancja na meble wynosi 2 lata + serwis pogwarancyjny.'
+        title: 'Serwis gwarantowany',
+        txt: 'Gwarancja na meble wynosi 2 lata + serwis pogwarancyjny'
     },
 ]
 

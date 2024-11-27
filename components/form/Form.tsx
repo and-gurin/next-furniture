@@ -45,7 +45,7 @@ export default function Form() {
     return (
         <div className={style.form}>
             <h3 className={baskerville.className + ' ' + style.form__title}>
-                Bezpłatna wycena
+                Bezpłatna wycena w 24 godziny
             </h3>
             <p className={style.form__subtitle}>
                 Skontaktuj się z nami już dziś, aby dowiedzieć się więcej o cenie i sposobie realizacji
