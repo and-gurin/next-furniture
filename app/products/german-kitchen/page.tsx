@@ -6,7 +6,7 @@ import GalleryKitchen from "@/components/gallery/gallery-kitchen/GalleryKitchen"
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-    title: 'Niemieckie kuchnie Nobilia | InHouse meble'
+    title: 'Kuchnie niemieckie nobilia | InHouse meble'
 }
 const GermanKitchen = () => {
     return (

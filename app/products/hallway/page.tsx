@@ -6,7 +6,7 @@ import GalleryWardrobe from "@/components/gallery/gallery-wardrobe/GalleryWardro
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-    title: 'Szafy z drzwiami skrzydłowymi | InHouse meble'
+    title: 'Szafa do przedpokoju na wymiar | InHouse meble'
 }
 
 const HallwayWardrobe = () => {

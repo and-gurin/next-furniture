@@ -6,7 +6,7 @@ import GalleryWardrobe from "@/components/gallery/gallery-wardrobe/GalleryWardro
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-    title: 'Szafy Wnekowe | InHouse meble'
+    title: 'Szafy Wnekowe na wymiar | InHouse meble'
 }
 const NicheWardrobe = () => {
     return (

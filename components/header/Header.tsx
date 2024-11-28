@@ -178,7 +178,7 @@ const Header = () => {
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Kuchnie w nowoczesnym stylu
+                        Nowoczesne kuchnie pod zabudowę
                     </Link>
                     <Link
                         href={'/products/classic-kitchen'}
@@ -215,14 +215,14 @@ const Header = () => {
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Szafy z drzwiami przesuwnymi
+                        Szafa przesuwna na wymiar
                     </Link>
                     <Link
                         href={'/products/bedroom'}
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Szafy do sypialni
+                        Meble do zabudowy w sypialni
                     </Link>
                     <Link
                         href={'/products/niche'}
@@ -236,7 +236,7 @@ const Header = () => {
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Szafy narożne
+                        Szafa narożna na wymiar
                     </Link>
                     <Link
                         href={'/products/bevel'}
@@ -252,21 +252,21 @@ const Header = () => {
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Łazienka
+                        Zabudowa łazienkowa
                     </Link>
                     <Link
                         href={'/products/living-room'}
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Salon
+                        Zabudowa do salonu
                     </Link>
                     <Link
                         href={'/products/custom-furniture'}
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Na wymiar
+                        Zabudowa na wymiar
                     </Link>
                 </div>
             </div>
@@ -279,7 +279,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('kitchen1')}
                     >
-                        Kuchnie w nowoczesnym stylu
+                        Nowoczesne kuchnie pod zabudowę
                     </Link>
                     <Link
                         href={'/products/classic-kitchen'}
@@ -295,7 +295,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('kitchen3')}
                     >
-                        Niemieckie kuchnie Nobilia
+                        Kuchnie niemieckie nobilia
                     </Link>
                 </div>
                 <div className={style.header__categories}>
@@ -305,7 +305,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('wardrobe1')}
                     >
-                        Garderoby
+                        Garderoby do zabudowy
                     </Link>
                     <Link
                         href={'/products/hallway'}
@@ -313,7 +313,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('wardrobe2')}
                     >
-                        Szafa do przedpokoju
+                        Zabudowa przedpokoju na wymiar
                     </Link>
                     <Link
                         href={'/products/sliding'}
@@ -321,7 +321,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('wardrobe3')}
                     >
-                        Szafy z drzwiami przesuwnymi
+                        Szafa przesuwna na wymiar
                     </Link>
                     <Link
                         href={'/products/bedroom'}
@@ -329,7 +329,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('wardrobe4')}
                     >
-                        Szafy do sypialni
+                        Meble do zabudowy w sypialni
                     </Link>
                     <Link
                         href={'/products/niche'}
@@ -337,7 +337,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('wardrobe5')}
                     >
-                        Szafy wnekowe
+                        Zabudowa wnęki na wymiar
                     </Link>
                     <Link
                         href={'/products/corner'}
@@ -345,7 +345,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('wardrobe6')}
                     >
-                        Szafy narożne
+                        Szafa narożna na wymiar
                     </Link>
                     <Link
                         href={'/products/bevel'}
@@ -353,7 +353,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('wardrobe7')}
                     >
-                        Szafy pod skos
+                        Zabudowa skosów
                     </Link>
                 </div>
                 <div className={style.header__categories}>
@@ -363,7 +363,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('bath')}
                     >
-                        Łazienka
+                        Zabudowa łazienkowa
                     </Link>
                     <Link
                         href={'/products/living-room'}
@@ -371,7 +371,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('living')}
                     >
-                        Salon
+                        Zabudowa do salonu
                     </Link>
                     <Link
                         href={'/products/custom-furniture'}
@@ -379,7 +379,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('custom')}
                     >
-                        Na wymiar
+                        Zabudowa na wymiar
                     </Link>
                 </div>
                 <div className={style.header__figure}>

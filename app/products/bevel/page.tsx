@@ -6,7 +6,7 @@ import GalleryWardrobe from "@/components/gallery/gallery-wardrobe/GalleryWardro
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-    title: 'Szafy z drzwiami skrzydłowymi | InHouse meble'
+    title: 'Zabudowa pod skosem | InHouse meble'
 }
 
 const HallwayWardrobe = () => {
@@ -15,7 +15,7 @@ const HallwayWardrobe = () => {
             <FurnitureDetails
                 image={classic}
                 title={'Zabudowa pod skosem (na poddaszu)'}
-                description={'Stwórz idealną przestrzeń do przechowywania dzięki naszym szafkom przedpokojowym, ' +
+                description={'Stwórz idealną przestrzeń do przechowywania dzięki naszym szafkom, ' +
                     'w których każdy element jest przemyślany w najdrobniejszych szczegółach ' +
                     'dla Twojej wygody i stylu.'}/>
             <GalleryWardrobe defaultTag={'bevel'}/>

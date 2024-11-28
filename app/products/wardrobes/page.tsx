@@ -6,14 +6,14 @@ import GalleryWardrobe from "@/components/gallery/gallery-wardrobe/GalleryWardro
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-    title: 'Szafy | InHouse meble'
+    title: 'Szafy na wymiar | InHouse meble'
 }
 const Wardrobes = () => {
     return (
         <>
             <FurnitureDetails
                 image={classic}
-                title={'Szafy'}
+                title={'Szafy na wymiar'}
                 description={'Witamy w świecie innowacyjnego przechowywania! Nasze szafy zapewnią Ci ' +
                     'wygodę przechowywania i elegancki wygląd, idealny do każdego wnętrza.'}/>
             <GalleryWardrobe defaultTag={'all'}/>

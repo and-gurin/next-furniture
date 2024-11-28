@@ -6,14 +6,14 @@ import GalleryWardrobe from "@/components/gallery/gallery-wardrobe/GalleryWardro
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-    title: 'Szafy narożne | InHouse meble'
+    title: 'Szafa narożna na wymiar | InHouse meble'
 }
 const CornerWardrobe = () => {
     return (
         <>
             <FurnitureDetails
                 image={classic}
-                title={'Szafy narożne'}
+                title={'Szafa narożna na wymiar'}
                 description={'Jeżeli cenisz sobie przestrzeń, szafa narożna będzie dla ciebie idealnym rozwiązaniem'}/>
             <GalleryWardrobe defaultTag={'corner'}/>
             <Stages background={'whiteSmoke'}/>

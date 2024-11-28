@@ -6,7 +6,7 @@ import GalleryCustom from "@/components/gallery/gallery-custom/GalleryCustom";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-    title: 'Salon | InHouse meble'
+    title: 'Meble do salonu na wymiar | InHouse meble'
 }
 
 const LivingRoom = () => {
@@ -14,7 +14,7 @@ const LivingRoom = () => {
         <>
             <FurnitureDetails
                 image={classic}
-                title={'Salon'}
+                title={'Meble do salonu na wymiar'}
                 description={'Meble, które tworzą atmosferę przytulności i spokoju dla Twojego pełnego wypoczynku'}/>
             <GalleryCustom defaultTag={'living'}/>
             <Stages background={'whiteSmoke'}/>

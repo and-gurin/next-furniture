@@ -6,7 +6,7 @@ import GalleryCustom from "@/components/gallery/gallery-custom/GalleryCustom";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-    title: 'Łazienka | InHouse meble'
+    title: 'Zabudowa łazienkowa | InHouse meble'
 }
 
 const BathRoom = () => {
@@ -14,7 +14,7 @@ const BathRoom = () => {
         <>
             <FurnitureDetails
                 image={classic}
-                title={'Łazienka'}
+                title={'Zabudowa łazienkowa'}
                 description={'Indywidualne rozwiązania dla Twojej łazienki! ' +
                     'Nasze meble łączą elegancki design i praktyczność, ' +
                     'tworząc przytulną i funkcjonalną przestrzeń.'}/>
