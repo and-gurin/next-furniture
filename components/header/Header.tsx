@@ -80,7 +80,7 @@ const Header = () => {
 
     return (
         <header className={raleWay.className + ' ' + style.header} ref={headerRef}>
-            <div className={`wrapper  ${style.header__wrapper}`} >
+            <div className={`wrapper ${style.header__wrapper}`} >
                 <Logo/>
                 {/*<a href="tel:+48511944302" className={style.header__phone}>*/}
                 {/*    <Image*/}
@@ -113,9 +113,9 @@ const Header = () => {
                     <ul className={style.header__links}>
                         <NavItem links={links}/>
                         <li>
-                            <Link href={'/contacts'}>
+                            <Link href={'/valuation'}>
                                 <b>
-                                    {'Bezpłatna wycena'}
+                                    {'Wycena 24h'}
                                 </b>
                             </Link>
                         </li>
@@ -146,7 +146,7 @@ const Header = () => {
                         <NavItem links={links} openMenu={() => setOpenBurger(!openBurger)}/>
                         <Link href={'/contacts'}>
                             <b>
-                                {'Bezpłatna wycena'}
+                                {'Wycena 24h'}
                             </b>
                         </Link>
                     </ul>

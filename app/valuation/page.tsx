@@ -2,8 +2,8 @@ import "@/styles/wrapper.scss"
 import style from "./page.module.scss"
 import {baskerville} from "@/app/fonts";
 import Stages from "@/components/stages/Stages";
-import Form from "@/components/form/Form";
 import {Metadata} from "next";
+import FormValuation from "@/components/form-valuation/FormValuation";
 
 export const metadata: Metadata = {
     title: 'Wycena | InHouse meble'
@@ -16,14 +16,14 @@ export default function Valuation () {
                 <div className={`wrapper ${style.contacts__wrapper}`}>
                     <div className={style.contacts__description}>
                         <h2 className={baskerville.className + ' ' + style.contacts__title}>
-                            Bezpłatna wycena
+                            Projekt mebli 3D i wycena  gratis
                         </h2>
                         <p className={style.contacts__subtitle}>
 
                         </p>
                         <p className={style.contacts__subtitle}>
-                            Masz już projekt kuchni lub innych mebli? Dowiedz się, ile będzie kosztować wdrożenie.
-                            Po prostu wyślij go do nas na e-mail.
+                            Skontaktuj się z nami już dziś, aby dowiedzieć się więcej o cenie i sposobie realizacji
+                            kreacji Twojej wyjątkowej przestrzeni
                         </p>
                         <address className={style.contacts__links}>
                             <div className={style.contacts__link}>
@@ -40,11 +40,15 @@ export default function Valuation () {
                             <br/>
                             <div className={style.contacts__link}>
                                 <p className={style.contacts__link_left}>Adres:</p>
-                                <a className={style.contacts__link_right} href="https://maps.app.goo.gl/9vVgANhEb4Hhn8Pr5">Błażeja 76B, 61-608 Poznań</a>
+                                <a className={style.contacts__link_right}
+                                   href="https://maps.app.goo.gl/9vVgANhEb4Hhn8Pr5"
+                                >
+                                    Błażeja 76B, 61-608 Poznań
+                                </a>
                             </div>
                         </address>
                     </div>
-                    <Form/>
+                    <FormValuation/>
                 </div>
             </section>
             <Stages/>
