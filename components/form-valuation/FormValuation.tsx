@@ -111,14 +111,14 @@ export default function FormValuation() {
                     type="email"
                     className={style.form__field}
                     name="email"
-                    placeholder="Email"
+                    placeholder="Email (Wymagane)"
                     onChange={handleChange}
                 />
                 <input
                     type="tel"
                     className={style.form__field}
                     name="phone"
-                    placeholder="Telefon (Wymagane)"
+                    placeholder="Telefon"
                     onChange={handleChange}
                     required
                 />

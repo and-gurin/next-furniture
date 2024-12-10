@@ -4,11 +4,11 @@ import nodemailer from 'nodemailer';
 import { IncomingMessage } from 'http';
 
 // Отключаем встроенный парсер Next.js
-export const config = {
-    api: {
-        bodyParser: false,
-    },
-};
+// export const config = {
+//     api: {
+//         bodyParser: false,
+//     },
+// };
 
 // Функция для преобразования Next.js Request в IncomingMessage
 function toNodeIncomingMessage(req: Request): IncomingMessage {
