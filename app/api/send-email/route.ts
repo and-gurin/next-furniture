@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import formidable from 'formidable';
 import nodemailer from 'nodemailer';
 import { IncomingMessage } from 'http';
+import dotenv from 'dotenv';
+dotenv.config();
 
 // Отключаем встроенный парсер Next.js
 // export const config = {
@@ -68,12 +70,12 @@ export async function POST(req: Request) {
             try {
                 // Настройка почтового транспорта
                 const transporter = nodemailer.createTransport({
-                    host: 'mail.inhouse-meble.pl',
-                    port: 587,
+                    host: process.env.EMAIL_HOST,
+                    port: parseInt(process.env.EMAIL_PORT || '587', 10),
                     secure: false,
                     auth: {
-                        user: 'info@inhouse-meble.pl',
-                        pass: '92204286_zzZ',
+                        user: process.env.EMAIL_USER,
+                        pass: process.env.EMAIL_PASSWORD,
                     },
                 });
 
@@ -85,8 +87,8 @@ export async function POST(req: Request) {
                 }));
 
                 const mailOptions = {
-                    from: 'info@inhouse-meble.pl',
-                    to: 'info@inhouse-meble.pl',
+                    from: process.env.EMAIL_USER,
+                    to: process.env.EMAIL_USER,
                     subject: `Обратная связь от ${fields.name}`,
                     text: `
 Имя: ${fields.name}

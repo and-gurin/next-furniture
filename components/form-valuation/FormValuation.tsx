@@ -104,6 +104,7 @@ export default function FormValuation() {
                     type="text"
                     className={style.form__field}
                     name="name"
+                    value={formData.name}
                     placeholder="Imię"
                     onChange={handleChange}
                 />
@@ -111,6 +112,7 @@ export default function FormValuation() {
                     type="email"
                     className={style.form__field}
                     name="email"
+                    value={formData.email}
                     placeholder="Email (Wymagane)"
                     onChange={handleChange}
                 />
@@ -118,6 +120,7 @@ export default function FormValuation() {
                     type="tel"
                     className={style.form__field}
                     name="phone"
+                    value={formData.phone}
                     placeholder="Telefon"
                     onChange={handleChange}
                     required
@@ -157,6 +160,7 @@ export default function FormValuation() {
                     name="message"
                     className={style.form__field + " " + style.form__field_area}
                     placeholder="Wiadomość..."
+                    value={formData.message}
                     onChange={handleChange}
                 />
                 <button className={style.form__button} type="submit">
