@@ -46,7 +46,7 @@ export async function POST(req: Request) {
 
     const nodeRequest = toNodeIncomingMessage(req);
 
-    return new Promise((resolve) => {
+    return new Promise<void | Response>((resolve) => {
         form.parse(nodeRequest, async (err, fields, files) => {
             if (err) {
                 console.error('Ошибка парсинга формы:', err);
