@@ -52,9 +52,9 @@ const KindOfFurniture = ({images, descriptions, location, german, custom}: {
                             </Link>}
 
                             <div>
-                                <h2 className={baskerville.className + ' ' + style.kind__title}>
+                                <h1 className={baskerville.className + ' ' + style.kind__title}>
                                     {descriptions.title}
-                                </h2>
+                                </h1>
                                 <p className={style.kind__subtitle}>
                                     {descriptions.description}
                                 </p>

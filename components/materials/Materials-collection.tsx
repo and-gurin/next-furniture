@@ -222,9 +222,9 @@ export const Material = ({title, materials}: {
     return (
         <>
             <div className={style.collection__header}>
-                <h2 className={baskerville.className + ' ' + style.collection__title}>
+                <h1 className={baskerville.className + ' ' + style.collection__title}>
                     {title}
-                </h2>
+                </h1>
             </div>
             <div className={style.collection__grid}>
                 {materials.map((material) => {

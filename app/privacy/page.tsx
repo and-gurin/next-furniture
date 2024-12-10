@@ -14,9 +14,9 @@ export default function PrivacyPolicy() {
             <section className={style.privacy}>
                 <div className={`wrapper ${style.privacy__wrapper}`}>
                     <article className={style.privacy__description}>
-                        <h2 className={baskerville.className + ' ' + style.privacy__title}>
+                        <h1 className={baskerville.className + ' ' + style.privacy__title}>
                             Polityka Prywatności
-                        </h2>
+                        </h1>
                         <ol type="1">
                             <li>
                                 <strong>1. Wstęp</strong>

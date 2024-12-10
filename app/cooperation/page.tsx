@@ -14,9 +14,9 @@ export default function Cooperation() {
             <section className={style.cooperation}>
                 <div className={`wrapper ${style.cooperation__wrapper}`}>
                     <article className={style.cooperation__description}>
-                        <h2 className={baskerville.className + ' ' + style.cooperation__title}>
+                        <h1 className={baskerville.className + ' ' + style.cooperation__title}>
                             Współpraca
-                        </h2>
+                        </h1>
                         <p className={style.cooperation__subtitle}>
                             Firma InHouse zaprasza do współpracy projektantów wnętrz.
                             Mamy ponad 20 lat doświadczenia w produkcji mebli: meble kuchenne,
