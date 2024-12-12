@@ -27,7 +27,6 @@
   }
 
   &__flag {
-    margin-left: auto;
     margin-right: 12px;
   }
 
@@ -86,9 +85,7 @@
   }
 
   &__phone {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    margin-right: 12px;
     margin-left: auto;
   }
 

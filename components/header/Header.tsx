@@ -91,6 +91,11 @@ const Header = () => {
                 {/*    />*/}
                 {/*    8:00-19:00*/}
                 {/*</a>*/}
+                <Link className={style.header__phone} href={'/valuation'}>
+                    <b>
+                        {'Wycena 24h'}
+                    </b>
+                </Link>
                 <Image
                     className={style.header__flag}
                     src={ukraine}
@@ -144,11 +149,14 @@ const Header = () => {
                     </div>
                     <ul className={style.header__links_burger}>
                         <NavItem links={links} openMenu={() => setOpenBurger(!openBurger)}/>
-                        <Link href={'/contacts'}>
-                            <b>
-                                {'Wycena 24h'}
-                            </b>
-                        </Link>
+                        <li onClick={() => setOpenBurger(!openBurger)}>
+                            <Link href={'/valuation'}>
+                                <b>
+                                    {'Wycena 24h'}
+                                </b>
+                            </Link>
+                        </li>
+
                     </ul>
                     <a href="tel:+48511944302" className={style.header__phone}>
                         <Image
