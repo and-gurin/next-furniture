@@ -19,9 +19,9 @@ const FurnitureDetails = ({image, title, description, text}: {
                 <div className={`wrapper ${style.details__wrapper}`}>
                     <div className={style.details__grid}>
                         <div className={style.details__description}>
-                            <h2 className={baskerville.className + ' ' + style.details__title}>
+                            <h1 className={baskerville.className + ' ' + style.details__title}>
                                 {title}
-                            </h2>
+                            </h1>
                             <p className={style.details__subtitle}>
                                 {description}
                             </p>

@@ -15,9 +15,9 @@ export default function CookiePolicy() {
             <section className={style.cookies}>
                 <div className={`wrapper ${style.cookies__wrapper}`}>
                     <article className={style.cookies__description}>
-                        <h2 className={baskerville.className + ' ' + style.cookies__title}>
+                        <h1 className={baskerville.className + ' ' + style.cookies__title}>
                             Polityka Plików Cookie
-                        </h2>
+                        </h1>
                         <ol type="1">
                             <li>
                                 <strong>1. Wstęp</strong>

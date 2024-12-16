@@ -15,9 +15,9 @@ export default function Contacts () {
             <section className={style.contacts}>
                 <div className={`wrapper ${style.contacts__wrapper}`}>
                     <div className={style.contacts__description}>
-                        <h2 className={baskerville.className + ' ' + style.contacts__title}>
+                        <h1 className={baskerville.className + ' ' + style.contacts__title}>
                             Kontakt
-                        </h2>
+                        </h1>
                         <p className={style.contacts__subtitle}>
                             Nasze produkty są unikalne i dostosowane do specyfiki
                             każdego klienta, a nasi klienci mogą

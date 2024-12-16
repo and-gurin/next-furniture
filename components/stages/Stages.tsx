@@ -59,9 +59,9 @@ const Stages = ({background}: {background?: string}) => {
         <section className={background === 'whiteSmoke' ? style.stages + ' ' + style.stages_backgroundSmoke : style.stages}>
             <div className={`wrapper ${style.stages__wrapper}`}>
                 <Fade direction={"up"}>
-                    <h2 className={baskerville.className + ' ' + style.stages__title}>
+                    <h1 className={baskerville.className + ' ' + style.stages__title}>
                         Wykonywanie mebli – krok po kroku
-                    </h2>
+                    </h1>
                 </Fade>
                 <ul>
                     {stages.map(stage =>

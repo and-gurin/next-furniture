@@ -59,9 +59,9 @@ const Gallery = ({tabs, images, title, defaultTag, height}: {
         <section className={style.gallery}>
             <div className={`wrapper ${style.gallery__wrapper}`}>
                 <div className={style.gallery__header}>
-                    <h2 className={baskerville.className + ' ' + style.gallery__title}>
+                    <h1 className={baskerville.className + ' ' + style.gallery__title}>
                         {title}
-                    </h2>
+                    </h1>
                     {tabs && <ul className={style.gallery__buttons}>
                         {tabList}
                     </ul>}
