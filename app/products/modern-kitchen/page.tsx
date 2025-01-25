@@ -1,9 +1,9 @@
 import React from 'react';
-import FurnitureDetails from "@/components/details/FurnitureDetails";
-import modern from "@/public/Kitchen/Modern/Modern-9-1.jpg"
 import Stages from "@/components/stages/Stages";
 import GalleryKitchen from "@/components/gallery/gallery-kitchen/GalleryKitchen";
 import {Metadata} from "next";
+import ModernTranslate from "@/components/details/products/Modern-translate";
+import I18nProvider from "@/components/I18nProvider/I18nProvider";
 
 export const metadata: Metadata = {
     title: 'Kuchnie w nowoczesnym stylu | InHouse meble'
@@ -12,14 +12,11 @@ export const metadata: Metadata = {
 const ModernKitchen = () => {
     return (
         <>
-            <FurnitureDetails
-                image={modern}
-                title={'Kuchnie w nowoczesnym stylu'}
-                description={'Eleganckie linie, funkcjonalność i ' +
-                    'odważne rozwiązania w każdym szczególe to kuchnie ' +
-                    'w stylu secesyjnym.'}/>
+            <ModernTranslate/>
             <GalleryKitchen defaultTag={'modern'}/>
-            <Stages background={'whiteSmoke'}/>
+            <I18nProvider>
+                <Stages background={'whiteSmoke'}/>
+            </I18nProvider>
         </>
     );
 };

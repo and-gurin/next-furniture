@@ -1,9 +1,9 @@
 import React from 'react';
-import FurnitureDetails from "@/components/details/FurnitureDetails";
-import classic from "@/public/Wardrobe/Collage/Wardrobe-8.jpg"
 import Stages from "@/components/stages/Stages";
 import GalleryWardrobe from "@/components/gallery/gallery-wardrobe/GalleryWardrobe";
 import {Metadata} from "next";
+import WardrobeTranslate from "@/components/details/products/Wardrobe-translate";
+import I18nProvider from "@/components/I18nProvider/I18nProvider";
 
 export const metadata: Metadata = {
     title: 'Garderoby  na wymiar | InHouse meble'
@@ -11,13 +11,11 @@ export const metadata: Metadata = {
 const Wardrobe = () => {
     return (
         <>
-            <FurnitureDetails
-                image={classic}
-                title={'Garderoby na wymiar'}
-                description={'Nigdy więcej nie będziesz musiał myśleć, gdzie umieścić rzeczy. ' +
-                    'Twoja Garderoba jest naprawdę wygodna .'}/>
+            <WardrobeTranslate/>
             <GalleryWardrobe defaultTag={'wardrobe'}/>
-            <Stages background={'whiteSmoke'}/>
+            <I18nProvider>
+                <Stages background={'whiteSmoke'}/>
+            </I18nProvider>
         </>
     );
 };

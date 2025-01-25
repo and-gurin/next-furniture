@@ -9,13 +9,13 @@ import "slick-carousel/slick/slick.scss";
 import "slick-carousel/slick/slick-theme.scss";
 
 const CustomPaging = ({
-                                                 images,
-                                                 setOpenSlider,
-                                                 initialIndex,
-    height
-}: {
+                          images,
+                          setOpenSlider,
+                          initialIndex,
+                          height
+                      }: {
     images: ImageProps[],
-    setOpenSlider:(isOpen: boolean) => void,
+    setOpenSlider: (isOpen: boolean) => void,
     initialIndex?: number,
     height?: string
 }) => {
@@ -63,12 +63,13 @@ const CustomPaging = ({
 
     return (
         <>
-            <div className={'darkBG'} ></div>
+            <div className={'darkBG'}></div>
             <div className={'centered'}>
                 <div ref={sliderRef} className="slider-container">
                     <Slider {...settingsGallery}>
                         {images.map((image) => (
-                            <figure key={image.id} className={height === 'kitchen' ? 'paging__figure_kitchen' : 'paging__figure_wardrobe'}>
+                            <figure key={image.id}
+                                    className={height === 'kitchen' ? 'paging__figure_kitchen' : 'paging__figure_wardrobe'}>
                                 <Image
                                     className={'paging__image'}
                                     fill

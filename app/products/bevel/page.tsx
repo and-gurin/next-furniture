@@ -1,27 +1,24 @@
 import React from 'react';
-import FurnitureDetails from "@/components/details/FurnitureDetails";
-import classic from "@/public/Wardrobe/bevel-1.jpg"
 import Stages from "@/components/stages/Stages";
 import GalleryWardrobe from "@/components/gallery/gallery-wardrobe/GalleryWardrobe";
 import {Metadata} from "next";
+import BevelTranslate from "@/components/details/products/Bevel-translate";
+import I18nProvider from "@/components/I18nProvider/I18nProvider";
 
 export const metadata: Metadata = {
     title: 'Zabudowa pod skosem | InHouse meble'
 }
 
-const HallwayWardrobe = () => {
+const BevelWardrobe = () => {
     return (
         <>
-            <FurnitureDetails
-                image={classic}
-                title={'Zabudowa pod skosem (na poddaszu)'}
-                description={'Stwórz idealną przestrzeń do przechowywania dzięki naszym szafkom, ' +
-                    'w których każdy element jest przemyślany w najdrobniejszych szczegółach ' +
-                    'dla Twojej wygody i stylu.'}/>
+            <BevelTranslate/>
             <GalleryWardrobe defaultTag={'bevel'}/>
-            <Stages background={'whiteSmoke'}/>
+            <I18nProvider>
+                <Stages background={'whiteSmoke'}/>
+            </I18nProvider>
         </>
     );
 };
 
-export default HallwayWardrobe;
+export default BevelWardrobe;

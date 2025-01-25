@@ -1,9 +1,9 @@
 import React from 'react';
-import FurnitureDetails from "@/components/details/FurnitureDetails";
-import classic from "@/public/Custom/Collage/bed-room-3.jpg"
 import Stages from "@/components/stages/Stages";
 import GalleryCustom from "@/components/gallery/gallery-custom/GalleryCustom";
 import {Metadata} from "next";
+import CustomTranslate from "@/components/details/products/Custom-translate";
+import I18nProvider from "@/components/I18nProvider/I18nProvider";
 
 export const metadata: Metadata = {
     title: 'Meble na wymiar | InHouse meble'
@@ -12,12 +12,11 @@ export const metadata: Metadata = {
 const CustomFurniture = () => {
     return (
         <>
-            <FurnitureDetails
-                image={classic}
-                title={'Meble na wymiar'}
-                description={'Ergonomiczne i nowoczesne rozwiązania zapewniające efektywną pracę'}/>
+            <CustomTranslate/>
             <GalleryCustom defaultTag={'custom'}/>
-            <Stages background={'whiteSmoke'}/>
+            <I18nProvider>
+                <Stages background={'whiteSmoke'}/>
+            </I18nProvider>
         </>
     );
 };

@@ -1,0 +1,54 @@
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.language-button {
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.language-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.language-options {
+  position: absolute;
+  top: 100%;
+  left: 50%; /* Центровка относительно родителя */
+  transform: translateX(-50%);
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 10;
+  width: max-content;
+  min-width: 135px; /* Минимальная ширина списка */
+}
+
+.language-option {
+  //display: flex;
+  //align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.language-option:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.language-flag {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.language-label {
+  font-size: 16px;
+}

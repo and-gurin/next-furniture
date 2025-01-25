@@ -1,4 +1,3 @@
-import Hero from "@/components/hero/Hero";
 import kitchen1 from "@/public/Kitchen/Сollage/high-tech-1.jpg"
 import kitchen2 from "@/public/Kitchen/Сollage/Classic-3.jpg"
 import kitchen3 from "@/public/Kitchen/Сollage/Modern-1.jpg"
@@ -10,6 +9,8 @@ import custom2 from "@/public/Custom/Collage/living-room-1.jpg"
 import custom3 from "@/public/Custom/Collage/bed-room-3.jpg"
 import KindOfFurniture from "@/components/kinds/KindOfFurniture";
 import Stages from "@/components/stages/Stages";
+import HeroTranslate from "@/components/hero/Hero-translate";
+import I18nProvider from "@/components/I18nProvider/I18nProvider"
 
 
 const kitchenImages = [
@@ -31,15 +32,13 @@ const customFurnitureImages = [
 ]
 
 const kitchenDescriptions = {
-    kindOfFurniture: 'kuchnia',
+    kindOfFurniture: 'page-kitchen-kind',
     link: '/products/kitchens',
-    title: 'Kto dziś robi śniadanie?',
-    description: 'To nie ma znaczenia. W kuchni na zamówienie każdy, kto chce przygotować ' +
-        'śniadanie, poczuje się jak szef kuchni. W Twojej kuchni ' +
-        'uwzględnimy preferencje każdego członka rodziny.',
+    title: 'page-kitchen-title',
+    description: 'page-kitchen-description',
     furnitureTypes: [
-        {type: 'Kuchnie w nowoczesnym stylu', link: '/products/modern-kitchen'},
-        {type: 'Kuchnie w stylu klasycznym', link: '/products/classic-kitchen'},
+        {type: 'page-kitchen-type1', link: '/products/modern-kitchen'},
+        {type: 'page-kitchen-type2', link: '/products/classic-kitchen'},
     ],
 }
 
@@ -47,27 +46,23 @@ const wardrobeDescriptions = {
     kindOfFurniture: 'szafa',
     link: '/products/wardrobes',
     title: 'Widziałeś moje skarpetki?',
-    description: 'Wypowiedz totalną wojnę z bałaganem. ' +
-        'Od teraz i na zawsze każda rzecz jest na swoim miejscu. ' +
-        'Tylko w szafie wykonanej według indywidualnego projektu.',
+    description: '',
     furnitureTypes: [
-        {type: 'Garderoby', link: '/products/wardrobe'},
-        {type: 'Szafy do przedpokoju', link: '/products/hallway'},
-        {type: 'Szafy przesuwne', link: '/products/sliding'},
-        {type: 'Szafy do sypialni', link: '/products/bedroom'},
-        {type: 'Szafy wnekowe', link: '/products/niche'},
-        {type: 'Szafy narożne', link: '/products/corner'},
-        {type: 'Szafy pod skos', link: '/products/bevel'},
+        {type: 'page-wardrobe-type1', link: '/products/wardrobe'},
+        {type: 'page-wardrobe-type2', link: '/products/hallway'},
+        {type: 'page-wardrobe-type3', link: '/products/sliding'},
+        {type: 'page-wardrobe-type4', link: '/products/bedroom'},
+        {type: 'page-wardrobe-type5', link: '/products/niche'},
+        {type: 'page-wardrobe-type6', link: '/products/corner'},
+        {type: 'page-wardrobe-type7', link: '/products/bevel'},
     ],
 }
 
 const customFurnitureDescriptions = {
-    kindOfFurniture: 'meble na wymiar',
+    kindOfFurniture: 'page-custom-kind',
     link: '/products/customs',
-    title: 'Twoje pomysły są naszą pracą.',
-    description: 'Od pomysłu do realizacji - ' +
-        'stworzymy Meble, które idealnie pasują do Twojej przestrzeni i ' +
-        'stylu życia.',
+    title: 'page-custom-title',
+    description: 'page-custom-description',
     furnitureTypes: [
         {type: 'Łazienka', link: '/products/bath-room'},
         {type: 'Salon', link: '/products/living-room'},
@@ -78,15 +73,29 @@ const customFurnitureDescriptions = {
 export default function Home() {
     return (
         <>
-            <Hero/>
-            <KindOfFurniture images={kitchenImages} german={true} descriptions={kitchenDescriptions}/>
-            <KindOfFurniture
-                location={'image-on-left'}
-                images={wardrobeImages}
-                descriptions={wardrobeDescriptions}
-            />
-            <KindOfFurniture images={customFurnitureImages} custom={true} descriptions={customFurnitureDescriptions}/>
-            <Stages/>
+            <HeroTranslate/>
+            <I18nProvider>
+                <KindOfFurniture
+                    images={kitchenImages}
+                    german={true}
+                    descriptions={kitchenDescriptions}
+                />
+            </I18nProvider>
+            <I18nProvider>
+                <KindOfFurniture
+                    location={'image-on-left'}
+                    images={wardrobeImages}
+                    descriptions={wardrobeDescriptions}
+                />
+            </I18nProvider>
+            <I18nProvider>
+                <KindOfFurniture
+                    images={customFurnitureImages}
+                    custom={true}
+                    descriptions={customFurnitureDescriptions}
+                />
+                <Stages/>
+            </I18nProvider>
         </>
     )
 }

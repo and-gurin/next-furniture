@@ -1,7 +1,7 @@
-@import 'styles/constants';
-@import 'styles/mixins';
+@import '../../styles/constants';
+@import '../../styles/mixins';
 
-.cooperation {
+.contacts {
   margin: 96px 8px 48px 8px;
 
   @include media-tablet {
@@ -11,11 +11,9 @@
   &__wrapper {
     grid-auto-columns: 1fr;
     display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     background-color: $whiteSmoke;
     border-radius: 24px 24px 24px 24px;
-    padding-bottom: 40px;
 
     @include media-laptop {
       grid-template-columns: 1fr;
@@ -28,35 +26,44 @@
 
   &__description {
     align-self: center;
-    padding: 0 40px;
+    padding-left: 40px;
     border-radius: 24px 0 0 24px;
+
+    @include media-laptop {
+      padding: 10px 16px;
+    }
   }
 
   &__title {
-    font-size: 42px;
+    font-size: 72px;
     line-height: 83px;
     font-weight: 700;
     margin: 20px 0 32px 0;
 
     @include media-mobile {
       font-size: 36px;
+      margin: 0 0 0 0;
     }
   }
 
   &__subtitle {
-    margin: 24px 0;
+    max-width: 60ch;
+    margin-bottom: 24px;
   }
 
-  &__list {
-    margin-left: 20px;
+  &__links {
+    margin-bottom: 48px;
   }
 
   &__link {
-    color: dodgerblue;
-    cursor: pointer;
+    display: flex;
 
-    &:hover {
-      text-decoration: underline;
+    &_left {
+      width: 80px;
+    }
+
+    &_right {
+      font-weight: 700;
     }
   }
 }

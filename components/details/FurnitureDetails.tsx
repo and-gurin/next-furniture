@@ -5,7 +5,7 @@ import Image, {StaticImageData} from "next/image";
 import {Fade} from "react-awesome-reveal";
 import {baskerville} from "@/app/fonts";
 import Button from "@/components/button/button";
-import Advantages from "@/components/advantages/Advantages";
+import AdvantagesTranslate from "@/components/advantages/Advantages-translate";
 
 const FurnitureDetails = ({image, title, description, text}: {
     image: StaticImageData,
@@ -26,7 +26,7 @@ const FurnitureDetails = ({image, title, description, text}: {
                                 {description}
                             </p>
                             <Button text={text}/>
-                            <Advantages/>
+                            <AdvantagesTranslate/>
                         </div>
                             <figure className={style.details__figure}>
                                 <Image className={style.details__image}

@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.scss";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import CustomPaging from "@/components/slider/Slider";
 import React from "react";
+import {useTranslation} from "react-i18next";
 
 export type TabsProps = {
     tag: string,
@@ -26,10 +27,9 @@ export type ImagesProps = {
     initialIndex?: number,
 }
 
-const Gallery = ({tabs, images, title, defaultTag, height}: {
+const Gallery = ({tabs, images, defaultTag, height}: {
     tabs?: TabsProps[],
     images: ImageProps[],
-    title: string,
     defaultTag: string,
     height?: string
 }) => {
@@ -37,6 +37,9 @@ const Gallery = ({tabs, images, title, defaultTag, height}: {
     const [activeTab, setActiveTab] = React.useState(defaultTag);
     const [openSlider, setOpenSlider] = React.useState(false);
     const [initialIndex, setInitialIndex] = React.useState(0);
+
+    const { t } = useTranslation('gallery-header-stages');
+
     const tabList = tabs?.map(tab => {
         const finalClassName = activeTab === tab.tag
             ? style.gallery__button + ' ' + style.gallery__button_active
@@ -44,7 +47,7 @@ const Gallery = ({tabs, images, title, defaultTag, height}: {
         return (
             <li key={tab.title}>
                 <span  className={finalClassName} onClick={() => setActiveTab(tab.tag)}>
-                    {tab.title}
+                    {t(tab.title)}
                 </span>
             </li>
         )
@@ -60,7 +63,7 @@ const Gallery = ({tabs, images, title, defaultTag, height}: {
             <div className={`wrapper ${style.gallery__wrapper}`}>
                 <div className={style.gallery__header}>
                     <h2 className={baskerville.className + ' ' + style.gallery__title}>
-                        {title}
+                        {t('gallery-projects')}
                     </h2>
                     {tabs && <ul className={style.gallery__buttons}>
                         {tabList}

@@ -1,0 +1,51 @@
+{
+  "cookie-policy-title": "Cookie Policy",
+  "cookie-policy-introduction": {
+    "title": "1. Introduction",
+    "description": "This cookie policy explains what cookies are, how we use them, your rights regarding their usage, and how you can manage your cookie preferences."
+  },
+  "cookie-policy-what-are-cookies": {
+    "title": "2. What are cookies?",
+    "description": "Cookies are small text files stored on your device (computer, tablet, smartphone) when you visit our website. Cookies help us improve the site's functionality, analyze traffic, and tailor content to your preferences."
+  },
+  "cookie-policy-types": {
+    "title": "3. What types of cookies do we use?",
+    "description": "We use the following types of cookies:",
+    "necessary": {
+      "title": "Necessary Cookies",
+      "description": "These cookies are essential for the proper functioning of our website. They enable basic functions such as page navigation and access to secure areas."
+    },
+    "analytics": {
+      "title": "Analytical Cookies",
+      "description": "These cookies help us understand how users interact with our website, allowing us to improve its functionality. The information collected by these cookies is anonymous and used only for statistical purposes."
+    },
+    "functional": {
+      "title": "Functional Cookies",
+      "description": "These cookies allow us to remember your preferences (such as language or region) and tailor the website to your individual needs."
+    },
+    "advertising": {
+      "title": "Advertising Cookies",
+      "description": "These cookies are used to display advertisements tailored to your interests. They may be used by us or our advertising partners."
+    }
+  },
+  "cookie-policy-manage-cookies": {
+    "title": "4. How to manage cookies?",
+    "description1": "You can manage your cookie preferences using your browser settings. Most browsers allow you to control cookies, including blocking or deleting them. However, disabling certain cookies may affect the functionality of our website.",
+    "description2": "Instructions for the most popular browsers:",
+    "browsers": {
+      "chrome": "Google Chrome",
+      "firefox": "Mozilla Firefox",
+      "edge": "Microsoft Edge",
+      "safari": "Safari"
+    }
+  },
+  "cookie-policy-changes": {
+    "title": "5. Changes to the Cookie Policy",
+    "description": "We reserve the right to make changes to this cookie policy. Any changes will be published on this page with the date of implementation."
+  },
+  "cookie-policy-contact": {
+    "title": "6. Contact",
+    "description": "If you have any questions regarding our cookie policy, please contact us via email at:",
+    "e-mail": "inhouse.biuro@gmail.com"
+  }
+}

@@ -1,12 +1,12 @@
 import './globals.css';
 import './_normalize.scss';
 import type { Metadata } from 'next';
-import React from 'react';
-import Header from '@/components/header/Header';
 import {raleWay} from '@/app/fonts';
-import Footer from "@/components/footer/Footer";
 import { GoogleTagManager } from '@next/third-parties/google';
 import Script from 'next/script';
+import React from 'react'
+import FooterTranslate from "@/components/footer/Footer-translate";
+import HeaderTranslate from "@/components/header/Header-translate";
 
 export const metadata: Metadata = {
   title: 'Twój dom, twoje zasady: meble wykonane na wymiar',
@@ -136,11 +136,9 @@ export const metadata: Metadata = {
   }
 }
 
-export default function RootLayout({
-  children,
-}: {
+export default function RootLayout({ children }: {
   children: React.ReactNode
-}) {
+})  {
   return (
     <html lang="pl">
     <head>
@@ -151,10 +149,12 @@ export default function RootLayout({
       ></Script>
     </head>
     <body >
-    <Header/>
+    <HeaderTranslate/>
     {/*<CookieConsent/>*/}
-    <main className={raleWay.className}>{children}</main>
-    <Footer/>
+    <main className={raleWay.className}>
+      {children}
+    </main>
+    <FooterTranslate/>
     </body>
     <GoogleTagManager gtmId="GTM-PZ2SQWZ8" />
     </html>

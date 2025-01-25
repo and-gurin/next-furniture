@@ -4,6 +4,7 @@ import "@/styles/wrapper.scss";
 import style from "./FormValuation.module.scss";
 import { baskerville } from "@/app/fonts";
 import React, { useState } from "react";
+import {useTranslation} from "react-i18next";
 
 export default function FormValuation() {
     const [formData, setFormData] = useState<{
@@ -91,13 +92,15 @@ export default function FormValuation() {
         }
     };
 
+    const { t } = useTranslation('contact-materials-privacy');
+
     return (
         <div className={style.form}>
             <h3 className={baskerville.className + " " + style.form__title}>
-                Wycena w 24 godziny
+                {t('form-title')}
             </h3>
             <p className={style.form__subtitle}>
-                Masz już projekt kuchni lub innych mebli? Dowiedz się, ile będzie kosztować wdrożenie
+                {t('form-subtitle')}
             </p>
             <form onSubmit={handleSubmit}>
                 <input
@@ -105,7 +108,7 @@ export default function FormValuation() {
                     className={style.form__field}
                     name="name"
                     value={formData.name}
-                    placeholder="Imię"
+                    placeholder={t('form-user-name')}
                     onChange={handleChange}
                 />
                 <input
@@ -113,21 +116,21 @@ export default function FormValuation() {
                     className={style.form__field}
                     name="email"
                     value={formData.email}
-                    placeholder="Email (Wymagane)"
+                    placeholder={t('form-user-mail')}
                     onChange={handleChange}
+                    required
                 />
                 <input
                     type="tel"
                     className={style.form__field}
                     name="phone"
                     value={formData.phone}
-                    placeholder="Telefon"
+                    placeholder={t('form-user-phone')}
                     onChange={handleChange}
-                    required
                 />
                 <div className={style.upload}>
                     <label className={style.upload__button} htmlFor="file-upload">
-                        Dodaj pliki
+                        {t('form-user-file')}
                     </label>
                     <ul className={style.upload__filelist}>
                         {formData.files.length > 0 ? (
@@ -139,12 +142,12 @@ export default function FormValuation() {
                                         className={style.upload__remove}
                                         onClick={() => handleFileRemove(index)}
                                     >
-                                        Usuń
+                                        {t('form-user-button')}
                                     </button>
                                 </li>
                             ))
                         ) : (
-                            <li className={style.upload__filename}>Możesz dodać kilka plików</li>
+                            <li className={style.upload__filename}>{t('form-user-files')}</li>
                         )}
                     </ul>
                     <input
@@ -159,12 +162,12 @@ export default function FormValuation() {
                 <textarea
                     name="message"
                     className={style.form__field + " " + style.form__field_area}
-                    placeholder="Wiadomość..."
+                    placeholder={t('form-textarea')}
                     value={formData.message}
                     onChange={handleChange}
                 />
                 <button className={style.form__button} type="submit">
-                    Wyślij
+                    {t('form-button')}
                 </button>
             </form>
         </div>

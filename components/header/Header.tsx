@@ -7,7 +7,7 @@ import Image from "next/image";
 import arrowDown from "@/public/arrow-down-339-svgrepo-com.svg";
 import {raleWay} from '@/app/fonts';
 import Logo from "@/components/logo/Logo";
-import {useEffect, useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import Link from "next/link";
 import kitchen1 from "@/public/Kitchen/Modern/Modern-8.jpg";
 import kitchen2 from "@/public/Kitchen/Classic/Classic-3.jpg";
@@ -27,12 +27,13 @@ import close from "@/public/close-bold-svgrepo-com.svg";
 import arrowRight from "@/public/right-arrow-svgrepo-com.svg";
 import arrowLeft from "@/public/left-arrow-svgrepo-com.svg";
 import handset from "@/public/handset-svgrepo-com.svg";
-import ukraine from "@/public/flag-for-ukraine-svgrepo-com.svg"
+import {useTranslation} from "react-i18next";
+import LanguageSelector from "@/components/language-selector/LanguageSelector";
 
 const links = [
-    {id: 1, title: 'Materiały', href: '/materials'},
-    {id: 2, title: 'Kontakt', href: '/contacts'},
-    {id: 3, title: 'Współpraca', href: '/cooperation'},
+    {id: 1, title: 'header-title1', href: '/materials'},
+    {id: 2, title: 'header-title2', href: '/contacts'},
+    {id: 3, title: 'header-title3', href: '/cooperation'},
 ]
 
 const Header = () => {
@@ -45,6 +46,8 @@ const Header = () => {
         setOpenBottomMenu(!openBottomMenu);
         setOpenBurger(!openBurger)
     }
+
+    const { t } = useTranslation('gallery-header-stages');
 
     const headerRef = useRef<HTMLDivElement>(null);
 
@@ -78,6 +81,8 @@ const Header = () => {
         };
     }, [setOpenBurger]);
 
+
+
     return (
         <header className={raleWay.className + ' ' + style.header} ref={headerRef}>
             <div className={`wrapper ${style.header__wrapper}`} >
@@ -91,22 +96,26 @@ const Header = () => {
                 {/*    />*/}
                 {/*    8:00-19:00*/}
                 {/*</a>*/}
-                <Link className={style.header__phone} href={'/valuation'}>
-                    <b>
-                        {'Wycena 24h'}
-                    </b>
-                </Link>
-                <Image
-                    className={style.header__flag}
-                    src={ukraine}
-                    width='32'
-                    height='32'
-                    alt='Flaga Ukrainy'
-                />
+                <div className={style.header__flag}>
+                    <LanguageSelector/>
+                </div>
+
+                {/*<Image*/}
+                {/*    className={style.header__flag}*/}
+                {/*    src={ukraine}*/}
+                {/*    width='32'*/}
+                {/*    height='32'*/}
+                {/*    alt='Flaga Ukrainy'*/}
+                {/*/>*/}
+                {/*<Link className={style.header__phone} href={'/valuation'}>*/}
+                {/*    <b>*/}
+                {/*        {'Wycena 24h'}*/}
+                {/*    </b>*/}
+                {/*</Link>*/}
                 <nav className={style.header__navigation}>
                     <div className={style.header__products}
                          onClick={() => setOpen(!open)}>
-                        Produkty
+                        {t('header-products')}
                         <Image
                             className={open ? style.header__arrow : style.header__arrow_up}
                             src={arrowDown}
@@ -117,13 +126,13 @@ const Header = () => {
                     </div>
                     <ul className={style.header__links}>
                         <NavItem links={links}/>
-                        <li>
-                            <Link href={'/valuation'}>
-                                <b>
-                                    {'Wycena 24h'}
-                                </b>
-                            </Link>
-                        </li>
+                        {/*<li>*/}
+                        {/*    <Link href={'/valuation'}>*/}
+                        {/*        <b>*/}
+                        {/*            {'Wycena 24h'}*/}
+                        {/*        </b>*/}
+                        {/*    </Link>*/}
+                        {/*</li>*/}
                     </ul>
                 </nav>
                 <div className={style.header__burger} onClick={() => setOpenBurger(!openBurger)}>
@@ -139,7 +148,7 @@ const Header = () => {
                 <nav className={style.header__navigation_burger} ref={burgerRef}>
                     <div className={style.header__products}
                          onClick={() => setOpenBottomMenu(!openBottomMenu)}>
-                        Produkty
+                        {t('header-products')}
                         <Image
                             src={arrowRight}
                             width='16'
@@ -149,13 +158,13 @@ const Header = () => {
                     </div>
                     <ul className={style.header__links_burger}>
                         <NavItem links={links} openMenu={() => setOpenBurger(!openBurger)}/>
-                        <li onClick={() => setOpenBurger(!openBurger)}>
-                            <Link href={'/valuation'}>
-                                <b>
-                                    {'Wycena 24h'}
-                                </b>
-                            </Link>
-                        </li>
+                        {/*<li onClick={() => setOpenBurger(!openBurger)}>*/}
+                        {/*    <Link href={'/valuation'}>*/}
+                        {/*        <b>*/}
+                        {/*            {'Wycena 24h'}*/}
+                        {/*        </b>*/}
+                        {/*    </Link>*/}
+                        {/*</li>*/}
 
                     </ul>
                     <a href="tel:+48511944302" className={style.header__phone}>
@@ -165,7 +174,7 @@ const Header = () => {
                             height='24'
                             alt='Słuchawka'
                         />
-                        Pon-Sob: 8-00 : 20-00
+                        {t('header-times')}
                     </a>
                 </nav>
             }
@@ -177,7 +186,7 @@ const Header = () => {
                            width='40'
                            height='16'
                     />
-                    Powrót do menu
+                    {t('header-return')}
                 </div>
                 <p className={style.header__horizontalLLine}></p>
                 <div className={style.header__categories}>
@@ -186,21 +195,21 @@ const Header = () => {
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Nowoczesne kuchnie pod zabudowę
+                        {t('header-link1')}
                     </Link>
                     <Link
                         href={'/products/classic-kitchen'}
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Kuchnie w stylu klasycznym
+                        {t('header-link2')}
                     </Link>
                     <Link
                         href={'/products/german-kitchen'}
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Niemieckie kuchnie Nobilia
+                        {t('header-link3')}
                     </Link>
                 </div>
                 <div className={style.header__categories}>
@@ -209,49 +218,49 @@ const Header = () => {
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Zabudowa garderoby
+                        {t('header-link4')}
                     </Link>
                     <Link
                         href={'/products/hallway'}
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Zabudowa przedpokoju
+                        {t('header-link5')}
                     </Link>
                     <Link
                         href={'/products/sliding'}
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Szafa przesuwna na wymiar
+                        {t('header-link6')}
                     </Link>
                     <Link
                         href={'/products/bedroom'}
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Meble do zabudowy w sypialni
+                        {t('header-link7')}
                     </Link>
                     <Link
                         href={'/products/niche'}
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Zabudowa wnek
+                        {t('header-link8')}
                     </Link>
                     <Link
                         href={'/products/corner'}
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Szafa narożna na wymiar
+                        {t('header-link9')}
                     </Link>
                     <Link
                         href={'/products/bevel'}
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Zabudowa skosów
+                        {t('header-link10')}
                     </Link>
                 </div>
                 <div className={style.header__categories}>
@@ -260,21 +269,21 @@ const Header = () => {
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Zabudowa łazienkowa
+                        {t('header-link11')}
                     </Link>
                     <Link
                         href={'/products/living-room'}
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Zabudowa do salonu
+                        {t('header-link12')}
                     </Link>
                     <Link
                         href={'/products/custom-furniture'}
                         className={style.header__category}
                         onClick={onClickBottomMenuLinks}
                     >
-                        Zabudowa na wymiar
+                        {t('header-link13')}
                     </Link>
                 </div>
             </div>
@@ -287,7 +296,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('kitchen1')}
                     >
-                        Nowoczesne kuchnie pod zabudowę
+                        {t('header-link1')}
                     </Link>
                     <Link
                         href={'/products/classic-kitchen'}
@@ -295,7 +304,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('kitchen2')}
                     >
-                        Kuchnie w stylu klasycznym
+                        {t('header-link2')}
                     </Link>
                     <Link
                         href={'/products/german-kitchen'}
@@ -303,7 +312,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('kitchen3')}
                     >
-                        Kuchnie niemieckie nobilia
+                        {t('header-link3')}
                     </Link>
                 </div>
                 <div className={style.header__categories}>
@@ -313,7 +322,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('wardrobe1')}
                     >
-                        Garderoby do zabudowy
+                        {t('header-link4')}
                     </Link>
                     <Link
                         href={'/products/hallway'}
@@ -321,7 +330,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('wardrobe2')}
                     >
-                        Zabudowa przedpokoju na wymiar
+                        {t('header-link5')}
                     </Link>
                     <Link
                         href={'/products/sliding'}
@@ -329,7 +338,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('wardrobe3')}
                     >
-                        Szafa przesuwna na wymiar
+                        {t('header-link6')}
                     </Link>
                     <Link
                         href={'/products/bedroom'}
@@ -337,7 +346,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('wardrobe4')}
                     >
-                        Meble do zabudowy w sypialni
+                        {t('header-link7')}
                     </Link>
                     <Link
                         href={'/products/niche'}
@@ -345,7 +354,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('wardrobe5')}
                     >
-                        Zabudowa wnęki na wymiar
+                        {t('header-link8')}
                     </Link>
                     <Link
                         href={'/products/corner'}
@@ -353,7 +362,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('wardrobe6')}
                     >
-                        Szafa narożna na wymiar
+                        {t('header-link9')}
                     </Link>
                     <Link
                         href={'/products/bevel'}
@@ -361,7 +370,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('wardrobe7')}
                     >
-                        Zabudowa skosów
+                        {t('header-link10')}
                     </Link>
                 </div>
                 <div className={style.header__categories}>
@@ -371,7 +380,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('bath')}
                     >
-                        Zabudowa łazienkowa
+                        {t('header-link11')}
                     </Link>
                     <Link
                         href={'/products/living-room'}
@@ -379,7 +388,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('living')}
                     >
-                        Zabudowa do salonu
+                        {t('header-link12')}
                     </Link>
                     <Link
                         href={'/products/custom-furniture'}
@@ -387,7 +396,7 @@ const Header = () => {
                         onClick={() => setOpen(!open)}
                         onMouseEnter={() => setProductImage('custom')}
                     >
-                        Zabudowa na wymiar
+                        {t('header-link13')}
                     </Link>
                 </div>
                 <div className={style.header__figure}>

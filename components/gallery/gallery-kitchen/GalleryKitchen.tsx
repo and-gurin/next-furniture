@@ -81,12 +81,13 @@ import nob9 from "@/public/Kitchen/Nobilia/nobilia-9.jpg";
 import nob10 from "@/public/Kitchen/Nobilia/nobilia-10.jpg";
 import nob11 from "@/public/Kitchen/Nobilia/nobilia-11.jpg";
 import nob12 from "@/public/Kitchen/Nobilia/nobilia-12.jpg";
+import I18nProvider from '@/components/I18nProvider/I18nProvider';
 
 const tabs = [
-    {tag: 'all', title: 'Wszystkie'},
-    {tag: 'modern', title: 'Nowoczesny'},
-    {tag: 'high', title: 'NOBILIA'},
-    {tag: 'classic', title: 'Klasyczny'},
+    {tag: 'all', title: 'gallery-tab-all'},
+    {tag: 'modern', title: 'gallery-kitchen-tab1'},
+    {tag: 'high', title: 'gallery-kitchen-tab2'},
+    {tag: 'classic', title: 'gallery-kitchen-tab3'},
 ]
 
 const images = [
@@ -175,13 +176,15 @@ const images = [
 
 const GalleryKitchen = ({defaultTag}: {defaultTag: string}) => {
     return (
-        <Gallery
-            tabs={tabs}
-            images={images}
-            title={'Galeria realizacji'}
-            defaultTag={defaultTag}
-            height={'kitchen'}
-        />
+        <I18nProvider>
+            <Gallery
+                tabs={tabs}
+                images={images}
+                defaultTag={defaultTag}
+                height={'kitchen'}
+            />
+        </I18nProvider>
+
     );
 };
 

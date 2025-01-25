@@ -1,10 +1,10 @@
 import "@/styles/wrapper.scss"
 import Stages from "@/components/stages/Stages";
 import {Metadata} from "next";
-import classic from "@/public/Materials/materials.png";
-import FurnitureDetails from "@/components/details/FurnitureDetails";
 import React from "react";
 import MaterialsCollection from "@/components/materials/Materials-collection";
+import MaterialsTranslate from "@/components/details/Materials-translate";
+import I18nProvider from "@/components/I18nProvider/I18nProvider";
 
 export const metadata: Metadata = {
     title: 'Materiały | InHouse meble'
@@ -13,12 +13,11 @@ export default function Materials() {
 
     return (
         <>
-            <FurnitureDetails
-                image={classic}
-                title={'Materiały'}
-                description={'Mnogość wzorów oraz komponentów najwyższej jakości'}/>
+            <MaterialsTranslate/>
             <MaterialsCollection/>
-            <Stages background={'whiteSmoke'}/>
+            <I18nProvider>
+                <Stages background={'whiteSmoke'}/>
+            </I18nProvider>
         </>
 
     )

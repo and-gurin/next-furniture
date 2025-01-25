@@ -39,8 +39,9 @@ import swingWardrobe5 from "@/public/Wardrobe/Hallway-5.jpg";
 import swingWardrobe6 from "@/public/Wardrobe/Hallway-6.jpg";
 import Image from "next/image";
 import {baskerville} from '@/app/fonts';
-import Advantages from "@/components/advantages/Advantages";
 import Button from "@/components/button/button";
+import AdvantagesTranslate from "@/components/advantages/Advantages-translate";
+import {useTranslation} from "react-i18next";
 
 const images = [
     {id: 17,  src: modern5},
@@ -89,18 +90,19 @@ const Hero = () => {
         className: 'sliderHero'
     };
 
+    const { t } = useTranslation('gallery-header-stages');
+
     return (
         <section className='hero'>
             <div className={`wrapper hero__wrapper`}>
                 <div className='hero__description'>
-                    <h1 className={`${baskerville.className} hero__title`}>Meble na wymiar</h1>
-                    <p className='hero__subtitle'>Witamy w świecie nieograniczonych możliwości
-                        dla Twojego wnętrza! Tworzymy spersonalizowane rozwiązania meblowe,
-                        które odzwierciedlają Twoją wyjątkowość i styl.
+                    <h1 className={`${baskerville.className} hero__title`}>{t('hero-title')}</h1>
+                    <p className='hero__subtitle'>
+                        {t('hero-subtitle')}
                     </p>
                     <Button text={'contact'}/>
                     <div>
-                        <Advantages/>
+                        <AdvantagesTranslate/>
                     </div>
                 </div>
                 <div className='slider__wrapper'>

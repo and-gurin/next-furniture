@@ -1,9 +1,9 @@
 import React from 'react';
-import FurnitureDetails from "@/components/details/FurnitureDetails";
-import classic from "@/public/Wardrobe/niche-6.jpg"
 import Stages from "@/components/stages/Stages";
 import GalleryWardrobe from "@/components/gallery/gallery-wardrobe/GalleryWardrobe";
 import {Metadata} from "next";
+import NicheTranslate from "@/components/details/products/Niche-translate";
+import I18nProvider from "@/components/I18nProvider/I18nProvider";
 
 export const metadata: Metadata = {
     title: 'Szafy Wnekowe na wymiar | InHouse meble'
@@ -11,13 +11,11 @@ export const metadata: Metadata = {
 const NicheWardrobe = () => {
     return (
         <>
-            <FurnitureDetails
-                image={classic}
-                title={'Zabudowa wnęki na wymiar'}
-                description={'Czy masz wolną niszę? Zróbmy tam szafę. W końcu miejsce do przechowywania ' +
-                    'nigdy nie jest zbędne.'}/>
+            <NicheTranslate/>
             <GalleryWardrobe defaultTag={'niche'}/>
-            <Stages background={'whiteSmoke'}/>
+            <I18nProvider>
+                <Stages background={'whiteSmoke'}/>
+            </I18nProvider>
         </>
     );
 };

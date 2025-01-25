@@ -26,10 +26,6 @@
     align-items: center;
   }
 
-  &__flag {
-    margin-right: 12px;
-  }
-
   &__navigation {
     @include flex( $gap:20px);
 
@@ -84,9 +80,15 @@
     align-items: center;
   }
 
-  &__phone {
-    margin-right: 12px;
+  &__flag {
+    margin-right: 20px;
     margin-left: auto;
+  }
+
+  &__phone {
+    margin-right: 20px;
+    display: flex;
+    gap: 10px;
   }
 
   &__bottomMenu {

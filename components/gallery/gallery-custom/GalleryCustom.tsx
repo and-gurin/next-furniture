@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import Gallery from "@/components/gallery/Gallery";
 import bath1 from "@/public/Custom/Bath-room/bath-1.jpg";
@@ -39,12 +41,13 @@ import living14 from "@/public/Custom/Living-room/living-room-17-2.jpg";
 import living15 from "@/public/Custom/Living-room/living-room-18.jpg";
 import living16 from "@/public/Custom/Living-room/living-room-19-1.jpg";
 import living17 from "@/public/Custom/Living-room/living-room-19-2.jpg";
+import I18nProvider from "@/components/I18nProvider/I18nProvider";
 
 
 const tabs = [
-    {tag: 'all', title: 'Wszystkie'},
-    {tag: 'bath', title: 'Łazienka'},
-    {tag: 'living', title: 'Salon'},
+    {tag: 'all', title: 'gallery-tab-all'},
+    {tag: 'bath', title: 'gallery-custom-tab1'},
+    {tag: 'living', title: 'gallery-custom-tab2'},
     // {tag: 'custom', title: 'Na wymiar'},
 ]
 
@@ -98,13 +101,16 @@ const images = [
 ]
 
 const GalleryCustom = ({defaultTag}: {defaultTag: string}) => {
+
     return (
-        <Gallery
-            tabs={tabs}
-            images={images}
-            title={'Galeria realizacji'}
-            defaultTag={defaultTag}
-        />
+        <I18nProvider>
+            <Gallery
+                tabs={tabs}
+                images={images}
+                defaultTag={defaultTag}
+            />
+        </I18nProvider>
+
     );
 };
 

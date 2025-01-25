@@ -8,6 +8,7 @@ import Link from "next/link";
 import {Fade} from "react-awesome-reveal";
 import React from "react";
 import nobKitchen from "@/public/Nobilia_Logo.svg"
+import {useTranslation} from "react-i18next";
 
 export type ImagePropsType = {
     id: string,
@@ -34,6 +35,9 @@ const KindOfFurniture = ({images, descriptions, location, german, custom}: {
     german?: boolean,
     custom?: boolean
 }) => {
+
+    const { t } = useTranslation('gallery-header-stages');
+
     return (
 
             <section className={style.kind}>
@@ -44,19 +48,19 @@ const KindOfFurniture = ({images, descriptions, location, german, custom}: {
                         : style.kind__grid + ' ' + style.kind__grid_left}>
                         <div className={style.kind__description}>
                             {custom ? <p className={baskerville.className + ' ' + style.kind__copy}>
-                                {descriptions.kindOfFurniture}
+                                {t(descriptions.kindOfFurniture)}
                             </p> : <Link href={descriptions.link}>
                                 <p className={baskerville.className + ' ' + style.kind__copy}>
-                                    {descriptions.kindOfFurniture}
+                                    {t(descriptions.kindOfFurniture)}
                                 </p>
                             </Link>}
 
                             <div>
                                 <h2 className={baskerville.className + ' ' + style.kind__title}>
-                                    {descriptions.title}
+                                    {t(descriptions.title)}
                                 </h2>
                                 <p className={style.kind__subtitle}>
-                                    {descriptions.description}
+                                    {t(descriptions.description)}
                                 </p>
                                 <ul>
                                     {descriptions.furnitureTypes.map(type => {
@@ -64,10 +68,10 @@ const KindOfFurniture = ({images, descriptions, location, german, custom}: {
                                             <Fade  direction={location !== 'image-on-left'
                                                 ? 'left' : 'right'}>
                                                 <Link href={type.link} className={style.kind__details}>
-                                                    <p>{type.type}</p>
+                                                    <p>{t(type.type)}</p>
                                                     <div className={style.kind__more}>
                                                         <p className={baskerville.className + ' ' + style.kind__details_copy}>
-                                                            Więcej
+                                                            {t('king-details-copy')}
                                                         </p>
                                                         <Image src={arrowRight}
                                                                alt='arrow-right'
@@ -83,7 +87,7 @@ const KindOfFurniture = ({images, descriptions, location, german, custom}: {
                                         <Fade  direction={location !== 'image-on-left'
                                             ? 'left' : 'right'}>
                                             <Link href={'/products/german-kitchen'} className={style.kind__details}>
-                                                <p>{'Kuchnie'}</p>
+                                                <p>{t('king-details')}</p>
                                                 <p className={style.kind__nobilia}>
                                                     {german ? <Image
                                                         src={nobKitchen}
@@ -95,7 +99,7 @@ const KindOfFurniture = ({images, descriptions, location, german, custom}: {
                                                 </p>
                                                 <div className={style.kind__more}>
                                                     <p className={baskerville.className + ' ' + style.kind__details_copy}>
-                                                        Więcej
+                                                        {t('king-details-copy')}
                                                     </p>
                                                     <Image src={arrowRight}
                                                            alt='arrow-right'

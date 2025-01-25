@@ -1,9 +1,9 @@
 import React from 'react';
-import FurnitureDetails from "@/components/details/FurnitureDetails";
-import classic from "@/public/Wardrobe/corner-1-2.jpg"
 import Stages from "@/components/stages/Stages";
 import GalleryWardrobe from "@/components/gallery/gallery-wardrobe/GalleryWardrobe";
 import {Metadata} from "next";
+import CornerTranslate from "@/components/details/products/Corner-translate";
+import I18nProvider from "@/components/I18nProvider/I18nProvider";
 
 export const metadata: Metadata = {
     title: 'Szafa narożna na wymiar | InHouse meble'
@@ -11,12 +11,11 @@ export const metadata: Metadata = {
 const CornerWardrobe = () => {
     return (
         <>
-            <FurnitureDetails
-                image={classic}
-                title={'Szafa narożna na wymiar'}
-                description={'Jeżeli cenisz sobie przestrzeń, szafa narożna będzie dla ciebie idealnym rozwiązaniem'}/>
+            <CornerTranslate/>
             <GalleryWardrobe defaultTag={'corner'}/>
-            <Stages background={'whiteSmoke'}/>
+            <I18nProvider>
+                <Stages background={'whiteSmoke'}/>
+            </I18nProvider>
         </>
     );
 };

@@ -6,6 +6,7 @@ import {baskerville} from "@/app/fonts";
 import {useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
 import Modal from "@/components/modal/Modal";
+import {useTranslation} from "react-i18next";
 
 export default function Form() {
 
@@ -14,6 +15,7 @@ export default function Form() {
     const [modalMessage, setModalMessage] = useState("");
     //const [fileName, setFileName] = useState("");
 
+    const { t } = useTranslation();
 
     const sendEmail = (e?: { preventDefault: () => void; }) => {
         e!.preventDefault();
@@ -45,13 +47,13 @@ export default function Form() {
     return (
         <div className={style.form}>
             <h3 className={baskerville.className + ' ' + style.form__title}>
-                Bezpłatna wizyta
+                {t('form-title')}
             </h3>
             <p className={style.form__subtitle}>
-                Wpisz swoje imię oraz numer telefonu lub adres e-mail, aby umówić się na bezpłatną wizytę
+                {t('form-subtitle')}
             </p>
             <form className={style.contacts__form} ref={form} onSubmit={sendEmail}>
-                <input placeholder='Imię'
+                <input placeholder={t('form-user-name')}
                        name='user_name'
                        className={style.form__field}
                        type="text"
@@ -62,7 +64,7 @@ export default function Form() {
                        className={style.form__field}
                        type="email"
                 />
-                <input placeholder='Telefon'
+                <input placeholder={t('form-user-phone')}
                        name='phone'
                        className={style.form__field}
                        type="tel"
@@ -82,11 +84,11 @@ export default function Form() {
                 {/*</div>*/}
                 <textarea className={style.form__field + ' ' + style.form__field_area}
                           rows={7} cols={45}
-                          placeholder='Wiadomość...'
+                          placeholder={t('form-textarea')}
                           name='message'
                 />
                 <button className={style.form__button} type='submit'>
-                    Wyślij nam wiadomość
+                    {t('form-button')}
                 </button>
             </form>
             <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} message={modalMessage} />

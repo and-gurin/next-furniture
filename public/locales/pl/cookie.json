@@ -1,0 +1,51 @@
+{
+  "cookie-policy-title": "Polityka Plików Cookie",
+  "cookie-policy-introduction": {
+    "title": "1. Wstęp",
+    "description": "Niniejsza polityka plików cookie wyjaśnia, czym są pliki cookie, jak je wykorzystujemy, jakie masz prawa w związku z ich używaniem oraz jak możesz zarządzać swoimi preferencjami dotyczącymi plików cookie."
+  },
+  "cookie-policy-what-are-cookies": {
+    "title": "2. Czym są pliki cookie?",
+    "description": "Pliki cookie to małe pliki tekstowe, które są przechowywane na Twoim urządzeniu (komputerze, tablecie, smartfonie) podczas odwiedzania naszej strony internetowej. Pliki cookie pomagają nam poprawić funkcjonalność strony, analizować ruch oraz dostosowywać treści do Twoich preferencji."
+  },
+  "cookie-policy-types": {
+    "title": "3. Jakie rodzaje plików cookie wykorzystujemy?",
+    "description": "Wykorzystujemy następujące rodzaje plików cookie:",
+    "necessary": {
+      "title": "Pliki cookie niezbędne",
+      "description": "Są to pliki cookie, które są niezbędne do prawidłowego funkcjonowania naszej strony. Umożliwiają one korzystanie z podstawowych funkcji, takich jak nawigacja po stronie oraz dostęp do zabezpieczonych obszarów."
+    },
+    "analytics": {
+      "title": "Pliki cookie analityczne",
+      "description": "Te pliki cookie pomagają nam zrozumieć, jak użytkownicy korzystają z naszej strony, co pozwala nam poprawiać jej działanie. Informacje zbierane za pomocą tych plików są anonimowe i służą wyłącznie do celów statystycznych."
+    },
+    "functional": {
+      "title": "Pliki cookie funkcjonalne",
+      "description": "Umożliwiają one zapamiętywanie Twoich wyborów (takich jak język lub region) oraz dostosowywanie strony do Twoich indywidualnych potrzeb."
+    },
+    "advertising": {
+      "title": "Pliki cookie reklamowe",
+      "description": "Te pliki cookie służą do wyświetlania reklam dostosowanych do Twoich zainteresowań. Mogą być używane przez nas lub przez naszych partnerów reklamowych."
+    }
+  },
+  "cookie-policy-manage-cookies": {
+    "title": "4. Jak zarządzać plikami cookie?",
+    "description1": "Możesz zarządzać swoimi preferencjami dotyczącymi plików cookie, korzystając z ustawień swojej przeglądarki internetowej. Większość przeglądarek umożliwia kontrolowanie plików cookie, w tym ich blokowanie lub usuwanie. Pamiętaj jednak, że wyłączenie niektórych plików cookie może wpłynąć na funkcjonalność naszej strony.",
+    "description2": "Instrukcje dla najpopularniejszych przeglądarek:",
+    "browsers": {
+      "chrome": "Google Chrome",
+      "firefox": "Mozilla Firefox",
+      "edge": "Microsoft Edge",
+      "safari": "Safari"
+    }
+  },
+  "cookie-policy-changes": {
+    "title": "5. Zmiany w Polityce Plików Cookie",
+    "description": "Zastrzegamy sobie prawo do wprowadzania zmian w niniejszej polityce plików cookie. Wszelkie zmiany będą publikowane na tej stronie wraz z datą ich wprowadzenia."
+  },
+  "cookie-policy-contact": {
+    "title": "6. Kontakt",
+    "description": "Jeśli masz jakiekolwiek pytania dotyczące naszej polityki plików cookie, skontaktuj się z nami pod adresem e-mail:",
+    "e-mail": "inhouse.biuro@gmail.com"
+  }
+}

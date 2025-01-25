@@ -10,60 +10,74 @@ import "@/styles/wrapper.scss"
 import {baskerville} from "@/app/fonts";
 import {Fade} from "react-awesome-reveal";
 import Link from "next/link";
+import {useTranslation} from "react-i18next";
 
 const stages = [
     {
-        id: '01',
-        src: stageOne,
-        title: <Link className={style.stages__link} href={'/contacts'}>
-                Pierwszy kontakt, wycena
-        </Link>,
-        description: 'Dzwonisz do nas lub wysyłasz wiadomość, ' +
-            'a my próbujemy sprawdzić, czy możemy pomóc ci rozwiązać twój problem.' +
-        ' Na tym etapie wykonamy projekt z wizualizacją i wyceną',
-        list: ''
-    },
-    {
         id: '02',
         src: stageTwo,
-        title: 'Projekt',
-        description: 'To najważniejszy etap. Wyraźnie rozumiemy, ' +
-            'że meble na zamówienie muszą być w pełnej harmonii z pomieszczeniem. ' +
-            ' Przyjedziemy do ' +
-            'Ciebie z próbkami materiałów, laptopem, na którym ' +
-            'we współpracy z Tobą stworzymy finalną wersję projektu 3d w czasie rzeczywistym. ' +
-            'Na tym etapie wykonamy:',
+        title: 'stage-title2',
+        description: 'stage-description2',
         list: '1',
     },
     {
         id: '03',
         src: stageThree,
-        title: 'Produkcja',
-        description: 'Zawarcie umowy i produkcja mebli. Podpiszemy z Tobą umowę i wykonamy meble. ' +
-            'Doskonale zdajemy sobie sprawę, ' +
-            'że po podpisaniu umowy i zatwierdzeniu projektu możesz mieć ' +
-            'genialne pomysły, jak ulepszyć meble. Możesz dokonać zmiany w projekcie do momentu zakupu materiałów.',
+        title: 'stage-title3',
+        description: 'stage-description3',
         list: ''
     },
     {
         id: '04',
         src: stageFour,
-        title: 'Montaż',
-        description: 'Montaż mebli. Zainstalujemy meble, ' +
-            'dostosujemy mechanizmy i upewnimy się, że masz to, czego chciałeś.',
+        title: 'stage-title4',
+        description: 'stage-description4',
         list: ''
     },
 ]
 const Stages = ({background}: {background?: string}) => {
+
+    const { t } = useTranslation('gallery-header-stages');
+
     return (
         <section className={background === 'whiteSmoke' ? style.stages + ' ' + style.stages_backgroundSmoke : style.stages}>
             <div className={`wrapper ${style.stages__wrapper}`}>
                 <Fade direction={"up"}>
                     <h2 className={baskerville.className + ' ' + style.stages__title}>
-                        Wykonywanie mebli – krok po kroku
+                        {t('stage-title0')}
                     </h2>
                 </Fade>
                 <ul>
+                    <li>
+                        <Fade direction={"up"} triggerOnce={true} fraction={0}>
+                            <div  className={style.stages__content}>
+                                <figure className={style.stages__figure}>
+                                    <Image src={stageOne}
+                                           fill
+                                           sizes="(min-width: 200px) 50vw, 100vw"
+                                           alt='Etap pracy z klientem'
+                                    />
+                                </figure>
+                                <div className={style.stages__description}>
+                                    <div className={style.stages__number}>
+                                        <p className={baskerville.className + ' ' + style.stages__subtitle}>{'01'}</p>
+                                        <p className={style.stages__verticalLine}></p>
+                                    </div>
+                                    <div>
+                                        <p className={baskerville.className + ' ' + style.stages__subtitle}>
+                                            <Link className={style.stages__link} href={'/contacts'}>
+                                                {t('stage-title1')}
+                                            </Link>,
+                                        </p>
+                                        <p className={style.stages__description}>
+                                            {t('stage-description1')}
+                                        </p>
+                                        <br/>
+                                    </div>
+                                </div>
+                            </div>
+                        </Fade>
+                    </li>
                     {stages.map(stage =>
                         <li key={stage.id}>
                             <Fade direction={"up"} triggerOnce={true} fraction={0}>
@@ -82,17 +96,17 @@ const Stages = ({background}: {background?: string}) => {
                                         </div>
                                         <div>
                                             <p className={baskerville.className + ' ' + style.stages__subtitle}>
-                                                {stage.title}
+                                                {t(stage.title)}
                                             </p>
                                             <p className={style.stages__description}>
-                                                {stage.description}
+                                                {t(stage.description)}
                                             </p>
                                             <br/>
                                             {stage.list &&
                                                 <ul className={style.stages_list}>
-                                                    <li>- pomiar</li>
-                                                    <li>- tworzenie projektu</li>
-                                                    <li>- wybór materiałów</li>
+                                                    <li>{t('stage-list1')}</li>
+                                                    <li>{t('stage-list2')}</li>
+                                                    <li>{t('stage-list3')}</li>
                                                 </ul>
                                             }
                                         </div>
@@ -102,7 +116,6 @@ const Stages = ({background}: {background?: string}) => {
                         </li>
                     )}
                 </ul>
-
             </div>
         </section>
     );

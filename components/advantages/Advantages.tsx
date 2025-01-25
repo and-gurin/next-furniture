@@ -1,30 +1,37 @@
+'use client'
+
 import React from 'react';
 import Image from "next/image";
 import {baskerville} from "@/app/fonts";
 import measuring from "@/public/check-svgrepo-com.svg";
 import style from "./Advantages.module.scss"
+import {useTranslation} from "react-i18next";
 
 const advantages = [
     {
-        id: 1, src: measuring,
-        title: 'Doceniam twój czas',
-        txt: 'Wykonamy project z wizualizacją 3D i wyceną w 24 godziny. Pomiar w Poznaniu + 100 km za darmo!'
+        id: 1,
+        src: measuring,
+        title: "advantage-title1",
+        txt: "advantage-description1"
     },
     {
         id: 2,
         src: measuring,
-        title: 'Jesteśmy do twojej dyspozycji',
-        txt: 'Projektant jest w kontakcie 24/7 na wszystkich etapach pracy'
+        title: "advantage-title2",
+        txt: "advantage-description2"
     },
     {
         id: 3,
         src: measuring,
-        title: 'Serwis gwarantowany',
-        txt: 'Gwarancja na meble wynosi 2 lata + serwis pogwarancyjny'
+        title: "advantage-title3",
+        txt: "advantage-description3"
     },
 ]
 
 const Advantages = () => {
+
+    const { t } = useTranslation();
+
     return (
         <div>
             {advantages.map(adv => {
@@ -38,10 +45,10 @@ const Advantages = () => {
                         />
                         <div>
                             <p className={baskerville.className + ' ' + style.advantage}>
-                                {adv.title}
+                                {t(adv.title)}
                             </p>
                             <p className={style.txt}>
-                                {adv.txt}
+                                {t(adv.txt)}
                             </p>
                         </div>
                     </div>

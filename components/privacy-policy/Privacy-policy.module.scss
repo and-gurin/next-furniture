@@ -1,7 +1,7 @@
-@import 'styles/constants';
-@import 'styles/mixins';
+@import '../../styles/constants';
+@import '../../styles/mixins';
 
-.cookies {
+.privacy {
   margin: 96px 8px 48px 8px;
 
   @include media-tablet {

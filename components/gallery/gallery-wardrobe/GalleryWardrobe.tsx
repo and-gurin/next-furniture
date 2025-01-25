@@ -105,6 +105,7 @@ import cornerWardrobe5 from "@/public/Wardrobe/corner-2-3.jpg";
 import cornerWardrobe6 from "@/public/Wardrobe/corner-4.jpg";
 import bevelWardrobe1 from "@/public/Wardrobe/bevel-1.jpg";
 import bevelWardrobe2 from "@/public/Wardrobe/bevel-2.jpeg";
+import I18nProvider from "@/components/I18nProvider/I18nProvider";
 
 
 const tabs = [
@@ -230,13 +231,15 @@ const images = [
 
 const GalleryWardrobe = ({defaultTag}: {defaultTag: string}) => {
     return (
-        <Gallery
-            tabs={tabs}
-            images={images}
-            title={'Galeria realizacji'}
-            defaultTag={defaultTag}
-            height={'wardrobe'}
-        />
+        <I18nProvider>
+            <Gallery
+                tabs={tabs}
+                images={images}
+                defaultTag={defaultTag}
+                height={'wardrobe'}
+            />
+        </I18nProvider>
+
     );
 };
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import FurnitureDetails from "@/components/details/FurnitureDetails";
-import classic from "@/public/Wardrobe/Hallway-2-1.jpg"
 import Stages from "@/components/stages/Stages";
 import GalleryWardrobe from "@/components/gallery/gallery-wardrobe/GalleryWardrobe";
 import {Metadata} from "next";
+import HallwayTranslate from "@/components/details/products/Hallway-translate";
+import I18nProvider from "@/components/I18nProvider/I18nProvider";
 
 export const metadata: Metadata = {
     title: 'Szafa do przedpokoju na wymiar | InHouse meble'
@@ -12,14 +12,11 @@ export const metadata: Metadata = {
 const HallwayWardrobe = () => {
     return (
         <>
-            <FurnitureDetails
-                image={classic}
-                title={'Szafa do przedpokoju na wymiar'}
-                description={'Stwórz idealną przestrzeń do przechowywania dzięki naszym szafkom przedpokojowym, ' +
-                    'w których każdy element jest przemyślany w najdrobniejszych szczegółach ' +
-                    'dla Twojej wygody i stylu.'}/>
+            <HallwayTranslate/>
             <GalleryWardrobe defaultTag={'hallway'}/>
-            <Stages background={'whiteSmoke'}/>
+            <I18nProvider>
+                <Stages background={'whiteSmoke'}/>
+            </I18nProvider>
         </>
     );
 };

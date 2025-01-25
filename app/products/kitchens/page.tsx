@@ -1,27 +1,24 @@
 import React from 'react';
-import FurnitureDetails from "@/components/details/FurnitureDetails";
-import modern from "@/public/Kitchen/HIGH-TECH/high-tech-12-2.jpg"
 import Stages from "@/components/stages/Stages";
 import GalleryKitchen from "@/components/gallery/gallery-kitchen/GalleryKitchen";
 import {Metadata} from "next";
+import KitchensTranslate from "@/components/details/products/Kitchens-translate";
+import I18nProvider from "@/components/I18nProvider/I18nProvider";
 
 export const metadata: Metadata = {
     title: 'Kuchnie na wymiar | InHouse meble'
 }
 
-const ModernKitchen = () => {
+const Kitchens = () => {
     return (
         <>
-            <FurnitureDetails
-                image={modern}
-                title={'Kuchnie na wymiar'}
-                description={'Nowoczesny styl, nienaganna jakość, niezrównany komfort. ' +
-                    'Zanurz się w świecie innowacyjnych rozwiązań w naszych kuchniach , ' +
-                    'w których design łączy się z funkcjonalnością na najwyższym poziomie.'}/>
+            <KitchensTranslate/>
             <GalleryKitchen defaultTag={'all'}/>
-            <Stages background={'whiteSmoke'}/>
+            <I18nProvider>
+                <Stages background={'whiteSmoke'}/>
+            </I18nProvider>
         </>
     );
 };
 
-export default ModernKitchen;
+export default Kitchens;
