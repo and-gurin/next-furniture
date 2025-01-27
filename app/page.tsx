@@ -12,7 +12,6 @@ import Stages from "@/components/stages/Stages";
 import HeroTranslate from "@/components/hero/Hero-translate";
 import I18nProvider from "@/components/I18nProvider/I18nProvider"
 
-
 const kitchenImages = [
     {id: '1', src: kitchen1},
     {id: '2', src: kitchen2},

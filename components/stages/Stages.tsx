@@ -37,7 +37,7 @@ const stages = [
 ]
 const Stages = ({background}: {background?: string}) => {
 
-    const { t } = useTranslation('gallery-header-stages');
+    const { t } = useTranslation('gallery');
 
     return (
         <section className={background === 'whiteSmoke' ? style.stages + ' ' + style.stages_backgroundSmoke : style.stages}>

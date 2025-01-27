@@ -90,7 +90,7 @@ const Hero = () => {
         className: 'sliderHero'
     };
 
-    const { t } = useTranslation('gallery-header-stages');
+    const { t } = useTranslation('gallery');
 
     return (
         <section className='hero'>

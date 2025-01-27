@@ -38,7 +38,7 @@ const Gallery = ({tabs, images, defaultTag, height}: {
     const [openSlider, setOpenSlider] = React.useState(false);
     const [initialIndex, setInitialIndex] = React.useState(0);
 
-    const { t } = useTranslation('gallery-header-stages');
+    const { t } = useTranslation('gallery');
 
     const tabList = tabs?.map(tab => {
         const finalClassName = activeTab === tab.tag

@@ -140,7 +140,7 @@ const box = [
 
 const MaterialsCollection = () => {
 
-    const { t } = useTranslation('gallery-header-stages');
+    const { t } = useTranslation('gallery');
 
     return (
         <section className={style.collection}>

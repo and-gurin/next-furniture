@@ -9,7 +9,7 @@ import {useTranslation} from "react-i18next";
 
 export default function Valuation () {
 
-    const { t } = useTranslation('contact-materials-privacy');
+    const { t } = useTranslation('common');
 
     return (
         <>

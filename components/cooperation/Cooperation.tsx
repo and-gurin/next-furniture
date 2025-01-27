@@ -7,7 +7,7 @@ import {useTranslation} from "react-i18next";
 
 export default function Cooperation() {
 
-    const { t } = useTranslation('contact-materials-privacy');
+    const { t } = useTranslation('common');
 
     return (
         <>

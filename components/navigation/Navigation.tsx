@@ -9,7 +9,7 @@ function NavItem({links, openMenu}: {
     openMenu?: () => void
 }) {
 
-    const { t } = useTranslation('gallery-header-stages');
+    const { t } = useTranslation('gallery');
 
     return (
         links.map(link =>

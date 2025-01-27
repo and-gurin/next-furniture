@@ -8,7 +8,7 @@ import FurnitureDetails from '../FurnitureDetails';
 
 export default function HallwayTranslate() {
 
-    const { t } = useTranslation('contact-materials-privacy');
+    const { t } = useTranslation('common');
     return (
         <I18nProvider>
             <FurnitureDetails

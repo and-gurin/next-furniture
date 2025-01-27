@@ -36,7 +36,7 @@ const KindOfFurniture = ({images, descriptions, location, german, custom}: {
     custom?: boolean
 }) => {
 
-    const { t } = useTranslation('gallery-header-stages');
+    const { t } = useTranslation('gallery');
 
     return (
 

@@ -10,7 +10,7 @@ import {useTranslation} from "react-i18next";
 
 const Footer = () => {
 
-    const { t } = useTranslation('contact-materials-privacy');
+    const { t } = useTranslation();
 
     return (
         <footer className={raleWay.className + ' ' + style.footer}>
@@ -54,7 +54,7 @@ const Footer = () => {
                     </div>
                 </nav>
                 <p className={style.footer__copyright}>
-                    Copyright 2024 © In House All rights reserved.
+                    Copyright 2025 © In House All rights reserved.
                 </p>
             </div>
         </footer>

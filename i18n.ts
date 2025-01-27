@@ -1,24 +1,32 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import Backend from 'i18next-http-backend';
+import be from '@/public/locales/be/contact-materials-privacy.json';
+import en from '@/public/locales/en/contact-materials-privacy.json';
+import pl from '@/public/locales/pl/contact-materials-privacy.json';
+import cookieBe from '@/public/locales/be/cookie.json';
+import cookieEn from '@/public/locales/en/cookie.json';
+import cookiePl from '@/public/locales/pl/cookie.json';
+import galleryBe from '@/public/locales/be/gallery-header-stages.json';
+import galleryEn from '@/public/locales/en/gallery-header-stages.json';
+import galleryPl from '@/public/locales/pl/gallery-header-stages.json';
+
+const resources = {
+    be: { common: be, cookie: cookieBe, gallery: galleryBe },
+    en: { common: en, cookie: cookieEn, gallery: galleryEn },
+    pl: { common: pl, cookie: cookiePl, gallery: galleryPl },
+};
 
 i18n
-    .use(Backend) // Используем i18next-http-backend для загрузки JSON-файлов
-    .use(initReactI18next) // Интеграция с React
+    .use(initReactI18next)
     .init({
-        lng: 'pl', // Текущий язык. Можно сменить динамически
+        resources, // Указываем ресурсы
+        lng: 'pl', // Язык по умолчанию
+        fallbackLng: 'pl',
         interpolation: {
             escapeValue: false, // React уже экранирует HTML
         },
-        react: {
-            useSuspense: false, // Отключаем Suspense для SSR
-        },
-        ns: ['contact-materials-privacy', 'cookie', 'galery-header-stages'], // Указываем используемые namespaces
-        defaultNS: 'contact-materials-privacy', // Пространство имён по умолчанию
-        backend: {
-            loadPath: '/locales/{{lng}}/{{ns}}.json', // Путь к JSON-файлам
-        },
-        //debug: process.env.NODE_ENV === 'development', // Включить логирование в режиме разработки
+        ns: ['common', 'cookie', 'gallery'], // Пространства имён
+        defaultNS: 'common', // Пространство имён по умолчанию
     });
 
 export default i18n;

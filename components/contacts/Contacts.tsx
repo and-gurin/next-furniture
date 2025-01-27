@@ -9,7 +9,7 @@ import FormTranslate from "@/components/form-valuation/Form-translate";
 
 export default function Contacts () {
 
-    const { t } = useTranslation('contact-materials-privacy');
+    const { t } = useTranslation('common');
 
     return (
         <>

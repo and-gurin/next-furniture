@@ -8,7 +8,7 @@ import FurnitureDetails from '../FurnitureDetails';
 
 export default function SlidingTranslate() {
 
-    const { t } = useTranslation('contact-materials-privacy');
+    const { t } = useTranslation('common');
     // const FurnitureDetails = dynamic(
     //     () => import('@/components/details/FurnitureDetails'),
     //     { ssr: false }

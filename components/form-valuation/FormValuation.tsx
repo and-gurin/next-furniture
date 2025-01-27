@@ -92,7 +92,7 @@ export default function FormValuation() {
         }
     };
 
-    const { t } = useTranslation('contact-materials-privacy');
+    const { t } = useTranslation('common');
 
     return (
         <div className={style.form}>

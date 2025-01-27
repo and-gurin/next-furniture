@@ -47,7 +47,7 @@ const Header = () => {
         setOpenBurger(!openBurger)
     }
 
-    const { t } = useTranslation('gallery-header-stages');
+    const { t } = useTranslation('gallery');
 
     const headerRef = useRef<HTMLDivElement>(null);
 
