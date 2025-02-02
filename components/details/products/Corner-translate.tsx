@@ -9,10 +9,7 @@ import FurnitureDetails from '../FurnitureDetails';
 export default function CornerTranslate() {
 
     const { t } = useTranslation('common');
-    // const FurnitureDetails = dynamic(
-    //     () => import('@/components/details/FurnitureDetails'),
-    //     { ssr: false }
-    // )
+
     return (
         <I18nProvider>
             <FurnitureDetails

@@ -9,6 +9,7 @@ import FurnitureDetails from '../FurnitureDetails';
 export default function LivingTranslate() {
 
     const { t } = useTranslation('common');
+
     return (
         <I18nProvider>
             <FurnitureDetails

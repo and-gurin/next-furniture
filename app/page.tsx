@@ -42,10 +42,10 @@ const kitchenDescriptions = {
 }
 
 const wardrobeDescriptions = {
-    kindOfFurniture: 'szafa',
+    kindOfFurniture: 'page-wardrobe-kind',
     link: '/products/wardrobes',
-    title: 'Widziałeś moje skarpetki?',
-    description: '',
+    title: 'page-wardrobe-title',
+    description: 'page-wardrobe-description',
     furnitureTypes: [
         {type: 'page-wardrobe-type1', link: '/products/wardrobe'},
         {type: 'page-wardrobe-type2', link: '/products/hallway'},
@@ -63,8 +63,8 @@ const customFurnitureDescriptions = {
     title: 'page-custom-title',
     description: 'page-custom-description',
     furnitureTypes: [
-        {type: 'Łazienka', link: '/products/bath-room'},
-        {type: 'Salon', link: '/products/living-room'},
+        {type: 'page-custom-type1', link: '/products/bath-room'},
+        {type: 'page-custom-type2', link: '/products/living-room'},
         // {type: 'Meble na wymiar', link: '/products/custom-furniture'},
     ],
 }

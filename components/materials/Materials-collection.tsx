@@ -167,7 +167,7 @@ export const Material = ({title, materials}: {
     materials: MaterialsProps[]
 }) => {
 
-    const { t } = useTranslation('gallery-header-stages');
+    const { t } = useTranslation('gallery');
 
     return (
         <>

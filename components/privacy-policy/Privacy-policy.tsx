@@ -14,9 +14,9 @@ export default function Privacy() {
                 <section className={style.privacy}>
                     <div className={`wrapper ${style.privacy__wrapper}`}>
                         <article className={style.privacy__description}>
-                            <h2 className={baskerville.className + ' ' + style.privacy__title}>
+                            <h1 className={baskerville.className + ' ' + style.privacy__title}>
                                 {t('privacy-title')}
-                            </h2>
+                            </h1>
                             <ol type="1">
                                 <li>
                                     <strong>{t('privacy-strong1')}</strong>
