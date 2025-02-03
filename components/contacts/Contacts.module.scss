@@ -46,6 +46,33 @@
     }
   }
 
+  &__list {
+    display: flex;
+    align-items: center;
+
+    @include media-laptop {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__figure {
+    position: relative;
+    margin-left: auto;
+    margin-bottom: 20px;
+    width: 260px;
+    height: 260px;
+
+    @include media-laptop {
+      margin-left: 0;
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+  }
+
   &__subtitle {
     max-width: 60ch;
     margin-bottom: 24px;
