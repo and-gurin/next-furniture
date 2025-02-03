@@ -101,6 +101,9 @@ const Hero = () => {
                     <p className='hero__subtitle'>
                         {t('hero-subtitle')}
                     </p>
+                    <p className='hero__subtitle'>
+                        {t('hero-subtitle-1')}
+                    </p>
                     <Button text={'contact'}/>
                     <div>
                         <AdvantagesTranslate/>

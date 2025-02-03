@@ -12,10 +12,13 @@ export default function ModernTranslate() {
 
     return (
         <I18nProvider>
-            <FurnitureDetails
+            <
+                FurnitureDetails
                 image={modern}
                 title={t('products-modern-title')}
-                description={t('products-modern-description')}/>
+                description={t('products-modern-description')}
+                descriptionAdditional={t('products-common-description')}
+            />
         </I18nProvider>
     );
 }

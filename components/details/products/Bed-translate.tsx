@@ -12,10 +12,13 @@ export default function BedTranslate() {
 
     return (
         <I18nProvider>
-            <FurnitureDetails
+            <
+                FurnitureDetails
                 image={classic}
                 title={t('products-bed-title')}
-                description={t('products-bed-description')}/>
+                description={t('products-bed-description')}
+                descriptionAdditional={t('products-common-description')}
+            />
         </I18nProvider>
     );
 }

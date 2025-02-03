@@ -2,7 +2,7 @@
 
 import I18nProvider from '@/components/I18nProvider/I18nProvider';
 import React from "react";
-import classic from "@/public/Custom/Collage/bed-room-3.jpg"
+import classic from "@/public/Custom/Living-room/living-room-6.jpg"
 import {useTranslation} from "react-i18next";
 import FurnitureDetails from '../FurnitureDetails';
 
@@ -12,10 +12,13 @@ export default function CustomTranslate() {
 
     return (
         <I18nProvider>
-            <FurnitureDetails
+            <
+                FurnitureDetails
                 image={classic}
                 title={t('products-custom-title')}
-                description={t('products-custom-description')}/>
+                description={t('products-custom-description')}
+                descriptionAdditional={t('products-common-description')}
+            />
         </I18nProvider>
     );
 }

@@ -12,10 +12,13 @@ export default function KitchensTranslate() {
 
     return (
         <I18nProvider>
-            <FurnitureDetails
+            <
+                FurnitureDetails
                 image={modern}
                 title={t('products-kitchens-title')}
-                description={t('products-kitchens-description')}/>
+                description={t('products-kitchens-description')}
+                descriptionAdditional={t('products-common-description')}
+            />
         </I18nProvider>
     );
 }

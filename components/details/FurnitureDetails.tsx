@@ -7,10 +7,11 @@ import {baskerville} from "@/app/fonts";
 import Button from "@/components/button/button";
 import AdvantagesTranslate from "@/components/advantages/Advantages-translate";
 
-const FurnitureDetails = ({image, title, description, text}: {
+const FurnitureDetails = ({image, title, description, descriptionAdditional, text}: {
     image: StaticImageData,
     title: string,
     description: string,
+    descriptionAdditional?: string,
     text?: string,
 }) => {
     return (
@@ -24,6 +25,9 @@ const FurnitureDetails = ({image, title, description, text}: {
                             </h1>
                             <p className={style.details__subtitle}>
                                 {description}
+                            </p>
+                            <p className={style.details__subtitle}>
+                                {descriptionAdditional}
                             </p>
                             <Button text={text}/>
                             <AdvantagesTranslate/>

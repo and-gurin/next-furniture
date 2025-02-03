@@ -12,10 +12,13 @@ export default function GermanTranslate() {
 
     return (
         <I18nProvider>
-            <FurnitureDetails
+            <
+                FurnitureDetails
                 image={ht}
                 title={t('products-german-title')}
-                description={t('products-german-description')}/>
+                description={t('products-german-description')}
+                descriptionAdditional={t('products-common-description')}
+            />
         </I18nProvider>
     );
 }

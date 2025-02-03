@@ -13,10 +13,13 @@ export default function NicheTranslate() {
 
     return (
         <I18nProvider>
-            <FurnitureDetails
+            <
+                FurnitureDetails
                 image={classic}
                 title={t('products-niche-title')}
-                description={t('products-niche-description')}/>
+                description={t('products-niche-description')}
+                descriptionAdditional={t('products-common-description')}
+            />
         </I18nProvider>
     );
 }

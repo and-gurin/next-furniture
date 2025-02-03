@@ -12,10 +12,13 @@ export default function BevelTranslate() {
 
     return (
         <I18nProvider>
-            <FurnitureDetails
+            <
+                FurnitureDetails
                 image={classic}
                 title={t('products-bevel-title')}
-                description={t('products-bevel-description')}/>
+                description={t('products-bevel-description')}
+                descriptionAdditional={t('products-common-description')}
+            />
         </I18nProvider>
     );
 }

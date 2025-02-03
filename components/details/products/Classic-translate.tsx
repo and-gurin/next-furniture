@@ -12,10 +12,13 @@ export default function ClassicTranslate() {
 
     return (
         <I18nProvider>
-            <FurnitureDetails
+            <
+                FurnitureDetails
                 image={classic}
                 title={t('products-classic-title')}
-                description={t('products-classic-description')}/>
+                description={t('products-classic-description')}
+                descriptionAdditional={t('products-common-description')}
+            />
         </I18nProvider>
     );
 }

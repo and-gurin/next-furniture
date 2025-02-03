@@ -12,10 +12,13 @@ export default function BathTranslate() {
 
     return (
         <I18nProvider>
-            <FurnitureDetails
+            <
+                FurnitureDetails
                 image={classic}
                 title={t('products-bath-title')}
-                description={t('products-bath-description')}/>
+                description={t('products-bath-description')}
+                descriptionAdditional={t('products-common-description')}
+            />
         </I18nProvider>
     );
 }
