@@ -6,7 +6,11 @@ import { baskerville } from "@/app/fonts";
 import React, { useState } from "react";
 import {useTranslation} from "react-i18next";
 
-export default function FormValuation() {
+export default function FormValuation({mode}: {
+    mode?: string,
+    setIsOpen(isOpenModal: boolean): void
+
+}) {
     const [formData, setFormData] = useState<{
         name: string;
         email: string;
@@ -95,7 +99,7 @@ export default function FormValuation() {
     const { t } = useTranslation('common');
 
     return (
-        <div className={style.form}>
+        <div className={mode === 'modal' ? style.form + " " + style.form_modal : style.form}>
             <h3 className={baskerville.className + " " + style.form__title}>
                 {t('form-title')}
             </h3>

@@ -5,8 +5,9 @@ import {raleWay} from '@/app/fonts';
 import { GoogleTagManager } from '@next/third-parties/google';
 import Script from 'next/script';
 import React from 'react'
-import FooterTranslate from "@/components/footer/Footer-translate";
-import HeaderTranslate from "@/components/header/Header-translate";
+import Header from "@/components/header/Header";
+import I18nProvider from "@/components/I18nProvider/I18nProvider";
+import Footer from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
   title: 'Twój dom, twoje zasady: meble wykonane na wymiar',
@@ -148,13 +149,17 @@ export default function RootLayout({ children }: {
           strategy="afterInteractive"
       ></Script>
     </head>
-    <body >
-    <HeaderTranslate/>
+    <body>
+    <I18nProvider>
+      <Header/>
+    </I18nProvider>
     {/*<CookieConsent/>*/}
     <main className={raleWay.className}>
       {children}
     </main>
-    <FooterTranslate/>
+    <I18nProvider>
+      <Footer/>
+    </I18nProvider>
     </body>
     <GoogleTagManager gtmId="GTM-PZ2SQWZ8" />
     </html>

@@ -87,19 +87,20 @@ const Header = () => {
         <header className={raleWay.className + ' ' + style.header} ref={headerRef}>
             <div className={`wrapper ${style.header__wrapper}`} >
                 <Logo/>
-                {/*<a href="tel:+48511944302" className={style.header__phone}>*/}
-                {/*    <Image*/}
-                {/*        src={handset}*/}
-                {/*        width='24'*/}
-                {/*        height='24'*/}
-                {/*        alt='Słuchawka'*/}
-                {/*    />*/}
-                {/*    8:00-19:00*/}
-                {/*</a>*/}
                 <div className={style.header__flag}>
-                    <LanguageSelector/>
+                    {!openBurger && <a href="tel:+48511944302" className={style.header__phone}>
+                        <Image
+                            src={handset}
+                            width='24'
+                            height='24'
+                            alt='Słuchawka'
+                        />
+                        8:00-19:00
+                    </a>}
+                    <div >
+                        <LanguageSelector/>
+                    </div>
                 </div>
-
                 {/*<Image*/}
                 {/*    className={style.header__flag}*/}
                 {/*    src={ukraine}*/}

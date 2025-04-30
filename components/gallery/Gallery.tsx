@@ -5,10 +5,10 @@ import {baskerville} from "@/app/fonts";
 import style from "./Gallery.module.scss";
 import "slick-carousel/slick/slick.scss";
 import "slick-carousel/slick/slick-theme.scss";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import CustomPaging from "@/components/slider/Slider";
 import React from "react";
 import {useTranslation} from "react-i18next";
+import Button from "@/components/button/button";
 
 export type TabsProps = {
     tag: string,
@@ -37,6 +37,7 @@ const Gallery = ({tabs, images, defaultTag, height}: {
     const [activeTab, setActiveTab] = React.useState(defaultTag);
     const [openSlider, setOpenSlider] = React.useState(false);
     const [initialIndex, setInitialIndex] = React.useState(0);
+    const [visibleCount, setVisibleCount] = React.useState(9); // показываем по 9
 
     const { t } = useTranslation('gallery');
 
@@ -46,17 +47,32 @@ const Gallery = ({tabs, images, defaultTag, height}: {
             : style.gallery__button;
         return (
             <li key={tab.title}>
-                <span  className={finalClassName} onClick={() => setActiveTab(tab.tag)}>
+                <span className={finalClassName} onClick={() => {
+                    setActiveTab(tab.tag);
+                    setVisibleCount(9); // сброс при смене вкладки
+                }}>
                     {t(tab.title)}
                 </span>
             </li>
         )
-    })
+    });
+
     const onClickImageHandler = (imageId: number) => {
-      setInitialIndex(imageId);
-      setOpenSlider(true)
-    }
-    const filteredImages = activeTab === 'all' ? images : images.filter((image: { tag: string | string[]; }) => image.tag.includes(activeTab))
+        setInitialIndex(imageId);
+        setOpenSlider(true);
+    };
+
+    const filteredImages = activeTab === 'all'
+        ? images
+        : images.filter(image => image.tag.includes(activeTab));
+
+    const visibleImages = filteredImages.slice(0, visibleCount);
+
+    const showMoreHandler = () => {
+        setVisibleCount(prev => prev + 9);
+    };
+
+    const hasMoreImages = visibleCount < filteredImages.length;
 
     return (
         <section className={style.gallery}>
@@ -70,26 +86,31 @@ const Gallery = ({tabs, images, defaultTag, height}: {
                     </ul>}
                 </div>
                 <div className={style.gallery__grid}>
-                    {filteredImages.map((image: { id: React.Key | null | undefined; src: string | StaticImport; }, index) => {
-                        return (
-                            <figure key={image.id}
-                                 onClick={() => onClickImageHandler(index)}
-                                 className={style.gallery__figure}>
+                    {visibleImages.map((image, index) => (
+                        <div key={image.id} onClick={() => onClickImageHandler(index)}>
+                            <figure className={style.gallery__figure}>
                                 <Image src={image.src}
                                        className={style.gallery__image}
                                        sizes="(min-width: 100px) 50vw, 100vw"
                                        alt='Nowoczesna meble na wymiar'/>
                             </figure>
-                        )
-                    })}
+                            <div>
+
+                            </div>
+                        </div>
+                    ))}
                     {openSlider &&
                         <CustomPaging
                             height={height}
                             images={filteredImages}
                             setOpenSlider={setOpenSlider}
-                            initialIndex={initialIndex}/>
-                    }
+                            initialIndex={initialIndex}/>}
                 </div>
+                {hasMoreImages && (
+                    <div className={style.gallery__loadMore}>
+                        <Button  title={t('button-title3')}  text={'contact'} onClick={showMoreHandler}/>
+                    </div>
+                )}
             </div>
         </section>
     );

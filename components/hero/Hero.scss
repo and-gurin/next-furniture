@@ -38,17 +38,33 @@
     @include media-mobile {
       font-size: 36px;
       margin-top: 0;
-      margin-bottom: 2px;
+      margin-bottom: 32px;
+      line-height: 46px;
     }
   }
 
   &__subtitle {
     max-width: 55ch;
     margin-bottom: 32px;
+    font-size: 20px;
+    line-height: 28px;
 
     @include media-laptop {
       max-width: 95%;
     }
+
+  }
+
+  &__subtitle_1 {
+    max-width: 55ch;
+    margin-bottom: 32px;
+    font-weight: 600;
+    font-size: 22px;
+
+    @include media-laptop {
+      max-width: 95%;
+    }
+
   }
 
   &__figure {
@@ -68,7 +84,7 @@
 .sliderHero {
   .slick-list {
     width: 50vw;
-    height: 590px;
+    height: 690px;
     overflow: hidden;
     border-radius: 24px 0 0 24px;
 

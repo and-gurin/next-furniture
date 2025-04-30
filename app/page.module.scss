@@ -1,25 +1,25 @@
-@import "../styles/constants";
-@import "../styles/mixins";
+@import "../styles/constants.scss";
+@import "../styles/mixins.scss";
 .wrapper {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 
-    @include media-mobile {
-        max-width: 540px;
-    }
+  @include media-mobile {
+    max-width: 540px;
+  }
 
-    @include media-tablet {
-        max-width: 720px;
-    }
+  @include media-tablet {
+    max-width: 720px;
+  }
 
-    @include media-laptop {
-        max-width: 960px;
-    }
+  @include media-laptop {
+    max-width: 960px;
+  }
 
-    @include media-desktop {
-        max-width: 1140px;
-    }
+  @include media-desktop {
+    max-width: 1140px;
+  }
 }

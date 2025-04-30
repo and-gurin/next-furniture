@@ -11,6 +11,7 @@ import KindOfFurniture from "@/components/kinds/KindOfFurniture";
 import Stages from "@/components/stages/Stages";
 import HeroTranslate from "@/components/hero/Hero-translate";
 import I18nProvider from "@/components/I18nProvider/I18nProvider"
+import Manufacturing from "@/components/manufacturing/Manufacturing";
 
 const kitchenImages = [
     {id: '1', src: kitchen1},
@@ -32,7 +33,7 @@ const customFurnitureImages = [
 
 const kitchenDescriptions = {
     kindOfFurniture: 'page-kitchen-kind',
-    link: '/products/kitchens',
+    link: '/products/kitchens-Warsaw',
     title: 'page-kitchen-title',
     description: 'page-kitchen-description',
     furnitureTypes: [
@@ -93,6 +94,7 @@ export default function Home() {
                     custom={true}
                     descriptions={customFurnitureDescriptions}
                 />
+                <Manufacturing/>
                 <Stages/>
             </I18nProvider>
         </>

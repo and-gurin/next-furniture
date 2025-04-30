@@ -43,6 +43,8 @@ import {baskerville} from '@/app/fonts';
 import Button from "@/components/button/button";
 import AdvantagesTranslate from "@/components/advantages/Advantages-translate";
 import {useTranslation} from "react-i18next";
+import Modal from "@/components/modal/Modal";
+import {useState} from "react";
 
 const images = [
     {id: 171,  src: kitchen14},
@@ -91,43 +93,49 @@ const Hero = () => {
         className: 'sliderHero'
     };
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const { t } = useTranslation('gallery');
 
     return (
-        <section className='hero'>
-            <div className={`wrapper hero__wrapper`}>
-                <div className='hero__description'>
-                    <h1 className={`${baskerville.className} hero__title`}>{t('hero-title')}</h1>
-                    <p className='hero__subtitle'>
-                        {t('hero-subtitle')}
-                    </p>
-                    <p className='hero__subtitle'>
-                        {t('hero-subtitle-1')}
-                    </p>
-                    <Button text={'contact'}/>
-                    <div>
-                        <AdvantagesTranslate/>
+        <>
+            <section className='hero'>
+                <div className={`wrapper hero__wrapper`}>
+                    <div className='hero__description'>
+                        <h1 className={`${baskerville.className} hero__title`}>{t('hero-title')}</h1>
+                        <p className='hero__subtitle'>
+                            {t('hero-subtitle-1')}
+                        </p>
+                        <Button title={t('button-title2')} description={t('button-description')} text={'contact'} onClick={() => setIsModalOpen(true)}/>
+                        <p className={`${baskerville.className} hero__subtitle_1`}>
+                            {t('hero-subtitle')}
+                        </p>
+                        <div>
+                            <AdvantagesTranslate/>
+                        </div>
+                    </div>
+                    <div className='slider__wrapper'>
+                        <div className='slider'>
+                            <Slider {...settingsHero}>
+                                {images.map((image) =>
+                                    <figure className='hero__figure' key={image.id}>
+                                        <Image
+                                            className='hero__image'
+                                            fill
+                                            sizes="(min-width: 200px) 50vw, 100vw"
+                                            src={image.src}
+                                            alt="Nowoczesna meble na wymiar"
+                                        />
+                                    </figure>
+                                )}
+                            </Slider>
+                        </div>
                     </div>
                 </div>
-                <div className='slider__wrapper'>
-                    <div className='slider'>
-                        <Slider {...settingsHero}>
-                            {images.map((image) =>
-                                <figure className='hero__figure' key={image.id}>
-                                    <Image
-                                        className='hero__image'
-                                        fill
-                                        sizes="(min-width: 200px) 50vw, 100vw"
-                                        src={image.src}
-                                        alt="Nowoczesna meble na wymiar"
-                                    />
-                                </figure>
-                            )}
-                        </Slider>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+            <Modal setIsOpen={setIsModalOpen} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}/>
+        </>
+
     )
 }
 

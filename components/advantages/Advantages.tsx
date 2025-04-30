@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Image from "next/image";
-import {baskerville} from "@/app/fonts";
 import measuring from "@/public/check-svgrepo-com.svg";
 import style from "./Advantages.module.scss"
 import {useTranslation} from "react-i18next";
@@ -26,6 +25,18 @@ const advantages = [
         title: "advantage-title3",
         txt: "advantage-description3"
     },
+    {
+        id: 4,
+        src: measuring,
+        title: "advantage-title4",
+        txt: "advantage-description4"
+    },
+    {
+        id: 5,
+        src: measuring,
+        title: "advantage-title5",
+        txt: "advantage-description5"
+    },
 ]
 
 const Advantages = () => {
@@ -44,9 +55,9 @@ const Advantages = () => {
                             height={34}
                         />
                         <div>
-                            <p className={baskerville.className + ' ' + style.advantage}>
-                                {t(adv.title)}
-                            </p>
+                            {/*<p className={baskerville.className + ' ' + style.advantage}>*/}
+                            {/*    {t(adv.title)}*/}
+                            {/*</p>*/}
                             <p className={style.txt}>
                                 {t(adv.txt)}
                             </p>

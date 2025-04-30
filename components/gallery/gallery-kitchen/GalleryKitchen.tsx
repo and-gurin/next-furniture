@@ -91,7 +91,11 @@ const tabs = [
 ]
 
 const images = [
-    {id: '1', src: modern1, tag: 'modern'},
+    {
+        id: '1',
+        src: modern1,
+        tag: 'modern'
+    },
     {id: '2', src: modern21, tag: 'modern'},
     {id: '3', src: modern22, tag: 'modern'},
     {id: '4', src: modern4, tag: 'modern'},
