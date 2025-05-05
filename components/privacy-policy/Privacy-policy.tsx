@@ -4,10 +4,48 @@ import "@/styles/wrapper.scss"
 import style from "./Privacy-policy.module.scss"
 import {baskerville} from "@/app/fonts";
 import { useTranslation } from 'react-i18next';
+import stageOne from "@/public/stages-of-work-1.jpg";
+import stageTwo from "@/public/stages-of-work-2.jpg";
+import stageThree from "@/public/stages-of-work-3.jpg";
+import stageFour from "@/public/stages-of-work-4.jpg";
+import Stages from "@/components/stages/Stages";
+import I18nProvider from "@/components/I18nProvider/I18nProvider";
+import React from "react";
+
+const stages = [
+    {
+        id: '01',
+        src: stageOne,
+        title: 'stage-title1',
+        description: 'stage-description1',
+        list: '',
+    },
+    {
+        id: '02',
+        src: stageTwo,
+        title: 'stage-title2',
+        description: 'stage-description2',
+        list: ['stage-list1', 'stage-list2', 'stage-list3',],
+    },
+    {
+        id: '03',
+        src: stageThree,
+        title: 'stage-title3',
+        description: 'stage-description3',
+        list: ''
+    },
+    {
+        id: '04',
+        src: stageFour,
+        title: 'stage-title4',
+        description: 'stage-description4',
+        list: ''
+    },
+]
 
 export default function Privacy() {
 
-    const { t } = useTranslation('common');
+    const { t } = useTranslation(['common']);
 
     return (
             <>
@@ -244,6 +282,9 @@ export default function Privacy() {
                         </article>
                     </div>
                 </section>
+                <I18nProvider>
+                    <Stages stages={stages} title={t('stage-title0')}/>
+                </I18nProvider>
             </>
     )
 }

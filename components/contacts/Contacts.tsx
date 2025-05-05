@@ -8,10 +8,45 @@ import {useTranslation} from "react-i18next";
 import FormTranslate from "@/components/form-valuation/Form-translate";
 import Image from "next/image";
 import owner from "@/public/IMG_7687__-removebg-preview.png"
+import stageOne from "@/public/stages-of-work-1.jpg";
+import stageTwo from "@/public/stages-of-work-2.jpg";
+import stageThree from "@/public/stages-of-work-3.jpg";
+import stageFour from "@/public/stages-of-work-4.jpg";
+import Stages from "@/components/stages/Stages";
 
+const stages = [
+    {
+        id: '01',
+        src: stageOne,
+        title: 'stage-title1',
+        description: 'stage-description1',
+        list: '',
+    },
+    {
+        id: '02',
+        src: stageTwo,
+        title: 'stage-title2',
+        description: 'stage-description2',
+        list: ['stage-list1', 'stage-list2', 'stage-list3',],
+    },
+    {
+        id: '03',
+        src: stageThree,
+        title: 'stage-title3',
+        description: 'stage-description3',
+        list: ''
+    },
+    {
+        id: '04',
+        src: stageFour,
+        title: 'stage-title4',
+        description: 'stage-description4',
+        list: ''
+    },
+]
 export default function Contacts() {
 
-    const {t} = useTranslation('common');
+    const {t} = useTranslation(['common', 'gallery']);
 
     return (
         <>
@@ -67,6 +102,7 @@ export default function Contacts() {
                     <FormTranslate/>
                 </div>
             </section>
+            <Stages stages={stages} title={t('stage-title0')}/>
         </>
     )
 }

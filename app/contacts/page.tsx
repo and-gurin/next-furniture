@@ -1,4 +1,3 @@
-import Stages from "@/components/stages/Stages";
 import {Metadata} from "next";
 import Contacts from "@/components/contacts/Contacts";
 import I18nProvider from "@/components/I18nProvider/I18nProvider"
@@ -12,7 +11,6 @@ export default function ContactsPage () {
         <>
             <I18nProvider>
                 <Contacts/>
-                <Stages/>
             </I18nProvider>
         </>
     )

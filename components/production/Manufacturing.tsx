@@ -53,11 +53,12 @@ const Manufacturing = ({background}: {background?: string}) => {
     const { t } = useTranslation('gallery');
 
     return (
-        <section className={background === 'whiteSmoke' ? style.manu + ' ' + style.manu_backgroundSmoke : style.manu}>
-            <div className={`wrapper ${style.manu__wrapper}`}>
+        <section className={style.manu}>
+            <div className={background === 'whiteSmoke' ? `wrapper ${style.manu__wrapper} ${style.manu_backgroundSmoke}`
+                : `wrapper ${style.manu__wrapper}`}>
                 <Fade direction={"up"}>
                     <h2 className={baskerville.className + ' ' + style.manu__title}>
-                        {t('stage-title0')}
+                        {t('production-title0')}
                     </h2>
                 </Fade>
                 <ul className={style.manu__content}>

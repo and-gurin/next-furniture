@@ -1,19 +1,19 @@
 import React from 'react';
 import GalleryKitchen from "@/components/gallery/gallery-kitchen/GalleryKitchen";
 import {Metadata} from "next";
-import KitchensPoznanTranslate from "@/components/details/products/Kitchens-Poznan-translate";
+import KitchensTranslate from "@/components/details/products/Kitchens-translate";
 
 export const metadata: Metadata = {
     title: 'Kuchnie na wymiar | InHouse meble'
 }
 
-const KitchensPoznan = () => {
+const Kitchens = () => {
     return (
         <>
-            <KitchensPoznanTranslate/>
+            <KitchensTranslate/>
             <GalleryKitchen defaultTag={'all'}/>
         </>
     );
 };
 
-export default KitchensPoznan;
+export default Kitchens;

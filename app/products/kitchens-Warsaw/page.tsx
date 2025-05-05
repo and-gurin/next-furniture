@@ -1,24 +1,24 @@
 import React from 'react';
-import Stages from "@/components/stages/Stages";
 import GalleryKitchen from "@/components/gallery/gallery-kitchen/GalleryKitchen";
 import {Metadata} from "next";
-import KitchensTranslate from "@/components/details/products/Kitchens-translate";
 import I18nProvider from "@/components/I18nProvider/I18nProvider";
+import Manufacturing from "@/components/production/Manufacturing";
+import KitchensWarsawTranslate from "@/components/details/products/Kitchens-Warsaw-translate";
 
 export const metadata: Metadata = {
     title: 'Kuchnie na wymiar | InHouse meble'
 }
 
-const Kitchens = () => {
+const KitchensWarsaw = () => {
     return (
         <>
-            <KitchensTranslate/>
+            <KitchensWarsawTranslate/>
             <GalleryKitchen defaultTag={'all'}/>
             <I18nProvider>
-                <Stages background={'whiteSmoke'}/>
+                <Manufacturing/>
             </I18nProvider>
         </>
     );
 };
 
-export default Kitchens;
+export default KitchensWarsaw;

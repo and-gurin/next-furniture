@@ -135,7 +135,6 @@ const Hero = () => {
             </section>
             <Modal setIsOpen={setIsModalOpen} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}/>
         </>
-
     )
 }
 

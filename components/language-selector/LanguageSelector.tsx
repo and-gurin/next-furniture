@@ -5,11 +5,11 @@ import { useTranslation } from "react-i18next";
 import "./LanguageSelector.scss";
 
 const languages = [
-    //{ code: "ru", label: "Русский", flag: "🇷🇺" },
+    { code: "ru", label: "Русский", flag: "🇷🇺" },
     { code: "pl", label: "Polski", flag: "🇵🇱" },
     { code: "en", label: "English", flag: "🇬🇧" },
     // { code: "uk", label: "Українська", flag: "🇺🇦" },
-    { code: "be", label: "Беларуская", flag: "🇧🇾" },
+    //{ code: "be", label: "Беларуская", flag: "🇧🇾" },
 
 ];
 

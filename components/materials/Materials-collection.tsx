@@ -24,6 +24,11 @@ import move from "@/public/Materials/movento.jpg"
 import tandem from "@/public/Materials/tandem.jpg"
 import {useTranslation} from "react-i18next";
 import I18nProvider from "@/components/I18nProvider/I18nProvider"
+import stageOne from "@/public/stages-of-work-1.jpg";
+import stageTwo from "@/public/stages-of-work-2.jpg";
+import stageThree from "@/public/stages-of-work-3.jpg";
+import stageFour from "@/public/stages-of-work-4.jpg";
+import Stages from "@/components/stages/Stages";
 
 export type ImageProps = {
     id: number,
@@ -138,28 +143,57 @@ const box = [
     },
 ]
 
+const stages = [
+    {
+        id: '01',
+        src: stageOne,
+        title: 'stage-title1',
+        description: 'stage-description1',
+        list: '',
+    },
+    {
+        id: '02',
+        src: stageTwo,
+        title: 'stage-title2',
+        description: 'stage-description2',
+        list: ['stage-list1', 'stage-list2', 'stage-list3',],
+    },
+    {
+        id: '03',
+        src: stageThree,
+        title: 'stage-title3',
+        description: 'stage-description3',
+        list: ''
+    },
+    {
+        id: '04',
+        src: stageFour,
+        title: 'stage-title4',
+        description: 'stage-description4',
+        list: ''
+    },
+]
+
 const MaterialsCollection = () => {
 
     const { t } = useTranslation('gallery');
 
     return (
-        <section className={style.collection}>
-            <div className={`wrapper ${style.collection__wrapper}`}>
-                <I18nProvider>
-                    <Material title={t('material-title1')} materials={facades}/>
-                </I18nProvider>
-                <I18nProvider>
-                    <Material title={t('material-title2')} materials={worktop}/>
-                </I18nProvider>
-                <I18nProvider>
-                    <Material title={t('material-title3')} materials={lift}/>
-                </I18nProvider>
-                <I18nProvider>
-                    <Material title={t('material-title4')} materials={box}/>
-                </I18nProvider>
-            </div>
-        </section>
-    );
+        <>
+            <I18nProvider>
+                <section className={style.collection}>
+                    <div className={`wrapper ${style.collection__wrapper}`}>
+                            <Material title={t('material-title1')} materials={facades}/>
+                            <Material title={t('material-title2')} materials={worktop}/>
+                            <Material title={t('material-title3')} materials={lift}/>
+                            <Material title={t('material-title4')} materials={box}/>
+                    </div>
+                </section>
+                <Stages title={t('stage-title0')} stages={stages} background={'whiteSmoke'}/>
+            </I18nProvider>
+        </>
+
+);
 };
 
 export const Material = ({title, materials}: {

@@ -5,10 +5,44 @@ import style from "./Cookie.module.scss";
 import { baskerville } from "@/app/fonts";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-
+import stageOne from "@/public/stages-of-work-1.jpg";
+import stageTwo from "@/public/stages-of-work-2.jpg";
+import stageThree from "@/public/stages-of-work-3.jpg";
+import stageFour from "@/public/stages-of-work-4.jpg";
+import Stages from "@/components/stages/Stages";
+const stages = [
+    {
+        id: '01',
+        src: stageOne,
+        title: 'stage-title1',
+        description: 'stage-description1',
+        list: '',
+    },
+    {
+        id: '02',
+        src: stageTwo,
+        title: 'stage-title2',
+        description: 'stage-description2',
+        list: ['stage-list1', 'stage-list2', 'stage-list3',],
+    },
+    {
+        id: '03',
+        src: stageThree,
+        title: 'stage-title3',
+        description: 'stage-description3',
+        list: ''
+    },
+    {
+        id: '04',
+        src: stageFour,
+        title: 'stage-title4',
+        description: 'stage-description4',
+        list: ''
+    },
+]
 export default function Cookie() {
 
-    const { t } = useTranslation('cookie');
+    const { t } = useTranslation(['cookie']);
 
     return (
         <>
@@ -134,6 +168,7 @@ export default function Cookie() {
                     </article>
                 </div>
             </section>
+            <Stages title={t('stage-title0')} stages={stages}/>
         </>
     );
 }
