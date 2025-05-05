@@ -1,3 +1,6 @@
+@import 'styles/constants';
+@import 'styles/mixins';
+
 .modal {
   position: fixed;
   z-index: 1;
@@ -13,6 +16,10 @@
     margin: 6% auto;
     width: 80%;
     max-width: 600px;
+
+    @include media-mobile {
+      margin: 20% auto;
+    }
   }
 
   &__close {
@@ -20,7 +27,11 @@
     float: right;
     font-size: 64px;
     font-weight: 500;
-    padding: 10px;
+    padding: 20px;
+
+    @include media-mobile {
+      padding: 20px;
+    }
 
     &:hover,
     &:focus {

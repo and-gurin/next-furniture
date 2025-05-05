@@ -10,6 +10,10 @@
     border-radius: 0 0 12px 12px;
   }
 
+  @include media-mobile {
+    padding: 52px 32px 32px 32px;
+  }
+
   &__title {
     font-size: 32px;
     line-height: 48px;
@@ -22,6 +26,10 @@
     line-height: 32px;
     color: $whiteColor;
     margin-bottom: 48px;
+
+    @include media-mobile {
+      margin-bottom: 36px;
+    }
   }
 
   &__field {
@@ -35,6 +43,10 @@
     color: $whiteColor;
     display: inline-block;
     margin-bottom: 48px;
+
+    @include media-mobile {
+      margin-bottom: 36px;
+    }
 
     &::placeholder {
       color: $whiteColor;
@@ -73,6 +85,10 @@
   @include media-laptop {
     border-radius: 12px;
   }
+
+  @include media-mobile {
+    padding: 52px 32px 32px 32px;
+  }
 }
 
 .upload {
@@ -103,6 +119,7 @@
 
     @include media-laptop {
       padding: 5px;
+      line-height: 16px;
     }
   }
 

@@ -98,13 +98,19 @@ const Header = () => {
                                 <a href="tel:+48511944302" className={style.header__phone}>
                                     <Image
                                         src={handset}
-                                        width='24'
-                                        height='24'
+                                        width='28'
+                                        height='28'
                                         alt='Słuchawka'
                                     />
-                                    8:00-19:00
                                 </a>
-                                <span onClick={() => setIsModalOpen(!isModalOpen)} className={style.header__phone}>
+                                <div className={style.header__mail}>
+                                    <span>8:00</span>
+                                    <span>19:00</span>
+                                </div>
+                            </>
+
+                        }
+                        <span onClick={() => setIsModalOpen(!isModalOpen)} className={style.header__phone}>
                                 <Image
                                     src={mail}
                                     width='36'
@@ -112,8 +118,6 @@ const Header = () => {
                                     alt='mail'
                                 />
                             </span>
-                            </>
-                        }
                         <div >
                             <LanguageSelector/>
                         </div>
@@ -174,14 +178,6 @@ const Header = () => {
 
                         </ul>
                         <div className={style.header__mail}>
-                            <span onClick={() => setIsModalOpen(!isModalOpen)} className={style.header__phone}>
-                                <Image
-                                    src={mail}
-                                    width='36'
-                                    height='36'
-                                    alt='mail'
-                                />
-                            </span>
                             <a href="tel:+48511944302" className={style.header__phone}>
                                 <Image
                                     src={handset}

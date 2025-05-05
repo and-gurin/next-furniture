@@ -5,4 +5,9 @@
   justify-content: left;
   font-weight: 500;
   font-size: 18px;
+
+  @include media-mobile {
+    margin-right: 10px;
+    gap: 4px;
+  }
 }
