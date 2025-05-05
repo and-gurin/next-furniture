@@ -3,7 +3,6 @@
 import "@/styles/wrapper.scss"
 import style from "./Valuation.module.scss"
 import {baskerville} from "@/app/fonts";
-import Stages from "@/components/stages/Stages";
 import FormValuation from "@/components/form-valuation/FormValuation";
 import {useTranslation} from "react-i18next";
 
@@ -26,7 +25,6 @@ export default function Valuation () {
                     <FormValuation/>
                 </div>
             </section>
-            <Stages/>
         </>
     )
 }

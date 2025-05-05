@@ -29,6 +29,8 @@ import stageTwo from "@/public/stages-of-work-2.jpg";
 import stageThree from "@/public/stages-of-work-3.jpg";
 import stageFour from "@/public/stages-of-work-4.jpg";
 import Stages from "@/components/stages/Stages";
+import Manufacturing from "@/components/production/Manufacturing";
+import Reviews from "@/components/reviews/Reviews";
 
 export type ImageProps = {
     id: number,
@@ -189,7 +191,9 @@ const MaterialsCollection = () => {
                             <Material title={t('material-title4')} materials={box}/>
                     </div>
                 </section>
-                <Stages title={t('stage-title0')} stages={stages} background={'whiteSmoke'}/>
+                <Manufacturing background={'whiteSmoke'}/>
+                <Reviews/>
+                <Stages stages={stages} background={'whiteSmoke'}/>
             </I18nProvider>
         </>
 

@@ -11,6 +11,8 @@ import stageFour from "@/public/stages-of-work-4.jpg";
 import Stages from "@/components/stages/Stages";
 import I18nProvider from "@/components/I18nProvider/I18nProvider";
 import React from "react";
+import Manufacturing from "@/components/production/Manufacturing";
+import Reviews from "@/components/reviews/Reviews";
 
 const stages = [
     {
@@ -283,7 +285,9 @@ export default function Privacy() {
                     </div>
                 </section>
                 <I18nProvider>
-                    <Stages stages={stages} title={t('stage-title0')}/>
+                    <Manufacturing/>
+                    <Reviews background={'whiteSmoke'}/>
+                    <Stages stages={stages}/>
                 </I18nProvider>
             </>
     )

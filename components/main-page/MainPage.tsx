@@ -111,8 +111,6 @@ const stages = [
 
 export default function MainPage () {
 
-    const {t} = useTranslation(['gallery']);
-
     return (
         <>
             <HeroTranslate/>
@@ -138,7 +136,7 @@ export default function MainPage () {
                 />
                 <Manufacturing/>
                 <Reviews background={'whiteSmoke'}/>
-                <Stages stages={stages} title={t('stage-title0')}/>
+                <Stages stages={stages}/>
             </I18nProvider>
         </>
     )
