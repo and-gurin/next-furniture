@@ -156,7 +156,7 @@ const Gallery = ({tabs, images, defaultTag, height}: {
             </section>
             <Manufacturing background={'whiteSmoke'}/>
             <Reviews/>
-            <Stages stages={stages} title={t('stage-title0')} background={'whiteSmoke'}/>
+            <Stages stages={stages} background={'whiteSmoke'}/>
             <Modal setIsOpen={setIsModalOpen} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}/>
         </>
 
