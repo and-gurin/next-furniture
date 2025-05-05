@@ -2,11 +2,11 @@
 
 import I18nProvider from '@/components/I18nProvider/I18nProvider';
 import React from "react";
-import classic from "@/public/Wardrobe/dressing-3-1.jpg"
+import modern from "@/public/hero/hero-block-11.jpg"
 import {useTranslation} from "react-i18next";
 import FurnitureDetails from '../FurnitureDetails';
 
-export default function WardrobesTranslate() {
+export default function ModernTranslateWarsaw() {
 
     const { t } = useTranslation('common');
 
@@ -14,9 +14,9 @@ export default function WardrobesTranslate() {
         <I18nProvider>
             <
                 FurnitureDetails
-                image={classic}
-                title={t('products-wardrobes-title-poznan')}
-                description={t('products-wardrobes-description')}
+                image={modern}
+                title={t('products-modern-title-warsaw')}
+                description={t('products-modern-description')}
                 descriptionAdditional={t('products-common-description')}
             />
         </I18nProvider>

@@ -15,7 +15,7 @@ export default function WardrobesTranslate() {
             <
                 FurnitureDetails
                 image={classic}
-                title={t('products-wardrobes-title')}
+                title={t('products-wardrobes-title-warsaw')}
                 description={t('products-wardrobes-description')}
                 descriptionAdditional={t('products-common-description')}
             />
