@@ -64,7 +64,7 @@ export default function Cooperation() {
                     </article>
                 </div>
             </section>
-            <Stages title={t('stage-title0')} stages={stages}/>
+            <Stages stages={stages}/>
         </>
     )
 }

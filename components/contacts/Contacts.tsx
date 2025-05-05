@@ -102,7 +102,7 @@ export default function Contacts() {
                     <FormTranslate/>
                 </div>
             </section>
-            <Stages stages={stages} title={t('stage-title0')}/>
+            <Stages stages={stages}/>
         </>
     )
 }

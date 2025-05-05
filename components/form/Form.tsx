@@ -5,7 +5,6 @@ import style from "./Form.module.scss"
 import {baskerville} from "@/app/fonts";
 import {useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
-import Modal from "@/components/modal/Modal";
 import {useTranslation} from "react-i18next";
 
 export default function Form() {
@@ -91,7 +90,6 @@ export default function Form() {
                     {t('form-button')}
                 </button>
             </form>
-            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} message={modalMessage} />
         </div>
 
     )

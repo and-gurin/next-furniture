@@ -8,7 +8,7 @@ import {useTranslation} from "react-i18next";
 
 export default function FormValuation({mode}: {
     mode?: string,
-    setIsOpen(isOpenModal: boolean): void
+    setIsOpen?(isOpenModal: boolean): void
 
 }) {
     const [formData, setFormData] = useState<{

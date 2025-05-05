@@ -7,7 +7,7 @@ export default function FormTranslate() {
 
     return (
         <I18nProvider>
-            <FormValuation/>
+            <FormValuation />
         </I18nProvider>
     );
 }
