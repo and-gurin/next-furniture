@@ -173,7 +173,8 @@ const Header = () => {
                             {/*</li>*/}
 
                         </ul>
-                        <span onClick={() => setIsModalOpen(!isModalOpen)} className={style.header__phone}>
+                        <div className={style.header__mail}>
+                            <span onClick={() => setIsModalOpen(!isModalOpen)} className={style.header__phone}>
                                 <Image
                                     src={mail}
                                     width='36'
@@ -181,15 +182,16 @@ const Header = () => {
                                     alt='mail'
                                 />
                             </span>
-                        <a href="tel:+48511944302" className={style.header__phone}>
-                            <Image
-                                src={handset}
-                                width='24'
-                                height='24'
-                                alt='Słuchawka'
-                            />
-                            {t('header-times')}
-                        </a>
+                            <a href="tel:+48511944302" className={style.header__phone}>
+                                <Image
+                                    src={handset}
+                                    width='24'
+                                    height='24'
+                                    alt='Słuchawka'
+                                />
+                                {t('header-times')}
+                            </a>
+                        </div>
                     </nav>
                 }
                 <div className={!openBottomMenu ? style.header__bottomMenu
