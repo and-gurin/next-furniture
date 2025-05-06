@@ -2,6 +2,7 @@ import React from 'react';
 import GalleryWardrobe from "@/components/gallery/gallery-wardrobe/GalleryWardrobe";
 import {Metadata} from "next";
 import BedTranslate from "@/components/details/products/Bed-translate";
+import FAQ from "@/components/faq/FAQ";
 
 export const metadata: Metadata = {
     title: 'Meble do zabudowy w sypialni | InHouse meble'

@@ -5,6 +5,7 @@ import React from "react";
 import modern from "@/public/hero/hero-block-11.jpg"
 import {useTranslation} from "react-i18next";
 import FurnitureDetails from '../FurnitureDetails';
+import FAQ from "@/components/faq/FAQ";
 
 export default function ModernTranslate() {
 
@@ -19,6 +20,7 @@ export default function ModernTranslate() {
                 description={t('products-modern-description')}
                 descriptionAdditional={t('products-common-description')}
             />
+            <FAQ/>
         </I18nProvider>
     );
 }

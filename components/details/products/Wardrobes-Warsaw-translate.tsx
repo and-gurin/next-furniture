@@ -6,7 +6,7 @@ import classic from "@/public/Wardrobe/dressing-3-1.jpg"
 import {useTranslation} from "react-i18next";
 import FurnitureDetails from '../FurnitureDetails';
 
-export default function WardrobesTranslate() {
+export default function WardrobesWarsawTranslate() {
 
     const { t } = useTranslation('common');
 

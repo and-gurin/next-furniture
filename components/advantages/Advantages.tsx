@@ -31,12 +31,12 @@ const advantages = [
         title: "advantage-title4",
         txt: "advantage-description4"
     },
-    {
-        id: 5,
-        src: measuring,
-        title: "advantage-title5",
-        txt: "advantage-description5"
-    },
+    // {
+    //     id: 5,
+    //     src: measuring,
+    //     title: "advantage-title5",
+    //     txt: "advantage-description5"
+    // },
 ]
 
 const Advantages = () => {

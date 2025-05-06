@@ -1,19 +1,19 @@
 import React from 'react';
 import GalleryWardrobe from "@/components/gallery/gallery-wardrobe/GalleryWardrobe";
 import {Metadata} from "next";
-import WardrobesTranslate from "@/components/details/products/Wardrobes-translate";
+import WardrobesWarsawTranslate from "@/components/details/products/Wardrobes-Warsaw-translate";
 
 export const metadata: Metadata = {
     title: 'Szafy na wymiar | InHouse meble'
 }
 
-const Wardrobes = () => {
+const WardrobesWarsaw = () => {
     return (
         <>
-            <WardrobesTranslate/>
+            <WardrobesWarsawTranslate/>
             <GalleryWardrobe defaultTag={'all'}/>
         </>
     );
 };
 
-export default Wardrobes;
+export default WardrobesWarsaw;

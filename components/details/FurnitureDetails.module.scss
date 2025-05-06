@@ -47,18 +47,23 @@
     @include media-tablet {
       font-size: 48px;
       line-height: 52px;
-      margin-bottom: 32px;
+      margin-bottom: 26px;
     }
 
     @include media-mobile {
       font-size: 36px;
       line-height: 46px;
+      margin-top: 12px;
     }
   }
 
   &__subtitle {
     margin-bottom: 56px;
     max-width: 50ch;
+
+    @include media-mobile {
+      margin-bottom: 36px;
+    }
   }
 
   &__figure {
