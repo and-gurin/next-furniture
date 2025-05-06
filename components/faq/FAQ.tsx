@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import styles from './FAQ.module.scss';
 import {raleWay} from "@/app/fonts";

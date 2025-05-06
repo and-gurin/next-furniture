@@ -31,6 +31,7 @@ import stageFour from "@/public/stages-of-work-4.jpg";
 import Stages from "@/components/stages/Stages";
 import Manufacturing from "@/components/production/Manufacturing";
 import Reviews from "@/components/reviews/Reviews";
+import FAQ from "@/components/faq/FAQ";
 
 export type ImageProps = {
     id: number,
@@ -194,6 +195,7 @@ const MaterialsCollection = () => {
                 <Manufacturing background={'whiteSmoke'}/>
                 <Reviews/>
                 <Stages stages={stages} background={'whiteSmoke'}/>
+                <FAQ/>
             </I18nProvider>
         </>
 
