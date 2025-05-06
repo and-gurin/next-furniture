@@ -3,19 +3,20 @@
 import { useState } from 'react';
 import styles from './FAQ.module.scss';
 import {raleWay} from "@/app/fonts";
+import {useTranslation} from "react-i18next";
 
 const faqData = [
     {
-        question: 'Czy wykonujecie pomiar na miejscu?',
-        answer: 'Tak, wykonujemy bezpłatny (wstępny) pomiar u klienta w dogodnym terminie, oraz doradztwo techniczne',
-        detail1: '',
+        question: 'faq-question1',
+        answer: 'faq-answer1',
+        detail1: 'faq-detail11',
         detail2: '',
         detail3: '',
-        detail4: 'Bezpłatny pomiar obowiązuje na terenie administracyjnym łodzi, Poznaniu oraz Warszawy + 50 km.',
+        detail4: '',
     },
     {
-        question: 'Czy projekt kuchni jest darmowy?',
-        answer: 'Tak, wstępny projekt 3D przygotowujemy bezpłatnie na podstawie pomiarów i preferencji klienta.',
+        question: 'faq-question2',
+        answer: 'faq-answer2',
         detail1: '',
         detail2: '',
         detail3: '',
@@ -23,56 +24,56 @@ const faqData = [
 
     },
     {
-        question: 'Jak długo trwa realizacja?',
-        answer: 'Standardowy czas realizacji to 4-8 tygodni od akceptacji projektu i podpisania umowy.',
+        question: 'faq-question3',
+        answer: 'faq-answer3',
         detail1: '',
         detail2: '',
         detail3: '',
         detail4: '',
     },
     {
-        question: 'Co zawiera Cena mebli?',
+        question: 'faq-question4',
         answer: '',
-        detail1: '– kompleksowe wykonanie mebli, wraz z akcesoriami (uchwyty, cokoły z listwami, blaty, oświetlenie wraz z montażem… itp)',
-        detail2: '– transport mebli do miejsca docelowego',
-        detail3: '– montaż mebli u klienta, sprzątanie, wywóz śmieci',
-        detail4: '– regulację mebli po kilku tygodniach użytkowania',
+        detail1: 'faq-detail41',
+        detail2: 'faq-detail42',
+        detail3: 'faq-detail43',
+        detail4: 'faq-detail44',
     },
     {
-        question: 'Co nie obejmuje cena mebli?',
-        answer: 'Cena mebli kuchennych nie obejmuje podłączeń gazowych i hydraulicznych – zlew, kuchnia gazowa oraz zmywarka są odpowiednio przygotowane do podłączenia (blaty zabezpieczone silikonem, powycinane wszystkie niezbędne otwory w meblach, doprowadzone wszystkie rury, wygodny dostęp do wszystkich zaworów i odpływów)',
+        question: 'faq-question5',
+        answer: 'faq-answer5',
         detail1: '',
         detail2: '',
         detail3: '',
         detail4: '',
     },
     {
-        question: 'Czy termin realizacji projektu jest określony w umowie?',
-        answer: 'W umowie zawarte są wszystkie szczegóły dotyczące mebli, termin realizacji zamówienia, warunki gwarancji oraz inne ważne dla stron punkty.',
+        question: 'faq-question6',
+        answer: 'faq-answer6',
         detail1: '',
         detail2: '',
         detail3: '',
         detail4: '',
     },
     {
-        question: 'Czy wpłacenie zadatku jest  konieczne?',
-        answer: 'Konieczne jest wpłacenie zadatku na poczet wykonania zamówienia w wysokości 30% ceny zamówionych mebli (gotówka lub przelew).',
+        question: 'faq-question7',
+        answer: 'faq-answer7',
         detail1: '',
         detail2: '',
         detail3: '',
         detail4: '',
     },
     {
-        question: 'Jak długo trwa montaż mebli?',
-        answer: 'Montaż mebli odbywa się przeważnie w godzinach porannych, trwa zazwyczaj kilka godzin. Przy bardziej skomplikowanych pracach, montaż mebli wydłużyć się może do 3 dni.',
+        question: 'faq-question8',
+        answer: 'faq-answer8',
         detail1: '',
         detail2: '',
         detail3: '',
         detail4: '',
     },
     {
-        question: 'Co z gwarancją na meble?',
-        answer: 'Na meble udziela 2-letniej gwarancji. Wszystkie okucia firmy Blum w naszych meblach objęte są dożywotnią gwarancją',
+        question: 'faq-answer9',
+        answer: 'faq-question9',
         detail1: '',
         detail2: '',
         detail3: '',
@@ -82,6 +83,8 @@ const faqData = [
 
 const FAQ = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+    const { t } = useTranslation('gallery');
 
     const toggleAnswer = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
@@ -97,26 +100,26 @@ const FAQ = () => {
                             onClick={() => toggleAnswer(index)}
                             className={styles.question}
                         >
-                            <span>{item.question}</span>
+                            <span>{t(item.question)}</span>
                             <span className={styles.icon}>
                 {openIndex === index ? '−' : '+'}
               </span>
                         </button>
                         <div className={`${styles.answer} ${openIndex === index ? styles.visible : ''}`}>
                             <p>
-                                {item.answer}
+                                {t(item.answer)}
                             </p>
                             <p>
-                                {item.detail1}
+                                {t(item.detail1)}
                             </p>
                             <p>
-                                {item.detail2}
+                                {t(item.detail2)}
                             </p>
                             <p>
-                                {item.detail3}
+                                {t(item.detail3)}
                             </p>
                             <p>
-                                {item.detail4}
+                                {t(item.detail4)}
                             </p>
                         </div>
                     </li>

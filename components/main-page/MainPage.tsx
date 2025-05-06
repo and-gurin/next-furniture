@@ -18,7 +18,6 @@ import stageOne from "@/public/stages-of-work-1.jpg";
 import stageTwo from "@/public/stages-of-work-2.jpg";
 import stageThree from "@/public/stages-of-work-3.jpg";
 import stageFour from "@/public/stages-of-work-4.jpg";
-import {useTranslation} from "react-i18next";
 import Reviews from "@/components/reviews/Reviews";
 import FAQ from "@/components/faq/FAQ";
 
@@ -115,7 +114,6 @@ export default function MainPage () {
     return (
         <>
             <HeroTranslate/>
-            <FAQ/>
             <I18nProvider>
                 <KindOfFurniture
                     images={kitchenImages}
@@ -136,6 +134,7 @@ export default function MainPage () {
                     custom={true}
                     descriptions={customFurnitureDescriptions}
                 />
+                <FAQ/>
                 <Manufacturing/>
                 <Reviews background={'whiteSmoke'}/>
                 <Stages stages={stages}/>
