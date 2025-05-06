@@ -13,6 +13,7 @@ import I18nProvider from "@/components/I18nProvider/I18nProvider";
 import React from "react";
 import Manufacturing from "@/components/production/Manufacturing";
 import Reviews from "@/components/reviews/Reviews";
+import FAQ from "@/components/faq/FAQ";
 
 const stages = [
     {
@@ -288,6 +289,7 @@ export default function Privacy() {
                     <Manufacturing/>
                     <Reviews background={'whiteSmoke'}/>
                     <Stages stages={stages}/>
+                    <FAQ/>
                 </I18nProvider>
             </>
     )

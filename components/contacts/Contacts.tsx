@@ -13,6 +13,9 @@ import stageTwo from "@/public/stages-of-work-2.jpg";
 import stageThree from "@/public/stages-of-work-3.jpg";
 import stageFour from "@/public/stages-of-work-4.jpg";
 import Stages from "@/components/stages/Stages";
+import FAQ from "@/components/faq/FAQ";
+import Manufacturing from "@/components/production/Manufacturing";
+import Reviews from "@/components/reviews/Reviews";
 
 const stages = [
     {
@@ -102,7 +105,10 @@ export default function Contacts() {
                     <FormTranslate/>
                 </div>
             </section>
+            <Manufacturing/>
+            <Reviews background={'whiteSmoke'}/>
             <Stages stages={stages}/>
+            <FAQ/>
         </>
     )
 }

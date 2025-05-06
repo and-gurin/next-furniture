@@ -17,6 +17,7 @@ import stageThree from "@/public/stages-of-work-3.jpg";
 import stageFour from "@/public/stages-of-work-4.jpg";
 import Manufacturing from "@/components/production/Manufacturing";
 import Reviews from "@/components/reviews/Reviews";
+import FAQ from "@/components/faq/FAQ";
 
 export type TabsProps = {
     tag: string,
@@ -158,6 +159,7 @@ const Gallery = ({tabs, images, defaultTag, height}: {
             <Reviews/>
             <Stages stages={stages} background={'whiteSmoke'}/>
             <Modal setIsOpen={setIsModalOpen} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}/>
+            <FAQ/>
         </>
 
 );

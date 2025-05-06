@@ -12,6 +12,7 @@ import stageFour from "@/public/stages-of-work-4.jpg";
 import Stages from "@/components/stages/Stages";
 import Manufacturing from "@/components/production/Manufacturing";
 import Reviews from "@/components/reviews/Reviews";
+import FAQ from "@/components/faq/FAQ";
 const stages = [
     {
         id: '01',
@@ -170,6 +171,7 @@ export default function Cookie() {
                     </article>
                 </div>
             </section>
+            <FAQ/>
             <Manufacturing/>
             <Reviews background={'whiteSmoke'}/>
             <Stages stages={stages}/>
