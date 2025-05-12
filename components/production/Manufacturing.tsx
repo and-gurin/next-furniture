@@ -2,10 +2,12 @@
 
 import style from "./Manufacturing.module.scss"
 import Image from "next/image";
-import manuOne from "@/public/manufacturing-1.jpg";
-import manuTwo from "@/public/manufacturing-2.jpg";
-import manuThree from "@/public/manufacturing-3.jpg";
-import manuFour from "@/public/manufacturing-4.jpg";
+import manuOne from "@/public/manufacturing-1-2.png";
+import manuTwo from "@/public/manufacturing-3-2.png";
+import manuThree from "@/public/manufacturing-4-2.png";
+import manuFour from "@/public/manufacturing-5-2.png";
+import manuSix from "@/public/manufacturing-6-2.png";
+import manuSeven from "@/public/manufacturing-8-2.png";
 import "@/styles/wrapper.scss"
 import {baskerville} from "@/app/fonts";
 import {Fade} from "react-awesome-reveal";
@@ -40,13 +42,20 @@ const manufacturing = [
         description: 'stage-description4',
         list: ''
     },
-    // {
-    //     id: '06',
-    //     src: manuFifth,
-    //     title: 'stage-title4',
-    //     description: 'stage-description4',
-    //     list: ''
-    // },
+    {
+        id: '06',
+        src: manuSix,
+        title: 'stage-title4',
+        description: 'stage-description4',
+        list: ''
+    },
+    {
+        id: '06',
+        src: manuSeven,
+        title: 'stage-title4',
+        description: 'stage-description4',
+        list: ''
+    },
 ]
 const Manufacturing = ({background}: {background?: string}) => {
 
