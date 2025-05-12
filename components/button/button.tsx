@@ -23,12 +23,18 @@ const Button = ({text, description, onClick, title, small}: {
                 <Link href={'/contacts'} className={finalClassName}>
                     {t('button-title1')}
                 </Link>
-                : <button className={finalClassName} onClick={onClick}>
-                    {title}
-                </button>}
-            {description && <div className={style.button__description}>
-                {description}
-            </div>}
+                :
+                <div>
+                    <button className={finalClassName} onClick={onClick}>
+                        {title}
+                    </button>
+                    {description &&
+                        <div className={style.button__description}>
+                            {description}
+                        </div>}
+                </div>
+            }
+
         </>
 
     );

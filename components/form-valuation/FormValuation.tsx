@@ -99,7 +99,8 @@ export default function FormValuation({mode}: {
     const { t } = useTranslation('common');
 
     return (
-        <div className={mode === 'modal' ? style.form + " " + style.form_modal : style.form}>
+        <div id="contact-form" className={mode === 'modal' ? style.form + " " + style.form_modal
+            : mode === 'bottom'? style.form + " " + style.form_pageBottom : style.form}>
             <h3 className={baskerville.className + " " + style.form__title}>
                 {t('form-title')}
             </h3>

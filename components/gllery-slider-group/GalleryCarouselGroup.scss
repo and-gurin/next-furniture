@@ -1,0 +1,97 @@
+@import 'styles/constants';
+@import 'styles/mixins';
+
+.sliderGroup {
+  width: 100%;
+  text-align: center;
+}
+
+.projectTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 16px 0;
+  color: $blackColor;
+}
+
+.sliderWrapper {
+  width: 100%;
+  position: relative;
+}
+
+.sliderItem {
+  display: flex;
+  justify-content: center;
+}
+
+.sliderImage {
+  width: 100%;
+  max-width: 460px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+
+  @include media-mobile {
+    border-radius: 8px;
+  }
+}
+
+.buttonImage {
+  //margin-bottom: 10px;
+  //margin-top: 10px;
+  //display: flex;
+  //flex-direction: column;
+  //align-items: center;
+  //justify-content: center;
+  //width: 100%;
+}
+
+.buttonImageVisible {
+  margin-top: 25px;
+}
+
+.customPrev, .customNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  padding: 4px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+
+  svg {
+    display: block;
+  }
+}
+
+.customPrev {
+  left: 20px;
+}
+
+.customNext {
+  right: 20px;
+}
+
+/* Полоски */
+.alice-carousel__dots {
+  position: absolute;
+  bottom: 9px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.alice-carousel__dots-item {
+  width: 52px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #aaa;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.alice-carousel__dots-item.__active {
+  background-color: #000;
+  opacity: 1;
+}

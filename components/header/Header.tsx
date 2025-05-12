@@ -27,7 +27,6 @@ import close from "@/public/close-bold-svgrepo-com.svg";
 import arrowRight from "@/public/right-arrow-svgrepo-com.svg";
 import arrowLeft from "@/public/left-arrow-svgrepo-com.svg";
 import handset from "@/public/handset-svgrepo-com.svg";
-import mail from "@/public/mail_pye5zxoeu4ge.svg";
 import {useTranslation} from "react-i18next";
 import LanguageSelector from "@/components/language-selector/LanguageSelector";
 import Modal from "@/components/modal/Modal";
@@ -104,20 +103,20 @@ const Header = () => {
                                     />
                                 </a>
                                 <div className={style.header__mail}>
-                                    <span>8:00</span>
+                                    <span>8:00 - </span>
                                     <span>19:00</span>
                                 </div>
                             </>
 
                         }
-                        <span onClick={() => setIsModalOpen(!isModalOpen)} className={style.header__phone}>
-                                <Image
-                                    src={mail}
-                                    width='36'
-                                    height='36'
-                                    alt='mail'
-                                />
-                            </span>
+                        {/*<span onClick={() => setIsModalOpen(!isModalOpen)} className={style.header__phone}>*/}
+                        {/*        <Image*/}
+                        {/*            src={mail}*/}
+                        {/*            width='36'*/}
+                        {/*            height='36'*/}
+                        {/*            alt='mail'*/}
+                        {/*        />*/}
+                        {/*    </span>*/}
                         <div >
                             <LanguageSelector/>
                         </div>

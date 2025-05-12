@@ -28,7 +28,8 @@ const CustomPaging = ({
         focusOnSelect: true,
         initialSlide: initialIndex,
         adaptiveHeight: true,
-        className: 'sliderGallery'
+        className: 'sliderGallery',
+        arrows: images.length > 1
     };
 
     useEffect(() => {

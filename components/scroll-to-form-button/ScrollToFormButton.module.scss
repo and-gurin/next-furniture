@@ -1,0 +1,30 @@
+@import 'styles/constants';
+@import 'styles/mixins';
+
+.stickyButton {
+  display: none;
+
+  @include media-tablet {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d2c8ae;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #c0b496;
+    }
+  }
+}

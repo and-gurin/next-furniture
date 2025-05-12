@@ -1,23 +1,22 @@
 'use client'
 
-import Image, {StaticImageData} from "next/image";
-import {baskerville} from "@/app/fonts";
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import GalleryCarouselGroup from "@/components/gllery-slider-group/GalleryCarouselGroup"; // добавь
+import { baskerville } from "@/app/fonts";
 import style from "./Gallery.module.scss";
-import "slick-carousel/slick/slick.scss";
-import "slick-carousel/slick/slick-theme.scss";
-import CustomPaging from "@/components/slider/Slider";
-import React, {useState} from "react";
-import {useTranslation} from "react-i18next";
 import Button from "@/components/button/button";
-import Modal from "@/components/modal/Modal";
+import Manufacturing from "@/components/production/Manufacturing";
+import Reviews from "@/components/reviews/Reviews";
 import Stages from "@/components/stages/Stages";
+import FAQ from "@/components/faq/FAQ";
 import stageOne from "@/public/stages-of-work-1.jpg";
 import stageTwo from "@/public/stages-of-work-2.jpg";
 import stageThree from "@/public/stages-of-work-3.jpg";
 import stageFour from "@/public/stages-of-work-4.jpg";
-import Manufacturing from "@/components/production/Manufacturing";
-import Reviews from "@/components/reviews/Reviews";
-import FAQ from "@/components/faq/FAQ";
+import {StaticImageData} from "next/image";
+import FormValuation from "@/components/form-valuation/FormValuation";
+import ScrollToFormButton from "@/components/scroll-to-form-button/ScrollToFormButton";
 
 export type TabsProps = {
     tag: string,
@@ -25,16 +24,11 @@ export type TabsProps = {
 }
 
 export type ImageProps = {
-    id: string,
-    tag: string,
-    src: StaticImageData | string,
-}
-
-export type ImagesProps = {
-    images: ImageProps[],
-    setOpenSlider:(isOpen: boolean) => void,
-    initialIndex?: number,
-}
+    id: string;
+    tag: string;       // 'kitchen' | 'wardrobe' | ...
+    group: string;     // например, 'kitchen-1', 'kitchen-2'
+    src: StaticImageData;
+};
 
 const stages = [
     {
@@ -67,47 +61,28 @@ const stages = [
     },
 ]
 
-const Gallery = ({tabs, images, defaultTag, height}: {
+const Gallery = ({ tabs, images, defaultTag, height}: {
     tabs?: TabsProps[],
     images: ImageProps[],
     defaultTag: string,
     height?: string
 }) => {
-
-    const [activeTab, setActiveTab] = React.useState(defaultTag);
-    const [openSlider, setOpenSlider] = React.useState(false);
-    const [initialIndex, setInitialIndex] = React.useState(0);
-    const [visibleCount, setVisibleCount] = React.useState(6); // показываем по 9
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [activeTab, setActiveTab] = useState(defaultTag);
+    const [visibleCount, setVisibleCount] = React.useState(6);
 
     const { t } = useTranslation('gallery');
 
-    const tabList = tabs?.map(tab => {
-        const finalClassName = activeTab === tab.tag
-            ? style.gallery__button + ' ' + style.gallery__button_active
-            : style.gallery__button;
-        return (
-            <li key={tab.title}>
-                <span className={finalClassName} onClick={() => {
-                    setActiveTab(tab.tag);
-                    setVisibleCount(6); // сброс при смене вкладки
-                }}>
-                    {t(tab.title)}
-                </span>
-            </li>
-        )
-    });
-
-    const onClickImageHandler = (imageId: number) => {
-        setInitialIndex(imageId);
-        setOpenSlider(true);
-    };
-
     const filteredImages = activeTab === 'all'
         ? images
-        : images.filter(image => image.tag.includes(activeTab));
+        : images.filter(img => img.tag === activeTab);
 
     const visibleImages = filteredImages.slice(0, visibleCount);
+
+    const grouped = visibleImages.reduce((acc: Record<string, ImageProps[]>, img) => {
+        if (!acc[img.group]) acc[img.group] = [];
+        acc[img.group].push(img);
+        return acc;
+    }, {});
 
     const showMoreHandler = () => {
         setVisibleCount(prev => prev + 9);
@@ -120,33 +95,35 @@ const Gallery = ({tabs, images, defaultTag, height}: {
             <section className={style.gallery}>
                 <div className={`wrapper ${style.gallery__wrapper}`}>
                     <div className={style.gallery__header}>
-                        <h2 className={baskerville.className + ' ' + style.gallery__title}>
+                        <h2 className={`${baskerville.className} ${style.gallery__title}`}>
                             {t('gallery-projects')}
                         </h2>
-                        {tabs && <ul className={style.gallery__buttons}>
-                            {tabList}
-                        </ul>}
+                        {tabs && (
+                            <ul className={style.gallery__buttons}>
+                                {tabs.map(tab => (
+                                    <li key={tab.title}>
+                    <span
+                        className={
+                            activeTab === tab.tag
+                                ? `${style.gallery__button} ${style.gallery__button_active}`
+                                : style.gallery__button
+                        }
+                        onClick={() => setActiveTab(tab.tag)}
+                    >
+                      {t(tab.title)}
+                    </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
                     </div>
+
                     <div className={style.gallery__grid}>
-                        {visibleImages.map((image, index) => (
-                            <div key={image.id} >
-                                <figure className={style.gallery__figure} onClick={() => onClickImageHandler(index)}>
-                                    <Image src={image.src}
-                                           className={style.gallery__image}
-                                           sizes="(min-width: 100px) 50vw, 100vw"
-                                           alt='Nowoczesna meble na wymiar'/>
-                                </figure>
-                                <div className={style.gallery__buttonImage}>
-                                    <Button onClick={() => setIsModalOpen(true)} text={'contact'} small={true} title={t('button-title2')}/>
-                                </div>
+                        {Object.entries(grouped).map(([groupId, groupImages]) => (
+                            <div key={groupId} className={style.sliderGroup}>
+                                    <GalleryCarouselGroup title={groupId} images={groupImages} height={height}/>
                             </div>
                         ))}
-                        {openSlider &&
-                            <CustomPaging
-                                height={height}
-                                images={filteredImages}
-                                setOpenSlider={setOpenSlider}
-                                initialIndex={initialIndex}/>}
                     </div>
                     {hasMoreImages && (
                         <div className={style.gallery__loadMore}>
@@ -155,14 +132,14 @@ const Gallery = ({tabs, images, defaultTag, height}: {
                     )}
                 </div>
             </section>
-            <Manufacturing background={'whiteSmoke'}/>
+            <Manufacturing background={"whiteSmoke"} />
             <Reviews/>
-            <Stages stages={stages} background={'whiteSmoke'}/>
-            <Modal setIsOpen={setIsModalOpen} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}/>
-            <FAQ/>
+            <Stages stages={stages} background={"whiteSmoke"} />
+            <FAQ />
+            <FormValuation mode={'bottom'}/>
+            <ScrollToFormButton/>
         </>
-
-);
+    );
 };
 
 export default Gallery;

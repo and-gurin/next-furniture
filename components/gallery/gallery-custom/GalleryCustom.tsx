@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import Gallery from "@/components/gallery/Gallery";
+import Gallery, {ImageProps} from "@/components/gallery/Gallery";
 import bath1 from "@/public/Custom/Bath-room/bath-1.jpg";
 import bath2 from "@/public/Custom/Bath-room/bath-2.jpg";
 import bath31 from "@/public/Custom/Bath-room/bath-3.jpg";
@@ -43,7 +43,6 @@ import living16 from "@/public/Custom/Living-room/living-room-19-1.jpg";
 import living17 from "@/public/Custom/Living-room/living-room-19-2.jpg";
 import I18nProvider from "@/components/I18nProvider/I18nProvider";
 
-
 const tabs = [
     {tag: 'all', title: 'gallery-tab-all'},
     {tag: 'bath', title: 'gallery-custom-tab1'},
@@ -51,54 +50,66 @@ const tabs = [
     // {tag: 'custom', title: 'Na wymiar'},
 ]
 
-const images = [
-    {id: '1', src: bath1, tag: 'bath'},
-    {id: '2', src: bath2, tag: 'bath'},
-    {id: '3', src: bath31, tag: 'bath'},
-    {id: '4', src: bath32, tag: 'bath'},
-    {id: '5', src: bath4, tag: 'bath'},
-    {id: '6', src: bath51, tag: 'bath'},
-    {id: '7', src: bath52, tag: 'bath'},
-    {id: '8', src: bath6, tag: 'bath'},
-    {id: '9', src: bath7, tag: 'bath'},
-    {id: '11', src: bath8, tag: 'bath'},
-    {id: '12', src: bath9, tag: 'bath'},
-    {id: '13', src: bath101, tag: 'bath'},
-    {id: '14', src: bath102, tag: 'bath'},
-    {id: '15', src: bath103, tag: 'bath'},
-    {id: '16', src: bath11, tag: 'bath'},
-    {id: '161', src: bath14, tag: 'bath'},
-    {id: '162', src: bath15, tag: 'bath'},
-    {id: '163', src: bath16, tag: 'bath'},
-    {id: '164', src: bath17, tag: 'bath'},
-    {id: '17', src: living1, tag: 'living'},
-    {id: '18', src: living21, tag: 'living'},
-    {id: '19', src: living22, tag: 'living'},
-    {id: '20', src: living3, tag: 'living'},
-    {id: '21', src: living41, tag: 'living'},
-    {id: '22', src: living42, tag: 'living'},
-    {id: '23', src: living43, tag: 'living'},
-    {id: '24', src: living5, tag: 'living'},
-    {id: '25', src: living6, tag: 'living'},
-    {id: '26', src: living7, tag: 'living'},
-    {id: '27', src: living8, tag: 'living'},
-    {id: '29', src: living9, tag: 'living'},
-    {id: '30', src: living10, tag: 'living'},
-    {id: '31', src: living11, tag: 'living'},
-    {id: '32', src: living12, tag: 'living'},
-    {id: '33', src: living13, tag: 'living'},
-    {id: '34', src: living14, tag: 'living'},
-    {id: '35', src: living15, tag: 'living'},
-    {id: '36', src: living16, tag: 'living'},
-    {id: '37', src: living17, tag: 'living'},
-    {id: '38', src: living8, tag: 'living'},
-    // {id: '29', src: custom2, tag: 'custom'},
-    // {id: '30', src: custom3, tag: 'custom'},
-    // {id: '31', src: custom41, tag: 'custom'},
-    // {id: '32', src: custom42, tag: 'custom'},
-    // {id: '33', src: custom5, tag: 'custom'},
+const rawImages = [
+    {src: bath1, filename: 'bath-1-1'},
+    {src: bath2, filename: 'bath-2-1'},
+    {src: bath31, filename: 'bath-3-1'},
+    {src: bath32, filename: 'bath-3-2'},
+    {src: bath4, filename: 'bath-4-1'},
+    {src: bath51, filename: 'bath-5-1'},
+    {src: bath52, filename: 'bath-5-2'},
+    {src: bath6, filename: 'bath-6-1'},
+    {src: bath7, filename: 'bath-7-1'},
+    {src: bath8, filename: 'bath-8-1'},
+    {src: bath9, filename: 'bath-9-1'},
+    {src: bath101, filename: 'bath-10-1'},
+    {src: bath102, filename: 'bath-10-2'},
+    {src: bath103, filename: 'bath-10-3'},
+    {src: bath11, filename: 'bath-11-1'},
+    {src: bath14, filename: 'bath-14-1'},
+    {src: bath15, filename: 'bath-15-1'},
+    {src: bath16, filename: 'bath-16-1'},
+    {src: bath17, filename: 'bath-17-1'},
+    {src: living1, filename: 'living-1-1'},
+    {src: living21, filename: 'living-2-1'},
+    {src: living22, filename: 'living-2-2'},
+    {src: living3, filename: 'living-3-1'},
+    {src: living41, filename: 'living-4-1'},
+    {src: living42, filename: 'living-4-2'},
+    {src: living43, filename: 'living-4-3'},
+    {src: living5, filename: 'living-5-1'},
+    {src: living6, filename: 'living-6-1'},
+    {src: living7, filename: 'living-7-1'},
+    {src: living8, filename: 'living-8-1'},
+    {src: living9, filename: 'living-9-1'},
+    {src: living10, filename: 'living-10-1'},
+    {src: living11, filename: 'living-11-1'},
+    {src: living12, filename: 'living-12-1'},
+    {src: living13, filename: 'living-13-1'},
+    {src: living14, filename: 'living-14-1'},
+    {src: living15, filename: 'living-15-1'},
+    {src: living16, filename: 'living-16-1'},
+    {src: living17, filename: 'living-17-1'},
+    //{src: living8, filename: 'living'},
+    // {src: custom2, filename: 'custom'},
+    // {src: custom3, filename: 'custom'},
+    // {src: custom41, filename: 'custom'},
+    // {src: custom42, filename: 'custom'},
+    // {src: custom5, filename: 'custom'},
 
 ]
+
+
+const images: ImageProps[] = rawImages.map(({ src, filename }) => {
+    const [tag, groupNum] = filename.split('-');
+    const group = `${tag}-${groupNum}`;
+    return {
+        id: filename,
+        tag,
+        group,
+        src
+    };
+});
 
 const GalleryCustom = ({defaultTag}: {defaultTag: string}) => {
 
