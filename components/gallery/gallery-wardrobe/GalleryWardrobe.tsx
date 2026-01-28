@@ -114,12 +114,12 @@ const tabs = [
 
 const rawImages = [
     {src: wardrobe41, filename: 'wardrobe-1-1'},
-    {src: wardrobe5, filename: 'wardrobe-2-1'},
+    //{src: wardrobe5, filename: 'wardrobe-2-1'},
     {src: wardrobe6, filename: 'wardrobe-3-1'},
-    {src: wardrobe7, filename: 'wardrobe-4-1'},
+    //{src: wardrobe7, filename: 'wardrobe-4-1'},
     {src: wardrobe8, filename: 'wardrobe-5-1'},
-    {src: wardrobe91, filename: 'wardrobe-6-1'},
-    {src: wardrobe92, filename: 'wardrobe-6-2'},
+    //{src: wardrobe91, filename: 'wardrobe-6-1'},
+    //{src: wardrobe92, filename: 'wardrobe-6-2'},
     {src: wardrobe10, filename: 'wardrobe-7-1'},
     {src: wardrobe11, filename: 'wardrobe-8-1'},
     {src: wardrobe12, filename: 'wardrobe-9-1'},

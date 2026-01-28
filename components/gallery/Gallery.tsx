@@ -132,9 +132,8 @@ const Gallery = ({ tabs, images, defaultTag, height}: {
                     )}
                 </div>
             </section>
-            <Manufacturing background={"whiteSmoke"} />
-            <Reviews/>
             <Stages stages={stages} background={"whiteSmoke"} />
+            <Reviews/>
             <FAQ />
             <FormValuation mode={'bottom'}/>
             <ScrollToFormButton/>

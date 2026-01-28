@@ -2,7 +2,7 @@
 
 import I18nProvider from '@/components/I18nProvider/I18nProvider';
 import React from "react";
-import modern from "@/public/hero/hero-block-11.jpg"
+import modern from "@/public/Kitchen/HIGH-TECH/high-tech-6-2.jpg"
 import {useTranslation} from "react-i18next";
 import FurnitureDetails from '../FurnitureDetails';
 

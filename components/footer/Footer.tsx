@@ -54,7 +54,7 @@ const Footer = () => {
                     </div>
                 </nav>
                 <p className={style.footer__copyright}>
-                    Copyright 2025 © In House All rights reserved.
+                    Copyright 2026 © In House All rights reserved.
                 </p>
             </div>
         </footer>

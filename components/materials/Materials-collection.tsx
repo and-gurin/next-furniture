@@ -29,7 +29,6 @@ import stageTwo from "@/public/stages-of-work-2.jpg";
 import stageThree from "@/public/stages-of-work-3.jpg";
 import stageFour from "@/public/stages-of-work-4.jpg";
 import Stages from "@/components/stages/Stages";
-import Manufacturing from "@/components/production/Manufacturing";
 import Reviews from "@/components/reviews/Reviews";
 import FAQ from "@/components/faq/FAQ";
 
@@ -192,9 +191,8 @@ const MaterialsCollection = () => {
                             <Material title={t('material-title4')} materials={box}/>
                     </div>
                 </section>
-                <Manufacturing background={'whiteSmoke'}/>
-                <Reviews/>
                 <Stages stages={stages} background={'whiteSmoke'}/>
+                <Reviews/>
                 <FAQ/>
             </I18nProvider>
         </>

@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7cbe8885-8359-42c8-b7de-2562851b6248" name="Changes" comment="feat: delete some pictures">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo_lalasia_.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/send-email/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/send-email/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/button/button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/button/button.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/button/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/button/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/contacts/Contacts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/contacts/Contacts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/cookie/Cookie.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/cookie/Cookie.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/cooperation/Cooperation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/cooperation/Cooperation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/details/products/Bath-translate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/details/products/Bath-translate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/details/products/Classic-translate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/details/products/Classic-translate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/details/products/Kitchens-translate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/details/products/Kitchens-translate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/details/products/Living-translate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/details/products/Living-translate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/details/products/Modern-translate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/details/products/Modern-translate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/gallery/Gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/gallery/Gallery.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/gallery/gallery-custom/GalleryCustom.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/gallery/gallery-custom/GalleryCustom.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/gallery/gallery-kitchen/GalleryKitchen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/gallery/gallery-kitchen/GalleryKitchen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/gallery/gallery-wardrobe/GalleryWardrobe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/gallery/gallery-wardrobe/GalleryWardrobe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/gllery-slider-group/GalleryCarouselGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/gllery-slider-group/GalleryCarouselGroup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/hero/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/hero/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/main-page/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/main-page/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/materials/Materials-collection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/materials/Materials-collection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/privacy-policy/Privacy-policy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/privacy-policy/Privacy-policy.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stages-of-work-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/stages-of-work-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stages-of-work-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/stages-of-work-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stages-of-work-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/stages-of-work-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stages-of-work-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/stages-of-work-4.jpg" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="16d1c0f01e9d7478c957178ec62a3e23bd0933bf" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2cicDfClJyTKeYm7U8b9axL1T68" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Desktop/2022Q1/next-furniture/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Lenovo\\Desktop\\D2022Q1\\next-furniture\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\2022Q1\next-furniture\public" />
+      <recent name="C:\Users\Lenovo\Desktop\2022Q1\next-furniture\app\products" />
+      <recent name="C:\Users\Lenovo\Desktop\2022Q1\next-furniture\components\details\products" />
+      <recent name="C:\Users\Lenovo\Desktop\2022Q1\next-furniture\components\reviews" />
+      <recent name="C:\Users\Lenovo\Desktop\2022Q1\next-furniture\components\main-page" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\2022Q1\next-furniture\components" />
+      <recent name="C:\Users\Lenovo\Desktop\2022Q1\next-furniture\app\products" />
+      <recent name="C:\Users\Lenovo\Desktop\2022Q1\next-furniture\components\form-valuation" />
+      <recent name="C:\Users\Lenovo\Desktop\2022Q1\next-furniture\components\valuation" />
+      <recent name="C:\Users\Lenovo\Desktop\2022Q1\next-furniture\components\cooperation" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7cbe8885-8359-42c8-b7de-2562851b6248" name="Changes" comment="" />
+      <created>1708597724370</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708597724370</updated>
+      <workItem from="1708597726393" duration="7000" />
+      <workItem from="1708597744216" duration="2673000" />
+      <workItem from="1708600548406" duration="32000" />
+      <workItem from="1708600767343" duration="2602000" />
+      <workItem from="1709208110019" duration="13000" />
+      <workItem from="1709208138315" duration="15824000" />
+      <workItem from="1709492208521" duration="25070000" />
+      <workItem from="1709667380139" duration="11389000" />
+      <workItem from="1710091389275" duration="21311000" />
+      <workItem from="1710278781081" duration="45060000" />
+      <workItem from="1711638724651" duration="7000" />
+      <workItem from="1711638747380" duration="32309000" />
+      <workItem from="1712168663308" duration="8000" />
+      <workItem from="1712168687226" duration="11814000" />
+      <workItem from="1712249431117" duration="10000" />
+      <workItem from="1712249455643" duration="12163000" />
+      <workItem from="1712487770740" duration="20472000" />
+      <workItem from="1712642020490" duration="17622000" />
+      <workItem from="1712905200695" duration="75227000" />
+      <workItem from="1715183614257" duration="1040000" />
+      <workItem from="1715546767590" duration="8000" />
+      <workItem from="1715585340101" duration="52449000" />
+      <workItem from="1715870392414" duration="20032000" />
+      <workItem from="1716039636008" duration="2563000" />
+      <workItem from="1716065674623" duration="1566000" />
+      <workItem from="1716116802446" duration="3797000" />
+      <workItem from="1716129605368" duration="91000" />
+      <workItem from="1716145907511" duration="4022000" />
+      <workItem from="1716311734774" duration="4956000" />
+      <workItem from="1716487651144" duration="12000" />
+      <workItem from="1716487681009" duration="13200000" />
+      <workItem from="1716543482153" duration="9000" />
+      <workItem from="1716543507240" duration="11794000" />
+      <workItem from="1716715452406" duration="3701000" />
+      <workItem from="1716725037071" duration="6469000" />
+      <workItem from="1716734683080" duration="9684000" />
+      <workItem from="1716793357742" duration="1144000" />
+      <workItem from="1716794602787" duration="3595000" />
+      <workItem from="1716813006831" duration="812000" />
+      <workItem from="1716827866539" duration="2653000" />
+      <workItem from="1716990794767" duration="20152000" />
+      <workItem from="1717188912945" duration="4754000" />
+      <workItem from="1717270275386" duration="10832000" />
+      <workItem from="1717444987282" duration="7866000" />
+      <workItem from="1717934274900" duration="15510000" />
+      <workItem from="1718137403711" duration="1751000" />
+      <workItem from="1718458148804" duration="600000" />
+      <workItem from="1718471790897" duration="595000" />
+      <workItem from="1718542487203" duration="184000" />
+      <workItem from="1718554372477" duration="1683000" />
+      <workItem from="1718561215148" duration="2044000" />
+      <workItem from="1718603116727" duration="25168000" />
+      <workItem from="1718765925698" duration="1215000" />
+      <workItem from="1718917150651" duration="963000" />
+      <workItem from="1720110673228" duration="6772000" />
+      <workItem from="1722159336657" duration="2524000" />
+      <workItem from="1723392337913" duration="31116000" />
+      <workItem from="1723497801445" duration="18108000" />
+      <workItem from="1723758488674" duration="7357000" />
+      <workItem from="1723908317215" duration="2825000" />
+      <workItem from="1724006269859" duration="3036000" />
+      <workItem from="1724605955194" duration="650000" />
+      <workItem from="1725784357088" duration="1720000" />
+      <workItem from="1726233631225" duration="2630000" />
+      <workItem from="1731363463274" duration="690000" />
+      <workItem from="1731600173717" duration="428000" />
+      <workItem from="1731672695471" duration="991000" />
+      <workItem from="1731844252692" duration="3483000" />
+      <workItem from="1732104939369" duration="6061000" />
+      <workItem from="1732275652659" duration="3374000" />
+      <workItem from="1732384674303" duration="11725000" />
+      <workItem from="1732578269217" duration="3363000" />
+      <workItem from="1732742593813" duration="1526000" />
+      <workItem from="1732747623634" duration="739000" />
+      <workItem from="1732772479224" duration="2683000" />
+      <workItem from="1732894622823" duration="713000" />
+      <workItem from="1732914218942" duration="8368000" />
+      <workItem from="1733216492356" duration="21167000" />
+      <workItem from="1733334369137" duration="5164000" />
+      <workItem from="1733650176496" duration="3396000" />
+      <workItem from="1733692825525" duration="7676000" />
+      <workItem from="1733733782817" duration="15585000" />
+      <workItem from="1733833028699" duration="1342000" />
+      <workItem from="1733834499217" duration="3822000" />
+      <workItem from="1733839868954" duration="1259000" />
+      <workItem from="1733859929967" duration="199000" />
+      <workItem from="1733861354349" duration="2598000" />
+      <workItem from="1734005807169" duration="5325000" />
+      <workItem from="1734035773390" duration="4057000" />
+      <workItem from="1734156655806" duration="7507000" />
+      <workItem from="1734302368601" duration="1105000" />
+      <workItem from="1734392843138" duration="11399000" />
+      <workItem from="1734717954696" duration="7931000" />
+      <workItem from="1734784311057" duration="82660000" />
+      <workItem from="1735642320459" duration="646000" />
+      <workItem from="1736083099096" duration="585000" />
+      <workItem from="1737294533486" duration="1262000" />
+      <workItem from="1737811266502" duration="14588000" />
+      <workItem from="1737908800288" duration="8225000" />
+      <workItem from="1738095743942" duration="3667000" />
+      <workItem from="1738516673169" duration="31275000" />
+      <workItem from="1738665030908" duration="2481000" />
+      <workItem from="1743162771594" duration="14417000" />
+      <workItem from="1743243413713" duration="15790000" />
+      <workItem from="1743392253018" duration="14642000" />
+      <workItem from="1745677304777" duration="40228000" />
+      <workItem from="1746020045348" duration="25910000" />
+      <workItem from="1746117082676" duration="61829000" />
+      <workItem from="1746435323890" duration="37000" />
+      <workItem from="1746435377659" duration="10394000" />
+      <workItem from="1746465283315" duration="11000" />
+      <workItem from="1746465321857" duration="11274000" />
+      <workItem from="1746515796953" duration="4638000" />
+      <workItem from="1746537215030" duration="226000" />
+      <workItem from="1746566711704" duration="69095000" />
+      <workItem from="1768824263487" duration="12417000" />
+      <workItem from="1769549140669" duration="4138000" />
+      <workItem from="1769615646226" duration="2054000" />
+    </task>
+    <task id="LOCAL-00028" summary="feat: remove rotation effect for images">
+      <option name="closed" value="true" />
+      <created>1716754166581</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1716754166581</updated>
+    </task>
+    <task id="LOCAL-00029" summary="feat: remove rotation effect for images">
+      <option name="closed" value="true" />
+      <created>1716754481982</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1716754481982</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feat: add open graph tags">
+      <option name="closed" value="true" />
+      <created>1717063257655</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1717063257655</updated>
+    </task>
+    <task id="LOCAL-00031" summary="fix: resolve some problems">
+      <option name="closed" value="true" />
+      <created>1717221379581</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1717221379581</updated>
+    </task>
+    <task id="LOCAL-00032" summary="feat: add materials section">
+      <option name="closed" value="true" />
+      <created>1717968435284</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1717968435284</updated>
+    </task>
+    <task id="LOCAL-00033" summary="feat: add several pages">
+      <option name="closed" value="true" />
+      <created>1718764087221</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1718764087221</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fix: fix several bugs">
+      <option name="closed" value="true" />
+      <created>1720125043822</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1720125043822</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fix: change slider height">
+      <option name="closed" value="true" />
+      <created>1720125625961</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1720125625961</updated>
+    </task>
+    <task id="LOCAL-00036" summary="fix: change project according ads requirement">
+      <option name="closed" value="true" />
+      <created>1723755343450</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1723755343450</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fix: change path names for several pictures">
+      <option name="closed" value="true" />
+      <created>1723757333419</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1723757333419</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fix: change file names for wardrobe pictures">
+      <option name="closed" value="true" />
+      <created>1723757937977</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1723757937977</updated>
+    </task>
+    <task id="LOCAL-00039" summary="fix: delete wardrobe pictures">
+      <option name="closed" value="true" />
+      <created>1723758177361</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1723758177361</updated>
+    </task>
+    <task id="LOCAL-00040" summary="fix: delete wardrobe pictures">
+      <option name="closed" value="true" />
+      <created>1723758845492</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1723758845492</updated>
+    </task>
+    <task id="LOCAL-00041" summary="fix: rename some files">
+      <option name="closed" value="true" />
+      <created>1723785376778</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1723785376778</updated>
+    </task>
+    <task id="LOCAL-00042" summary="feat: add script for cookie yes">
+      <option name="closed" value="true" />
+      <created>1723840740818</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1723840740818</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fix: add some additions">
+      <option name="closed" value="true" />
+      <created>1724009863845</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1724009863845</updated>
+    </task>
+    <task id="LOCAL-00044" summary="fix: add some another additions">
+      <option name="closed" value="true" />
+      <created>1725785523845</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1725785523845</updated>
+    </task>
+    <task id="LOCAL-00045" summary="fix: change lolgo">
+      <option name="closed" value="true" />
+      <created>1731673138687</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1731673138687</updated>
+    </task>
+    <task id="LOCAL-00046" summary="feat: add evaluation link">
+      <option name="closed" value="true" />
+      <created>1732481963112</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1732481963112</updated>
+    </task>
+    <task id="LOCAL-00047" summary="fix: add some changes">
+      <option name="closed" value="true" />
+      <created>1732748489474</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1732748489474</updated>
+    </task>
+    <task id="LOCAL-00048" summary="fix: add some changes">
+      <option name="closed" value="true" />
+      <created>1732775929394</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1732775929394</updated>
+    </task>
+    <task id="LOCAL-00049" summary="fix: add possibility to add some files">
+      <option name="closed" value="true" />
+      <created>1733785431202</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1733785431203</updated>
+    </task>
+    <task id="LOCAL-00050" summary="fix: remove next.js config">
+      <option name="closed" value="true" />
+      <created>1733834361677</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1733834361677</updated>
+    </task>
+    <task id="LOCAL-00051" summary="fix: add types for promise">
+      <option name="closed" value="true" />
+      <created>1733840166394</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1733840166394</updated>
+    </task>
+    <task id="LOCAL-00052" summary="fix: add .env file">
+      <option name="closed" value="true" />
+      <created>1733862968350</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1733862968350</updated>
+    </task>
+    <task id="LOCAL-00053" summary="fix: add valuation 24h to header">
+      <option name="closed" value="true" />
+      <created>1734034540132</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1734034540132</updated>
+    </task>
+    <task id="LOCAL-00054" summary="feat: add translator to app">
+      <option name="closed" value="true" />
+      <created>1737844697733</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1737844697748</updated>
+    </task>
+    <task id="LOCAL-00055" summary="feat: remove backend from translate">
+      <option name="closed" value="true" />
+      <created>1738013287951</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1738013287951</updated>
+    </task>
+    <task id="LOCAL-00056" summary="fix: change some photos">
+      <option name="closed" value="true" />
+      <created>1738530514796</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1738530514796</updated>
+    </task>
+    <task id="LOCAL-00057" summary="fix: change some photos">
+      <option name="closed" value="true" />
+      <created>1738530684774</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1738530684774</updated>
+    </task>
+    <task id="LOCAL-00058" summary="fix: change products descriptions and photos">
+      <option name="closed" value="true" />
+      <created>1738587443775</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1738587443775</updated>
+    </task>
+    <task id="LOCAL-00059" summary="fix: add owners photo">
+      <option name="closed" value="true" />
+      <created>1738613995223</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1738613995223</updated>
+    </task>
+    <task id="LOCAL-00060" summary="fix: add owners photo">
+      <option name="closed" value="true" />
+      <created>1743163078009</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1743163078009</updated>
+    </task>
+    <task id="LOCAL-00061" summary="fix: remove i18n.ts">
+      <option name="closed" value="true" />
+      <created>1743247269022</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1743247269022</updated>
+    </task>
+    <task id="LOCAL-00062" summary="feat: add Manufacturing block">
+      <option name="closed" value="true" />
+      <created>1746044346487</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1746044346487</updated>
+    </task>
+    <task id="LOCAL-00063" summary="feat: add reviews block">
+      <option name="closed" value="true" />
+      <created>1746423536046</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1746423536048</updated>
+    </task>
+    <task id="LOCAL-00064" summary="fix: remove button translate">
+      <option name="closed" value="true" />
+      <created>1746423977917</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1746423977917</updated>
+    </task>
+    <task id="LOCAL-00065" summary="fix: some errors">
+      <option name="closed" value="true" />
+      <created>1746425526692</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1746425526693</updated>
+    </task>
+    <task id="LOCAL-00066" summary="fix: some errors">
+      <option name="closed" value="true" />
+      <created>1746426817630</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1746426817631</updated>
+    </task>
+    <task id="LOCAL-00067" summary="feat: add mail button">
+      <option name="closed" value="true" />
+      <created>1746432322352</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1746432322353</updated>
+    </task>
+    <task id="LOCAL-00068" summary="fix: move header elements">
+      <option name="closed" value="true" />
+      <created>1746437858147</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1746437858147</updated>
+    </task>
+    <task id="LOCAL-00069" summary="fix: change translate files">
+      <option name="closed" value="true" />
+      <created>1746439940541</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1746439940542</updated>
+    </task>
+    <task id="LOCAL-00070" summary="fix: change header gaps">
+      <option name="closed" value="true" />
+      <created>1746445111474</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1746445111474</updated>
+    </task>
+    <task id="LOCAL-00071" summary="feat: add FAQ block">
+      <option name="closed" value="true" />
+      <created>1746510172872</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1746510172872</updated>
+    </task>
+    <task id="LOCAL-00072" summary="fix: some errors">
+      <option name="closed" value="true" />
+      <created>1746516226595</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1746516226595</updated>
+    </task>
+    <task id="LOCAL-00073" summary="feat: add translate to FAQ block">
+      <option name="closed" value="true" />
+      <created>1746533200056</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1746533200056</updated>
+    </task>
+    <task id="LOCAL-00074" summary="fix: add FAQ to some blocks">
+      <option name="closed" value="true" />
+      <created>1746533986543</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1746533986543</updated>
+    </task>
+    <task id="LOCAL-00075" summary="feat: add sliders to gallery">
+      <option name="closed" value="true" />
+      <created>1747056524796</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1747056524797</updated>
+    </task>
+    <task id="LOCAL-00076" summary="feat: add sliders to gallery">
+      <option name="closed" value="true" />
+      <created>1747082039943</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1747082039943</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix: add possibility to add some files" />
+    <MESSAGE value="fix: remove next.js config" />
+    <MESSAGE value="fix: add types for promise" />
+    <MESSAGE value="fix: add .env file" />
+    <MESSAGE value="fix: add valuation 24h to header" />
+    <MESSAGE value="feat: add" />
+    <MESSAGE value="feat: add translator to app" />
+    <MESSAGE value="feat: remove backend from translate" />
+    <MESSAGE value="fix: change some photos" />
+    <MESSAGE value="fix: change products descriptions and photos" />
+    <MESSAGE value="fix: add owners photo" />
+    <MESSAGE value="fix: remove i18n.ts" />
+    <MESSAGE value="feat: add Manufacturing block" />
+    <MESSAGE value="feat: add reviews block" />
+    <MESSAGE value="fix: remove button translate" />
+    <MESSAGE value="feat: add mail button" />
+    <MESSAGE value="fix: move header elements" />
+    <MESSAGE value="fix: change translate files" />
+    <MESSAGE value="fix: change header gaps" />
+    <MESSAGE value="feat: add FAQ block" />
+    <MESSAGE value="fix: some errors" />
+    <MESSAGE value="feat: add translate to FAQ block" />
+    <MESSAGE value="fix: add FAQ to some blocks" />
+    <MESSAGE value="feat: add sliders to gallery" />
+    <MESSAGE value="feat: delete some pictures" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: delete some pictures" />
+  </component>
+</project>

@@ -9,12 +9,12 @@ const Button = ({text, description, onClick, title, small}: {
     description?: string,
     onClick?: () => void,
     title: string,
-    small?: boolean
+    small?: string
 }) => {
 
     const {t} = useTranslation('gallery');
 
-    const finalClassName = small ? raleWay.className + ' ' + style.button__button_small
+    const finalClassName = small ==='small' ? raleWay.className + ' ' + style.button__button_small
         : raleWay.className + ' ' + style.button
 
     return (

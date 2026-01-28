@@ -10,7 +10,6 @@ import stageTwo from "@/public/stages-of-work-2.jpg";
 import stageThree from "@/public/stages-of-work-3.jpg";
 import stageFour from "@/public/stages-of-work-4.jpg";
 import Stages from "@/components/stages/Stages";
-import Manufacturing from "@/components/production/Manufacturing";
 import Reviews from "@/components/reviews/Reviews";
 import FAQ from "@/components/faq/FAQ";
 const stages = [
@@ -172,7 +171,6 @@ export default function Cookie() {
                 </div>
             </section>
             <FAQ/>
-            <Manufacturing/>
             <Reviews background={'whiteSmoke'}/>
             <Stages stages={stages}/>
         </>

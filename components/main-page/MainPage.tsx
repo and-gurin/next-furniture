@@ -1,19 +1,18 @@
 'use client';
 
-import kitchen1 from "@/public/Kitchen/HIGH-TECH/high-tech-1.jpg"
-import kitchen2 from "@/public/Kitchen/HIGH-TECH/high-tech-9-2.jpg"
-import kitchen3 from "@/public/Kitchen/HIGH-TECH/high-tech-11-2.jpg"
-import wardrobe1 from "@/public/Wardrobe/dressing-5.jpg"
+import kitchen1 from "@/public/Kitchen/Modern/Modern-10.jpg"
+import kitchen2 from "@/public/Kitchen/Classic/Classic-2-3.jpg"
+import kitchen3 from "@/public/Kitchen/Nobilia/nobilia-6.jpg"
+import wardrobe1 from "@/public/Wardrobe/dressing-4-1.jpg"
 import wardrobe2 from "@/public/Wardrobe/bevel-1.jpg"
 import wardrobe3 from "@/public/Wardrobe/bedroom-7.jpg"
-import custom1 from "@/public/Custom/Bath-room/bath-4.jpg"
-import custom2 from "@/public/Custom/Living-room/living-room-6.jpg"
-import custom3 from "@/public/Custom/Bed-room/bed-room-4-2.jpg"
+import custom1 from "@/public/Custom/Bath-room/bath-7.jpg"
+import custom2 from "@/public/Custom/Living-room/living-room-14.jpg"
+import custom3 from "@/public/Custom/Living-room/living-room-9.jpg"
 import KindOfFurniture from "@/components/kinds/KindOfFurniture";
 import Stages from "@/components/stages/Stages";
 import HeroTranslate from "@/components/hero/Hero-translate";
 import I18nProvider from "@/components/I18nProvider/I18nProvider"
-import Manufacturing from "@/components/production/Manufacturing";
 import stageOne from "@/public/stages-of-work-1.jpg";
 import stageTwo from "@/public/stages-of-work-2.jpg";
 import stageThree from "@/public/stages-of-work-3.jpg";
@@ -135,7 +134,6 @@ export default function MainPage () {
                     descriptions={customFurnitureDescriptions}
                 />
                 <FAQ/>
-                <Manufacturing/>
                 <Reviews background={'whiteSmoke'}/>
                 <Stages stages={stages}/>
             </I18nProvider>

@@ -13,15 +13,17 @@
   border: none;
   transition: all 500ms ease;
 
+  &:hover {
+    background-color: #aaaaaa;
+  }
+
   @include media-mobile {
     display: flex;
     justify-content: center;
     width: 100%;
   }
 
-  &:hover {
-    background-color: #aaaaaa;
-  }
+
 
   &__description {
     margin-top: 5px;

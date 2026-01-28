@@ -76,9 +76,9 @@ const GalleryCarouselGroup = ({ title, images, height }: Props) => {
                         )}
                     />
                 </div>
-                <div className={showControls ? 'buttonImage' : `buttonImage buttonImageVisible`}>
-                    <Button description={t('button-description')} onClick={() => setIsModalOpen(true)} text={'contact'} small={true} title={t('button-title4')}/>
-                </div>
+                {/*<div className={showControls ? 'buttonImage' : `buttonImage buttonImageVisible`}>*/}
+                {/*    <Button description={t('button-description')} onClick={() => setIsModalOpen(true)} text={'contact'} small={'small'} title={t('button-title4')}/>*/}
+                {/*</div>*/}
                 {openSlider &&
                     <CustomPaging
                         height={height}

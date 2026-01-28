@@ -60,12 +60,12 @@ export async function POST(req: Request) {
             console.log('Поля формы:', fields);
             console.log('Файлы:', files);
 
-            if (!files.file) {
-                console.warn('Файлы не обнаружены.');
-                return resolve(
-                    NextResponse.json({ message: 'Файлы не обнаружены.' }, { status: 400 })
-                );
-            }
+            // if (!files.file) {
+            //     console.warn('Файлы не обнаружены.');
+            //     return resolve(
+            //         NextResponse.json({ message: 'Файлы не обнаружены.' }, { status: 400 })
+            //     );
+            // }
 
             try {
                 // Настройка почтового транспорта
@@ -80,7 +80,11 @@ export async function POST(req: Request) {
                 });
 
                 // Обработка файлов
-                const uploadedFiles = Array.isArray(files.file) ? files.file : [files.file];
+                const uploadedFiles = files.file
+                    ? Array.isArray(files.file)
+                        ? files.file
+                        : [files.file]
+                    : [];
                 const attachments = uploadedFiles.map((file) => ({
                     filename: file.originalFilename || 'file',
                     path: file.filepath,

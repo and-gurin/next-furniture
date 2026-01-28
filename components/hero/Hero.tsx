@@ -14,10 +14,10 @@ import living1 from "@/public/Custom/Living-room/living-room-1.jpg";
 import living21 from "@/public/Custom/Living-room/living-room-2.jpg";
 import living22 from "@/public/Custom/Living-room/living-room-3.jpg";
 import living41 from "@/public/Custom/Living-room/living-room-5.jpg";
-import modern61 from "@/public/Kitchen/Modern/Modern-6-1.jpg";
-import modern62 from "@/public/Kitchen/Modern/Modern-6-2.jpg";
-import modern71 from "@/public/Kitchen/Modern/Modern-7-1.jpg";
-import modern72 from "@/public/Kitchen/Modern/Modern-7-2.jpg";
+import modern61 from "@/public/Kitchen/Nobilia/nobilia-11.jpg";
+import modern62 from "@/public/Kitchen/Nobilia/nobilia-12.jpg";
+import modern71 from "@/public/Kitchen/Nobilia/nobilia-9.jpg";
+import modern72 from "@/public/Kitchen/Nobilia/nobilia-6.jpg";
 import wardrobe1 from "@/public/Wardrobe/niche-3.jpg";
 import wardrobe4 from "@/public/Wardrobe/niche-6.jpg";
 import wardrobe5 from "@/public/Wardrobe/niche-7.jpg";
@@ -47,22 +47,22 @@ import Modal from "@/components/modal/Modal";
 import {useState} from "react";
 
 const images = [
-    {id: 171,  src: kitchen14},
-    {id: 172,  src: kitchen1},
-    {id: 14,  src: kitchen2},
-    {id: 115,  src: kitchen3},
-    {id: 116,  src: kitchen4},
-    {id: 117,  src: kitchen5},
-    {id: 231,  src: kitchen6},
-    {id: 232,  src: kitchen7},
+    //{id: 171,  src: kitchen14},
+    //{id: 172,  src: kitchen1},
+    //{id: 14,  src: kitchen2},
+    //{id: 115,  src: kitchen3},
+    //{id: 116,  src: kitchen4},
+    //{id: 117,  src: kitchen5},
+    //{id: 231,  src: kitchen6},
     {id: 233,  src: kitchen8},
+    {id: 232,  src: kitchen7},
     {id: 18,  src: modern61},
     {id: 19,  src: modern62},
     {id: 20,  src: modern71},
     {id: 21,  src: modern72},
-    {id: 211,  src: kitchen9},
-    {id: 212,  src: kitchen10},
-    {id: 213,  src: kitchen11},
+    //{id: 211,  src: kitchen9},
+    //{id: 212,  src: kitchen10},
+    //{id: 213,  src: kitchen11},
     {id: 214,  src: kitchen12},
     {id: 215,  src: kitchen13},
     {id: 2, src: bath2},
